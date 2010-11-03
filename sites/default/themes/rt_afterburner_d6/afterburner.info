@@ -1,0 +1,41 @@
+name = Afterburner
+project = rt_afterburner_d6
+project status url = http://updates.rockettheme.com/drupal/release-history
+description = Rockettheme Afterburner Theme for Drupal
+version = 6.x-1.4
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = /css/style.css
+stylesheets[print][] = /css/print.css
+
+features[] = Logo
+
+regions[admin_nav] = Admin Navigation
+
+regions[top] = Top
+regions[showcase] = Showcase
+regions[advertisement] = Advertisement
+regions[breadcrumb] = Breadcrumb
+
+
+regions[left] = Left
+regions[user123] = User 123
+regions[user456] = User 456
+regions[right] = Right
+
+regions[user789] = User 789
+
+regions[bottom] = Bottom
+regions[footer] = Footer
+regions[debug] = Debug
+
+
+stylesheets[all][] = css/typography.css
+stylesheets[all][] = css/headers.css
+stylesheets[all][] = css/drupal.css
+stylesheets[all][] = css/template_css.css
+
+
+
+
+
