@@ -1,0 +1,4 @@
+backups/*
+tmp/*
+sites/default/files/*
+sites/default/settings.php
