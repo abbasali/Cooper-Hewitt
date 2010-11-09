@@ -2,3 +2,6 @@ backups/*
 tmp/*
 sites/default/files/*
 sites/default/settings.php
+
+sites/nationaldesignawards.org/files/*
+sites/nationaldesignawards/settings.php
