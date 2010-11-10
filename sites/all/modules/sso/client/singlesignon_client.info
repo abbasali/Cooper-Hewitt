@@ -1,0 +1,11 @@
+; $Id: singlesignon_client.info,v 1.1 2009/09/30 18:55:11 meba Exp $
+name = Single sign-on client
+description = Authenticates a site's users against a single sign-on controller.
+core = 6.x
+
+; Information added by drupal.org packaging script on 2009-09-30
+version = "6.x-1.0-rc1"
+core = "6.x"
+project = "sso"
+datestamp = "1254337597"
+

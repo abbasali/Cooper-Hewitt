@@ -1,0 +1,12 @@
+Frequently Asked Questions:
+--------------------------
+
+I have followed installation or upgrade instructions and my sites are now
+redirecting to each other or just not working
+-------------------------------------------------------------------------
+
+Login to your database and issue a following SQL command:
+DELETE FROM prefix_variable WHERE name LIKE 'singlesignon%';
+DELETE FROM prefix_cache;
+
+Where prefix_ is your database prefix. If you are using different caching methods, you need to take care of deleting cache personally.

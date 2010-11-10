@@ -1,0 +1,85 @@
+<?php
+// $Id: singlesignon_client.install,v 1.1 2009/09/30 18:55:11 meba Exp $
+
+/**
+ * @file
+ * Install file for Single sign-on controller.
+ *
+ * Verifies requirements and cleans up on uninstall.
+ */
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function singlesignon_client_uninstall() {
+  variable_del('singlesignon_client_controller_url');
+  variable_del('singlesignon_client_private_key');
+}
+
+/**
+ * Implementation of hook_requirements().
+ */
+function singlesignon_client_requirements($phase) {
+  include_once dirname(drupal_get_path('module', 'singlesignon_client')) .'/singlesignon.inc';
+  $requirements = _singlesignon_requirements($phase);
+
+  $t = get_t();
+
+  if ($phase == 'install') {
+    // Make sure the controller module isn't active.
+    if (module_exists('singlesignon_controller')) {
+      $requirements['singlesignon conflict'] = array(
+        'title' => $t('Single Sign-on'),
+        'value' => $t('Controller'),
+        'description' => $t('Only one single sign-on module can be installed at a time.'),
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+  }
+  else {
+    // Verify that the sessions and users tables are shared.
+    global $db_prefix;
+    $requirements['singlesignon tables'] = array(
+      'title' => $t('Single sign-on tables'),
+    );
+    $tables = array('authmap', 'sessions', 'users');
+
+    $error = !is_array($db_prefix);
+    if (!$error) {
+      foreach ($tables as $table) {
+        if (!isset($db_prefix[$table])) {
+          $error = TRUE;
+          break;
+        }
+      }
+    }
+
+    if (!$error) {
+      $requirements['singlesignon tables'] += array(
+        'value' => $t('Shared'),
+        'severity' => REQUIREMENT_OK,
+      );
+    }
+    else {
+      $tail = array_pop($tables);
+      $list = $t('%list and %tail', array('%list' => implode(', ', $tables), '%tail' => $tail));
+      $requirements['singlesignon tables'] += array(
+        'value' => $t('Not shared'),
+        'description' => $t('Single Sign-on Client requires the !tables tables to be shared with the controller site. Please add an appropriate db_prefix array to %settings, such as:', array('!tables' => $list, '%settings' => conf_path() .'/settings.php')) ."<br /><code>\$db_prefix = array('default' => 'client prefix', 'authmap' => 'controller prefix', 'sessions' => 'controller prefix', 'users' => 'controller prefix');
+        </code>",
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+
+  }
+
+  return $requirements;
+}
+
+/**
+ * Implementation of hook_schema_alter().
+ */
+function singlesignon_client_schema_alter(&$schema) {
+  include_once dirname(drupal_get_path('module', 'singlesignon_client')) .'/singlesignon.inc';
+  _singlesignon_schema_alter($schema);
+}

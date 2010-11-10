@@ -1,0 +1,55 @@
+Upgrading from single sign-on 1.x
+---------------------------------
+
+If you were using previous version of shared
+sign-on, you will have to upgrade your current setup.
+
+Using shared sign-on on multiple installations
+----------------------------------------------
+
+All you have to do is pick one of your installations as a master. Disable old
+single sign-on module and remove it from the site.  Install Controller module
+on master, install Client on clients. Then proceed according to installation
+instructions in README.txt
+
+Using shared sign-on on shared installation
+-------------------------------------------
+
+You need this if you are using Domain Access module and other similar module
+allowing you to run multiple "domains" on one installation.
+
+Overview: You will have to create a separate login site, then dump all your
+users and sessions from current sites, create a separate database for them and
+share tables across all installations.
+
+1) Disable old single sign-on module and remove it from the site.
+
+2) Create a separate login site, called 'master'. Example:
+http://master.example.com, http://login.example.com,
+http://sharedsignon.example.com
+
+3) Install Drupal 6.x or 5.x on the master site as usual.
+
+4) Create database used for shared tables. Example: example_com_shared. You can use following UNIX command:
+mysqladmin create example_com_shared -p
+
+5) Grant access to example_com_shared to the SAME user that is using old databases. This is essential.
+
+6) Dump following tables on old sites: users, authmap, sessions. You can use following UNIX command:
+mysqldump database_name users authmap sessions -u database_user -p > sso_users_install.sql
+
+7) Import dumped file to shared database:
+mysql example_com_shared --default-character-set=utf8 -u database_user -p < sso_users_install.sql
+
+8) Edit settings.php on all sites including master. Change $db_prefix = '' to:
+
+$db_prefix = array(
+    'default'   => '',
+    'users'     => 'example_com_shared.',
+    'sessions'  => 'example_com_shared.',
+    'authmap'   => 'example_com_shared.',
+    );
+
+9) You should now be able to browse all sites without any problems. You should have shared users between client and master sites.
+
+10) Follow standard installation procedures in README.txt.
