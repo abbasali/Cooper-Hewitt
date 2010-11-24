@@ -1,0 +1,173 @@
+/**
+ * @version		1.5.3 August 18, 2010
+ * @author		RocketTheme, LLC http://www.rockettheme.com
+ * @copyright 	Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license		http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+/* Style2 */
+
+/* Logo Image */
+#logo {background: url(../images/style2/logo.png) 0 0 no-repeat;}
+
+/* Backgrounds */
+#main-trans, #main-trans2, #main-trans-top, #main-trans-bottom {background: url(../images/backgrounds/style2/main-trans.png) 0 0;}
+#main-trans2 {padding: 0 10px 10px 10px;}
+.colmask, #mainmodules7 {background: #fff;}
+
+/* Backgrounds - Full */
+body {background: #E8E9EA;}
+body.full #bg-tile {background: #E8E9EA url(../images/backgrounds/style2/bg-tile.png) 50% 0 repeat-x;}
+body.full #bg-main {background: url(../images/backgrounds/style2/bg-main.png) 50% 0 no-repeat;}
+body.full #footer-bg {background: url(../images/backgrounds/style2/footer-bg.png) 0 100% no-repeat;}
+body.full #footer-bg2 {background: url(../images/backgrounds/style2/footer-bg2.png) 100% 100% no-repeat;}
+body.full .feature-module {color: #333;background: url(../images/backgrounds/style2/feature-underlay.png) 100% 100% no-repeat;}
+body.full #header {background: url(../images/backgrounds/style2/main-trans.png) 0 0;}
+#horiz-menu ul, #horiz-menu .drop-top {background-image: url(../images/style2/main/drop-bg-1.png);}
+#horiz-menu ul.columns2, #horiz-menu .columns2 > .drop-top {background-image: url(../images/style2/main/drop-bg-2.png);}
+
+/* Backgrounds - Medium */
+body.medium #bg-tile {background: #E8E9EA url(../images/backgrounds/style2/bg-tile.png) 50% 0 repeat-x;}
+body.medium #bg-main {background: url(../images/backgrounds/style2/bg-main-med.png) 50% 112px repeat-x;}
+body.medium #footer-bg {background: url(../images/backgrounds/style2/footer-bg.png) 0 100% no-repeat;}
+body.medium #footer-bg2 {background: url(../images/backgrounds/style2/footer-bg2.png) 100% 100% no-repeat;}
+body.medium .feature-module {color: #333;background: url(../images/backgrounds/style2/feature-underlay.png) 100% 100% no-repeat;}
+
+/* Backgrounds - Simple */
+body.simple #bg-tile {background: #E8E9EA url(../images/backgrounds/style2/bg-tile.png) 50% -115px repeat-x;}
+body.simple #header .wrapper {background: url(../images/backgrounds/style2/main-trans.png) 0 0;}
+body.simple .feature-module {color: #333;}
+body.simple #horiz-menu ul, body.simple #horiz-menu .drop-top {background-image: url(../images/style2/main/drop-bg-1-simple.png);}
+body.simple #horiz-menu ul.columns2, body.simple #horiz-menu .columns2 > .drop-top {background-image: url(../images/style2/main/drop-bg-2-simple.png);}
+
+/* Header */
+#searchmod-surround, a.large .button, a.small .button, a.large:hover .button, a.small:hover .button {background-image: url(../images/style2/main/header-tools.png);}
+#header, #showmodules, #showmodules h3, #top-right ul li a {color: #666;}
+#searchmod-surround input {color: #666;}
+#header .rokradios, #header .rokradios-active, #header .rokchecks, #header .rokchecks-active {background-image: url(../images/style2/main/rokinputs-trans.png);color: #666;}
+#top-advertisement {background: #000;color: #fff;}
+
+/* Horizontal Menu */
+#horiz-menu {background: url(../images/backgrounds/style2/main-trans.png) 0 0;}
+#horiz-menu li.root, #horiz-menu.splitmenu li {background: none;}
+#horiz-menu li.root > .item, #horiz-menu li.root.active > .item, #horiz-menu li.root:hover > .item, #horiz-menu.splitmenu li .item {color: #333;background: url(../images/style2/main/horizmenu-div.png) 100% 50% no-repeat;}
+#horiz-menu li.root > .daddy span {background: url(../images/style2/main/horizmenu-bullet.png) 100% -272px no-repeat;}
+#horiz-menu li.root:hover, #horiz-menu li.root.active, #horiz-menu li.root.f-menuparent-itemfocus, #horiz-menu.splitmenu li:hover,  #horiz-menu.splitmenu li.sfHover, #horiz-menu.splitmenu li.active {background: none;}
+#horiz-menu li:hover > .item, #horiz-menu li.active > .item, #horiz-menu li.f-menuparent-itemfocus .item  {color: #333;}
+
+/* Menu Dropdowns */
+#horiz-menu li > .bullet {background: url(../images/style2/main/horizmenu-bullet.png) 5px -420px no-repeat;}
+#horiz-menu li:hover > .bullet, #horiz-menu li.f-menuparent-itemfocus .bullet, #horiz-menu li.active > .bullet {background: url(../images/style2/main/horizmenu-bullet.png) 5px -571px no-repeat;}
+#horiz-menu li {background: url(../images/style2/main/drop-div.png) 50% 100% no-repeat;}
+#horiz-menu li:hover, #horiz-menu li.active, #horiz-menu li.f-menuparent-itemfocus {}
+#horiz-menu li > .daddy span {background: url(../images/style2/main/horizmenu-bullet.png) 100% -723px no-repeat;}
+
+/* Modules */
+h3.module-title, .contentheading {background: #f7f7f7;color: #666;}
+h3.module-title span, .contentheading span {background: url(../images/style2/modules/h3-main.png) 0 0 repeat-x;color: #fff;padding: 0 8px 0 30px;}
+.logo-module .moduletable {color: #fff;}
+.inset .module-inner {background: #f0f0f0;color: #333;border: 1px solid #DDDEDF;}
+.inset .inset-h3 {background: #fff;}
+.inset h3.module-title {background: url(../images/style2/modules/inset-h3.png) 10px 50% no-repeat;color: #333;border: 0;}
+.inset .inset-h3 span {color: #333;}
+form.poll .readon-wrap1 a {color: #333;}
+
+/* Module Variations */
+.hilite1 .module-inner {background: url(../images/style2/modules/module-bg-v1.png) 50% 100% repeat-x;border: 1px solid #DFE0E1;}
+.hilite1 a.readon-main, .hilite1 input.button {color: #fff;}
+.hilite1 .roktabs-links, .hilite1 .active-arrows {background: #ddd;color: #333;}
+.hilite1 .roktabs-links ul li.active span {background: #fff;color: #000;}
+.hilite2 h3.module-title {background: #3C3C3C url(../images/style2/modules/h3-main.png) 0 -300px repeat-x;color: #ccc;}
+.hilite2 .module-inner {background: #0F0F0F url(../images/style2/modules/module-bg-v2.png) 50% 0 repeat-x;color: #ccc;}
+.hilite2 a.readon-main, .hilite2 input.button, .inset a.readon-main, .inset input.button {color: #333;}
+.hilite2 .roktabs-links ul li.active span {background: #353535;color: #fff;}
+.hilite3 h3.module-title span {background: url(../images/style2/modules/h3-main.png) 0 -400px repeat-x;color: #fff;}
+
+/* Side Menu */
+#main-body ul.menu li {border-bottom: 1px solid #ddd;}
+#main-body ul.menu li > a, #main-body ul.menu li > .separator, #main-body ul.menu li > .item, #main-body ul.menu li li > a, #main-body ul.menu li li > .separator, #main-body ul.menu li li > .item {background: url(../images/style2/main/arrows.png) 0 -58px no-repeat;}
+#main-body ul.menu li:hover > a, #main-body ul.menu li:hover > .separator, #main-body ul.menu li:hover > .item {background: url(../images/style2/main/arrows.png) 0 -607px no-repeat;color: #333;}
+#main-body ul.menu li.active > a, #main-body ul.menu li.active > .separator, #main-body ul.menu li.active > .item, #main-body ul.menu li.active:hover > a, #main-body ul.menu li.active:hover > .separator, #main-body ul.menu li.active:hover > .item {background: url(../images/style2/main/arrows.png) 0 -1126px no-repeat;color: #333;}
+
+/* RokAjaxSearch */
+#searchmod .search_options {color: #666;}
+#roksearch_results .rokajaxsearch-overlay {background: #292929;}
+#roksearch_results {background: #fff;border: 1px solid #ccc;border-bottom: 0;}
+#roksearch_results a:hover {color: #000;}
+#roksearch_results h3 {color: #333;}
+#roksearch_results span {color: #888;}
+#roksearch_results span.highlight {background: #999;color: #fff;}
+#roksearch_results .roksearch_header, #roksearch_results .roksearch_row_btm {background: #fff;border-bottom: 1px solid #ccc;color: #666;}
+#roksearch_results .roksearch_odd {background: #efefef;border-bottom: 1px solid #dfdfdf;}
+#roksearch_results .roksearch_even {border-bottom: 1px solid #dfdfdf;}
+#roksearch_results .roksearch_odd-hover, #roksearch_results .roksearch_even-hover {background: #fff;}
+#roksearch_results .roksearch_odd-hover h3, #roksearch_results .roksearch_even-hover h3 {background: url(../images/style2/main/arrows.png) 0 -1794px no-repeat;}
+#roksearch_results a#roksearch_link, #roksearch_results .arrow-left, #roksearch_results .arrow-left-disabled, #roksearch_results .arrow-right-disabled, #roksearch_results .arrow-right {background-image: url(../images/style2/main/header-tools.png);}
+
+/* RokQuickCart */
+.cart_quickcart .item_add span, .cart_quickcart .item_add:hover, .cart_quickcart .item_add:hover span, .cart_quickcart .simpleCart_checkout:hover span, .cart_quickcart .simpleCart_checkout span, .cart_quickcart .simpleCart_empty span, .cart_quickcart .simpleCart_empty:hover span {background-image: url(../images/style2/main/readon-r.png);}
+
+/* Roktabs */
+.roktabs-links, .active-arrows {background: #D5040B;color: #fff;}
+.roktabs-links ul li.active span {background: url(../images/style2/modules/h3-main.png) 0 -300px repeat-x;color: #fff;}
+.roktabs-wrapper .arrow-next, .roktabs-wrapper .arrow-prev {background-image: url(../images/style2/main/roktabs-arrows.png);}
+
+/* RokStories */
+.feature-block span.feature-title {color: #fff;}
+.feature-block .feature-numbers {color: #333;}
+.rokstories-layout4 .feature-block .feature-number-sub.active {color: #fff;}
+.rokstories-layout4 .feature-block .desc-container .description, .rokstories-layout4 .feature-block .feature-numbers, body.simple .rokstories-layout4 .feature-block .desc-container .description, body.simple .rokstories-layout4 .feature-block .feature-numbers {background-image: url(../images/style2/modules/rokstories-title.png);}
+body.full .rokstories-layout4 .feature-block .desc-container .description {background-position: 0 0;background-repeat: no-repeat;}
+body.full .rokstories-layout4 .feature-block .feature-numbers {background-position: 0 -290px;background-repeat: no-repeat;}
+.rokstories-layout4 .feature-block .desc-container .description {padding-right: 10px;}
+.rokstories-layout4 .feature-block .feature-numbers {padding: 2px 0;}
+
+/* RokNewsPager */
+body .roknewspager-h3 {background: url(../images/style2/modules/h3-main.png) 0 -100px repeat-x;color: #666;}
+body .hilite2 .roknewspager-h3 {background: url(../images/style2/modules/h3-main.png) 0 -300px repeat-x;color: #ccc;}
+body .hilite2 .roknewspager-numbers {color: #555;}
+body .roknewspager-toggle {background-image: url(../images/style2/main/arrows.png);background-color: transparent;}
+body ul.roknewspager .roknewspager-div {border-bottom: 1px dotted #ccc;}
+body .hilite2 ul.roknewspager .roknewspager-div {border-bottom: 1px dotted #333;}
+
+/* Bottom */
+#bottom-main {background: #E8E9EA;}
+#footer {background: #E8E9EA;color: #666;}
+#footer a.readon-main, #footer input.button {color: #000;}
+#rocket {background: url(../images/style2/main/header-tools.png) -127px -53px no-repeat;}
+
+/* Typography */
+span.highlight {color:#D5040B;}
+.highlight1 span.highlight {color:#000;}
+div.highlight1, div.highlight2 {color:#666;}
+div.highlight1 {background: #FEFFFE url(../images/typo/highlight1-2.jpg) 0 0 no-repeat;border:1px solid #DFE1E2;}
+div.highlight2 {background: #D4D6D7 url(../images/typo/highlight2-2.jpg) 0 0 no-repeat;border:1px solid #D4D6D7;}
+
+#breadcrumbs-home {background: url(../images/style2/main/typo-assets.png) 0 0 no-repeat;}
+span.breadcrumbs img {background: url(../images/style2/main/arrows.png) 0 -1794px no-repeat;}
+.sectiontableentry1 {background: #f1f1f1;}
+.article-info-surround {background: #f7f7f7;border-bottom: 1px solid #e7e7e7;color: #333;}
+.rokradios, .rokchecks, .rokradios-active, .rokchecks-active {background-image: url(../images/style2/main/rokinputs.png);}
+.readon1-l {background-image: url(../images/style2/main/readon-l.png);}
+.readon1-m {background-image: url(../images/style2/main/readon-m.png);}
+.readon1-r {background-image: url(../images/style2/main/readon-r.png);}
+.readon-wrap1 a {color: #333;}
+form.search_result input#search_searchword.inputbox, form.form-login .inputbox, input#email, .register-page .inputbox, input#contact_name.inputbox, input#contact_email.inputbox, input#contact_subject.inputbox, textarea#contact_text.inputbox {border: 1px solid #ddd;}
+ul.latestnews li a, ul.mostread li a, .blog_more ul li a, .block ul#mainlevel-nav li a, .featured-text-block li a, form.form-login .login-links a {background: url(../images/style2/main/arrows.png) 0 -1797px no-repeat;}
+.inset ul.latestnews li a, .inset ul.mostread li a, .inset .blog_more ul li a, .inset .block ul#mainlevel-nav li a, .inset .featured-text-block li a, .inset form.form-login .login-links a, .hilite2 ul.latestnews li a, .hilite2 ul.mostread li a, .hilite2 .blog_more ul li a, .hilite2 .block ul#mainlevel-nav li a, .hilite2 .featured-text-block li a, .hilite2 form.form-login .login-links a, #footer ul.latestnews li a, .footer ul.mostread li a, .footer .blog_more ul li a, .footer .block ul#mainlevel-nav li a, .footer .featured-text-block li a, .footer form.form-login .login-links a {background: url(../images/style2/main/arrows.png) 0 -1575px no-repeat;}
+.inset ul.latestnews li, .inset ul.mostread li, .inset .blog_more ul li, .inset .block ul#mainlevel-nav li, .inset .featured-text-block li {border-bottom: 1px solid #d0d0d0;}
+.buttonheading .pdf, .buttonheading .print, .buttonheading .email {background-image: url(../images/style2/main/typo-assets.png);}
+.pagination .page-block, .pagination .page-inactive:hover a {color: #fff;font-weight: bold;}
+.pagination .page-block a {color: #333;}
+
+/* K2 Stuff */
+#k2Container img {border: 1px solid #e2e2e2;}
+#k2Container li.even {background: #f7f7f7;}
+div.itemListCategory, div.subCategory, div.itemToolbar, div.itemNavigation, div.itemComments {background: #fff;border:1px solid #ddd;}
+div.itemComments .inputbox, div.itemComments textarea, div.itemComments #recaptcha_table {border: 1px solid #D1DFDF !important;}
+input#modlgn_username.inputbox, input#modlgn_passwd.inputbox {border: 1px solid #BBCCCC;}
+.k2LoginBlock input.button {color: #333;}
+
+/* Demo Stuff */
+.abstract-menu li a {color: #333;font-size: 29px;text-transform: uppercase;}
+.abstract-menu li a:hover span {}
+.abstract-menu li a.am1, .abstract-menu li a.am2, .abstract-menu li a.am3, body.simple .abstract-menu li a.am1, body.simple .abstract-menu li a.am2, body.simple .abstract-menu li a.am3 {}

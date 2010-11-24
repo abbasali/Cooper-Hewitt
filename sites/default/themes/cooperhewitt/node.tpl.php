@@ -1,32 +1,61 @@
 <?php
-// $Id: node.tpl.php,v 1.5 2007/10/11 09:51:29 goba Exp $
+// $Id: node.tpl.php,v 1.4 2008/01/25 21:21:44 goba Exp $
+
+/**
+ * @file node.tpl.php
+ **/
 ?>
-<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?>">
+<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?> clear-block">
+	
+	<div class="full-article">
+		<div class="module-tm">
+			<div class="module-tl"></div>
+			<div class="module-tr"></div>
+		</div>
+		
+		<div class="module-inner">
 
-<?php print $picture ?>
+			<div class="article-rel-wrapper">
+				<h2 class="contentheading"><?php echo $title; ?></h2>
+			</div>
+					  
+			<?php if ($submitted): ?>	
+				  		
+				<div class="article-info-surround">
+					<div class="article-info-right">
+						<span class="createdby"><?php print $name; ?></span>
+					</div>
+					<div class="iteminfo">
+	
+						<div class="article-info-left">
+							<span class="createdate">
+							
+								<span class="date1"><?php print format_date($node->created, 'custom', "F j, Y g:i a") ?></span>
+							</span>
+							<div class="clr"></div>
+						</div>
+	
+					</div>
+				</div>
+			
+			<?php endif; ?>	
 
-<?php if ($page == 0): ?>
-  <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
-<?php endif; ?>
+							
+			
+			
+			<?php print $content ?>
+			    
+			<?php print $links; ?>   
+			   
+		</div>
+		
+		<div class="module-bm">
+			<div class="module-bl"></div>
+			<div class="module-br"></div>
+		</div>
 
-  <?php if ($submitted): ?>
-    <span class="submitted"><?php print $submitted; ?></span>
-  <?php endif; ?>
-
-  <div class="content clear-block">
-    <?php print $content ?>
-  </div>
-
-  <div class="clear-block">
-    <div class="meta">
-    <?php if ($taxonomy): ?>
-      <div class="terms"><?php print $terms ?></div>
-    <?php endif;?>
-    </div>
-
-    <?php if ($links): ?>
-      <div class="links"><?php print $links; ?></div>
-    <?php endif; ?>
-  </div>
-
+		
+	</div>
+	<br /><br />
+  
 </div>

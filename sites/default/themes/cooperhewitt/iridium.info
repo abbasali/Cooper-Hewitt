@@ -1,0 +1,51 @@
+name = Iridium
+project = rt_iridium_d6
+project status url = http://updates.rockettheme.com/drupal/release-history
+description = Rockettheme Iridium Theme for Drupal
+version = 6.x-1.0
+core = 6.x
+engine = phptemplate
+
+features[] = favicon
+
+regions[advertisement] = Advertisement
+
+regions[logo_space] = Logo Space
+regions[top_right] = Top Right
+regions[search] = Search
+
+regions[toolbar] = Toolbar
+regions[feature] = Feature
+
+regions[showcase] = Showcase
+
+regions[left] = Left
+regions[main_feature] = Main Feature
+regions[user123] = User 123
+regions[inset] = Inset
+regions[frontpage] = Frontpage
+regions[main123] = Main 123
+regions[main456] = Main 456
+regions[inset2] = Inset 2
+regions[user456] = User 456	
+regions[right] = Right
+
+regions[main789] = Main 789
+regions[user789] = User 789
+
+regions[footer123] = Footer 123
+regions[footer4] = Footer 4
+
+regions[advertisement2] = Advertisement 2
+
+regions[debug] = Debug
+
+stylesheets[all][] = css/typography.css
+stylesheets[all][] = css/headers.css
+stylesheets[all][] = css/drupal.css
+stylesheets[all][] = css/template_css.css
+
+
+
+
+	
