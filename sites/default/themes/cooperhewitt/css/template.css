@@ -5,7 +5,7 @@
  * @license		http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
  */
 /* This is the Main template logo, Edit this to match the width and height of your new logo image */
-#logo {width: 240px;height: 80px;}
+#logo {width: 420px;height: 70px;}
 
 /* Template Custom Fonts */
 @font-face {font-family: Bebas;src: url(../fonts/Bebas.eot);}
@@ -64,9 +64,9 @@ a:hover {text-decoration: underline;}
 .inset .rokchecks-active, #footer .rokchecks-active, .hilite2 .rokchecks-active {background-position: 0 -1125px;background-repeat: no-repeat;}
 
 /* Header */
-#header .padding {padding: 15px 20px 17px 20px;overflow: hidden;}
+#header .padding {padding: 15px 20px 0px 20px;overflow: hidden;}
 #logo {float: left;margin: 0 25px 0 0;}
-.logo-module {width: 275px;float: left;overflow: hidden;}
+.logo-module {width: 420px;float: left;overflow: hidden;}
 .logo-module .moduletable {clear: both;}
 .banner-module .moduletable {margin: 0;padding: 0 20px;float: right;}
 .banner-module, .feature-module {overflow: hidden;}
