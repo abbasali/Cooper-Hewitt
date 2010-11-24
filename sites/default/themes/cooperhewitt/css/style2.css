@@ -133,7 +133,7 @@ body .hilite2 ul.roknewspager .roknewspager-div {border-bottom: 1px dotted #333;
 #bottom-main {background: #E8E9EA;}
 #footer {background: #E8E9EA;color: #666;}
 #footer a.readon-main, #footer input.button {color: #000;}
-#rocket {background: url(../images/style2/main/header-tools.png) -127px -53px no-repeat;}
+/* #rocket {background: url(../images/style2/main/header-tools.png) -127px -53px no-repeat;} */
 
 /* Typography */
 span.highlight {color:#D5040B;}
