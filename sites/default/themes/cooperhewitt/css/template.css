@@ -204,7 +204,7 @@ body.simple .rokstories-layout4 .feature-block .feature-numbers {background-posi
 .hilite1 .roktabs-wrapper .arrow-prev:hover {background-position: 0 -46px;background-repeat: no-repeat;}
 
 /* RokAjaxSearch */
-#searchmod {width: 223px;float: right;margin-top: 12px;}
+#searchmod {width: 223px;float: right;margin: 30px -175px;}
 #searchmod .moduletable {padding: 0;}
 #searchmod h3 {font-size: 14px;margin: 0 0 10px 5px;padding: 0;}
 #searchmod-surround {height: 22px;background-position: 0 0;background-repeat: no-repeat;}
