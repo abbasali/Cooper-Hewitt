@@ -33,7 +33,7 @@
 
 /* Core Formatting */
 html {height: 100%;margin-bottom: 1px;}
-body {margin: 0;line-height: 135%;}
+body {margin: 0;}
 form {margin: 0;padding: 0;}
 body.f-small, body#ff-optima.f-small, body#ff-georgia.f-small {font-size: 11px;}
 body, body.f-default {font-size: 12px;}
