@@ -1,0 +1,163 @@
+<?php
+/**
+ * @package drupal
+ * @subpackage droklatestnews
+ * @version 6.x-1.2 August 12, 2010
+ * @author RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+/*====================================
+	dRokLatestNews Module
+====================================*/
+
+/*
+* Implementation of hook_block()
+*/
+
+function droklatestnews_block($op = 'list', $delta = 0, $edit = array()) {
+	switch ($op) {
+	
+		case 'list':
+			$blocks[0]['info'] = t('dRokLatestNews');
+			$blocks[0]['cache'] = BLOCK_NO_CACHE;
+			return $blocks;
+			break;
+		
+		// configure items on block admin page
+		case 'configure':
+		case 'save':
+			break;
+		case 'view':
+			$textLabel = variable_get("latestnews_label", '');
+            $block['subject'] = $textLabel;
+			$block['content'] = theme('droklatestnews');
+			return $block;
+			break;
+	}
+
+}
+
+function droklatestnews_theme() {
+  return array(
+    'droklatestnews' => array(
+      'template' => 'droklatestnews',
+      'arguments' => array('links' => array()),
+    ),
+  );
+}
+
+
+function droklatestnews_admin() {
+	
+	$sql = "SELECT term_node.*, term_data.* FROM term_node, term_data WHERE  term_node.tid = term_data.tid ORDER BY term_data.name";
+	$result = db_query($sql);
+	
+	$form = array();
+	
+	$form['latestnews_rotatorCount'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Maximum number of items to retrieve'),
+	    '#default_value' => variable_get('latestnews_rotatorCount', 6),
+	    '#size' => 4,
+	    '#maxlength' => 4,
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  
+	  $form['latestnews_label'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Pretext Label'),
+	    '#default_value' => variable_get('latestnews_label', 'Updates:'),
+	    '#size' => 25,
+	    '#maxlength' => 25,
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['latestnews_linklabel'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Link Label'),
+	    '#default_value' => variable_get('latestnews_linklabel', 'Full Story'),
+	    '#size' => 25,
+	    '#maxlength' => 25,
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['latestnews_category'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Category ID'),
+	    '#size' => 4,
+	    '#maxlength' => 2,
+	    '#default_value' => variable_get('latestnews_category', ''),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['latestnews_feature'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Feature First Item'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('latestnews_feature', 1),
+	    '#description' => t("Display the latest item with featured style."),
+	    '#required' => TRUE,
+	  );
+	  
+	 $form['latestnews_img_path'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Path to Images'),
+	    '#default_value' => variable_get('latestnews_img_path', 'files/stories/'),
+	    '#size' => 50,
+	    '#maxlength' => 50,
+	    '#description' => t("The location of images for latestnews"),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['latestnews_preview_length'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Text Preview Length'),
+	    '#default_value' => variable_get('latestnews_preview_length', 100),
+	    '#size' => 6,
+	    '#maxlength' => 6,
+	    '#required' => TRUE,
+	  );
+	  
+
+	
+	  return system_settings_form($form);
+}
+
+function droklatestnews_menu() {
+
+	$items = array();
+	
+	$items['admin/rockettheme'] = array(
+		'title' => 'RocketTheme',
+		'description' => 'Manage settings for custom RocketTheme Modules.',
+		'position' => 'right',
+		'weight' => -5,
+		'page callback' => 'system_admin_menu_block_page',
+		'access arguments' => array('administer site configuration'),
+		'file' => 'system.admin.inc',
+		'file path' => drupal_get_path('module', 'system'),
+	
+	);
+	
+	
+	$items['admin/rockettheme/droklatestnews'] = array(
+	'title' => 'dRokLatestNews ',
+	'description' => 'Administer settings for dRokLatestNews',
+	'page callback' => 'drupal_get_form',
+	'page arguments' => array('droklatestnews_admin'),
+	'access arguments' => array('access administration pages'),
+	'type' => MENU_NORMAL_ITEM,
+	);
+	
+	return $items;
+}
+

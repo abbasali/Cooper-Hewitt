@@ -1,0 +1,137 @@
+<?php
+
+function drokblockclass_menu() {
+
+	$items = array();
+	
+	$items['admin/rockettheme'] = array(
+		'title' => 'RocketTheme',
+		'description' => 'Manage settings for custom RocketTheme Modules.',
+		'position' => 'right',
+		'weight' => -5,
+		'page callback' => 'system_admin_menu_block_page',
+		'access arguments' => array('administer site configuration'),
+		'file' => 'system.admin.inc',
+		'file path' => drupal_get_path('module', 'system'),
+	
+	);
+
+  $items['admin/rockettheme/drokblockclass'] = array(
+    'title' => 'dRokBlockClass',
+    'description' => "Create and edit block class styles.",
+   	'page callback' => 'drupal_get_form',
+    'page arguments' => array('drokblockclass_admin_settings'),
+    'access arguments' => array('administer block class'),
+    'weight' => 1
+  );
+
+  return $items;
+
+}
+
+function drokblockclass_admin_settings(){
+	
+	$form['block_classes'] = array(
+		'#type' => 'textarea',
+    '#title' => t('Block classes'),
+    '#default_value' => variable_get('block_classes', NULL),
+    '#description' => t('Enter the block classes here in the form className|Title.'),
+  );
+
+  return system_settings_form($form);
+	
+}
+
+function drokblockclass_get_class($block) {
+
+  $result = db_fetch_object(db_query('SELECT class FROM {block_class} WHERE module = "%s" AND delta = %d', $block->module, $block->delta));
+
+  if ($result !== FALSE) {
+    return $result->class;
+  }
+
+}
+
+function drokblockclass_delete_class($module, $delta) {
+
+	db_query("DELETE FROM {block_class} WHERE module='%s' AND delta=%d", $module, $delta);
+
+}
+
+function drokblockclass_add_class($module, $delta, $class) {
+
+	drokblockclass_delete_class($module, $delta);
+	
+	if($class){
+		db_query("INSERT INTO {block_class} (module, delta, class) VALUES ('%s', %d,'%s')", $module, $delta, $class);
+	}
+
+}
+
+
+function drokblockclass_form_alter(&$form, $form_state, $form_id){
+
+	switch ($form_id){
+		
+		case 'block_add_block_form':
+		case 'block_admin_configure':
+		
+		$block->module = $form['module']['#value'];
+		$block->delta = $form['delta']['#value'];
+
+		$class = drokblockclass_get_class($block);
+
+		$form['class'] = array(
+			'#type' => 'fieldset',
+			'#title' => t('Class'),
+			'#weight' => 0,
+			'#collapsible' => TRUE,
+			'#collapsed' => FALSE,
+		);
+
+		$block_classes_string = variable_get('block_classes', NULL);
+
+		$block_classes = explode("\n", $block_classes_string);
+
+		$options[] = '';
+
+		if(count($block_classes)){
+
+			foreach($block_classes as $block_class){
+
+				$explode_block_class = explode('|', $block_class);
+
+				$options[$explode_block_class[0]] = $explode_block_class[1];
+
+			}
+
+		}
+
+		 $form['class']['classes'] = array(
+		  '#type' => 'select',
+		  '#title' => t('Block class'),
+		  '#default_value' => $class,
+		  '#options' => $options,
+			'#description' => t('Please choose a class for your block.')
+		);
+
+		$form['#submit'][] = 'drokblockclass_form_block_admin_configure_submit';
+		
+		break;
+		
+	}
+	
+}
+
+function drokblockclass_form_block_admin_configure_submit($form_id, $form_values) { 
+	
+	drokblockclass_add_class($form_values['values']['module'], $form_values['values']['delta'], $form_values['values']['classes']);
+	
+}
+
+function drokblockclass_preprocess_block(&$variables){
+
+$variables['class'] = drokblockclass_get_class($variables['block']);	
+
+}
+
