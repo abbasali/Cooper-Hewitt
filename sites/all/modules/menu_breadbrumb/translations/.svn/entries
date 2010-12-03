@@ -1,0 +1,40 @@
+8
+
+dir
+21907
+https://luke@svn.prod.rockettheme.com/svn/src/rockettheme/drupal/modules/menu_breadcrumb/trunk/src/main/php/translations
+https://luke@svn.prod.rockettheme.com/svn/src
+
+
+
+2010-04-21T23:40:39.980642Z
+21703
+luke
+
+
+svn:special svn:externals svn:needs-lock
+
+hu.po
+file
+
+
+
+
+2010-01-11T21:30:08.000000Z
+d2c13789ebecb65b3e7a29c7c9c89362
+2010-04-21T23:40:39.980642Z
+21703
+luke
+
+menu_breadcrumb.pot
+file
+
+
+
+
+2009-12-01T22:55:43.000000Z
+be7e2f6fbdf71794ba763ed68aeb1ae8
+2010-04-21T23:40:39.980642Z
+21703
+luke
+

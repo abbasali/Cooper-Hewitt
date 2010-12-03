@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * Implementation of hook_schema().
+ */
+function drokblockclass_schema() {
+
+  $schema['block_class'] = array(
+    'description' => t('Stores block classes.'),
+    'fields' => array(
+	    'module' => array(
+	      'type' => 'text',
+	      'not null' => FALSE,
+	      'description' => t('The blocks\'s module.'),
+	    ),
+      'delta' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => t('The blocks\' delta'),
+      ),
+      'class' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => t('The class for the block.'),
+      )
+		)
+	);
+
+	return $schema;
+	
+};
+
+ /**
+ * Implementation of hook_install()
+ */
+function drokblockclass_install() {
+  drupal_install_schema('drokblockclass');
+}
+
+ /**
+ * Implementation of hook_install()
+ */
+function drokblockclass_uninstall() {
+  drupal_uninstall_schema('drokblockclass');
+}
+
+

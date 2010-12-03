@@ -1,0 +1,11 @@
+name = dRokBlockClass
+description = Allows assigning CSS classes to blocks.
+version = 6.x-1.1
+core = 6.x
+
+; uncomment these in order to enable remote update checks
+; project = drokblockclass
+; project status url = http://updates.rockettheme.com/drupal/release-history
+
+
+

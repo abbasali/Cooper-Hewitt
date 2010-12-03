@@ -1,0 +1,60 @@
+/**
+* @version		$Id: CHANGELOG.txt 13426 2009-11-04 16:36:00Z ian $
+* @package		Drupal
+* @copyright	Copyright (C) 2005 - 2009 Open Source Matters. All rights reserved.
+* @license		GNU/GPL, see LICENSE.php
+* Drupal is free software. This version may have been modified pursuant
+* to the GNU General Public License, and as distributed it includes or
+* is derivative of works licensed under the GNU General Public License or
+* other free or open source software licenses.
+*/
+
+1. Copyright and disclaimer
+---------------------------
+This application is opensource software released under the GPL.  Please
+see source code and the LICENSE file.
+
+
+2. Changelog
+------------
+This is a non-exhaustive (but still near complete) changelog for
+Joomla! 1.5, including beta and release candidate versions.
+Our thanks to all those people who've contributed bug reports and
+code fixes.
+
+Legend:
+
+* -> Security Fix
+# -> Bug Fix
+$ -> Language fix or change
++ -> Addition
+^ -> Change
+- -> Removed
+! -> Note
+
+------- Release [11-October-2010] -------
++ rokstories-mt1.2.js for newer themes
+
+Changed Files: 
+rokstories-mt1.2.js
+
+------- Release [8-September-2010] -------
+^ modified drokstories module to add additional admin options for new features
+
+Changed Files: 
+drokstories.module
+
+------- Release [12-August-2010] -------
+^ modified drokstories to support database table prefixes
+
+Changed Files: 
+drokstories.tpl.php
+
+
+------- Release [29-June-2010] -------
+^ updated drokstories.module to allow more characters in the category ID field
+
+
+
+------- Release 03 -------
+^ updated tpl file to support clean URLs

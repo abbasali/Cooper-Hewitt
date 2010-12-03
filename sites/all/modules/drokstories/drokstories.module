@@ -1,0 +1,347 @@
+<?php
+/**
+ * @package drupal
+ * @subpackage drokstories
+ * @version 6.x-1.6 October 11, 2010
+ * @author RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+/*====================================
+	dRokStories Module
+====================================*/
+
+/*
+* Implementation of hook_block()
+*/
+
+function drokstories_block($op = 'list', $delta = 0, $edit = array()) {
+	switch ($op) {
+	
+		case 'list':
+			$blocks[0]['info'] = t('dRokStories');
+			$blocks[0]['cache'] = BLOCK_NO_CACHE;
+			return $blocks;
+			break;
+		
+		// configure items on block admin page
+		case 'configure':
+		case 'save':
+			break;
+		case 'view':
+
+            $block['subject'] = "";
+			$block['content'] = theme('drokstories');
+			return $block;
+			break;
+	}
+
+}
+
+function drokstories_theme() {
+  return array(
+    'drokstories' => array(
+      'template' => 'drokstories',
+      'arguments' => array('links' => array()),
+    ),
+  );
+}
+
+function drokstories_admin() {
+	
+	$form = array();
+	
+	$form['drokstories_rotatorCount'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Maximum number of articles to retrieve'),
+	    '#default_value' => variable_get('drokstories_rotatorCount', 6),
+	    '#size' => 4,
+	    '#maxlength' => 4,
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	   $form['drokstories_category'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Category ID'),
+	    '#size' => 4,
+	    '#maxlength' => 4,
+	    '#default_value' => variable_get('drokstories_category', ''),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_showtitle'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Show Title'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('drokstories_showtitle', 1),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_showdate'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Show Date'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('drokstories_showdate', 0),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_showarticle'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Show Article'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('drokstories_showarticle', 1),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_showlink'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Show Link'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('drokstories_showlink', 1),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_showlabeltitle'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Show Label Title'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('drokstories_showlabeltitle', 0),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_linklabels'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Link Label Titles'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('drokstories_linklabels', 0),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_showarrows'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Show Arrows'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('drokstories_showarrows', 1),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_arrowpos'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Arrow Placement'),
+	    '#options' => array(
+			'inside' => 'Inside',
+			'outside' => 'Outside'
+		),
+	    '#default_value' => variable_get('drokstories_arrowpos', 'inside'),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_linktitles'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Link Titles'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('drokstories_linktitles', 0),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_linkimages'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Link Images'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('drokstories_linkimages', 0),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_autoplay'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Auto Play'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('drokstories_autoplay', 1),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_delay'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Display Time'),
+	    '#default_value' => variable_get('drokstories_delay', 7000),
+	    '#size' => 6,
+	    '#maxlength' => 6,
+	    '#description' => t("Amount of time to display each news item"),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_img_path'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Path to Images'),
+	    '#default_value' => variable_get('drokstories_img_path', 'files/stories/demo/rokstories/'),
+	    '#size' => 50,
+	    '#maxlength' => 50,
+	    '#description' => t("The location of images for dRokStories within theme directory"),
+	    '#required' => TRUE,
+	  );
+	  
+	  
+	  $form['drokstories_preview_length'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Preview Length'),
+	    '#default_value' => variable_get('drokstories_preview_length', 300),
+	    '#size' => 6,
+	    '#maxlength' => 6,
+	    '#description' => t("Amount of of preview text to display"),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_showthumbs'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Show Thumbnails'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('drokstories_showthumbs', 0),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_thumbpos'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Fixed Thumbnails'),
+	    '#options' => array(
+			'1' => 'Yes',
+			'0' => 'No'
+		),
+	    '#default_value' => variable_get('drokstories_thumbpos', 1),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_leftoffsetx'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Left Thumbnail X Offset'),
+	    '#default_value' => variable_get('drokstories_leftoffsetx', -40),
+	    '#size' => 6,
+	    '#maxlength' => 6,
+	    '#description' => t("X offset position of the Left thumbnail"),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_leftoffsety'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Left Thumbnail Y Offset'),
+	    '#default_value' => variable_get('drokstories_leftoffsety', -100),
+	    '#size' => 6,
+	    '#maxlength' => 6,
+	    '#description' => t("Y offset position of the Left thumbnail"),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_rightoffsetx'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Right Thumbnail X Offset'),
+	    '#default_value' => variable_get('drokstories_rightoffsetx', -30),
+	    '#size' => 6,
+	    '#maxlength' => 6,
+	    '#description' => t("X offset position of the Right thumbnail"),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_rightoffsety'] = array(
+	    '#type' => 'textfield',
+	    '#title' => t('Right Thumbnail Y Offset'),
+	    '#default_value' => variable_get('drokstories_rightoffsety', -100),
+	    '#size' => 6,
+	    '#maxlength' => 6,
+	    '#description' => t("Y offset position of the Right thumbnail"),
+	    '#required' => TRUE,
+	  );
+	  
+	  $form['drokstories_opacity'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Thumbnail Opacity'),
+	    '#options' => array(
+			'0.25' => '25%',
+			'0.50' => '50%',
+			'0.75' => '75%',
+			'1.0' => '100%'
+		),
+	    '#default_value' => variable_get('drokstories_opacity', 0.5),
+	    //'#description' => t(""),
+	    '#required' => TRUE,
+	  );
+	
+	  return system_settings_form($form);
+}
+
+function drokstories_menu() {
+
+	$items = array();
+	
+	$items['admin/rockettheme'] = array(
+		'title' => 'RocketTheme',
+		'description' => 'Manage settings for custom RocketTheme Modules.',
+		'position' => 'right',
+		'weight' => -5,
+		'page callback' => 'system_admin_menu_block_page',
+		'access arguments' => array('administer site configuration'),
+		'file' => 'system.admin.inc',
+		'file path' => drupal_get_path('module', 'system'),
+	
+	);
+	
+	
+	$items['admin/rockettheme/drokstories'] = array(
+	'title' => 'dRokStories ',
+	'description' => 'Administer settings for dRokStories',
+	'page callback' => 'drupal_get_form',
+	'page arguments' => array('drokstories_admin'),
+	'access arguments' => array('access administration pages'),
+	'type' => MENU_NORMAL_ITEM,
+	);
+	
+	return $items;
+	
+}
+
