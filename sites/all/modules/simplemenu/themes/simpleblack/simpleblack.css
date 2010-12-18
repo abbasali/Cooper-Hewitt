@@ -1,13 +1,27 @@
 /* Simpleblack theme v1.0 for Simple Menu styled by duvien.com July 2010 */
+
+.simplemenu-left {
+background: #101010 url(bkg.png) bottom left repeat-x;
+padding:5px 5px 5px 20px;
+height: 35px;
+border-bottom: 1px solid #999;
+}
+
+.simplemenu-right {
+background: #101010 url(bkg.png) bottom left repeat-x;
+padding:5px 5px 5px 0px;
+height: 35px;
+border-bottom: 1px solid #999;
+text-align: left;
+}
+
 .simplemenu-block {
-  height: 28px;
+  height: 35px;
   _margin-bottom: -20px;
 }
 #simplemenu {
-  background: #101010 url(bkg.png) bottom left repeat-x;
   font: bold 11px/20px "Lucida Grande", Verdana, sans-serif;
   color: #fff;
-  border-bottom: 1px solid #999;
   width: 100%;
   text-align: left;
   list-style-image: none;
