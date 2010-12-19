@@ -542,10 +542,10 @@ function _amazon_s3_upload_form($node) {
       $file = (object)$file;
       
       // Get the bucket url.
-      $bucket_url = _get_bucket_url();
-
+      /*$bucket_url = _get_bucket_url();
       $description = $file->filepath;
-      $description = "<small>" . $bucket_url . check_plain($description) . "</small>";
+      $description = "<small>" . $bucket_url . check_plain($description) . "</small>";*/
+      $description = "<small>" . _get_file_url($file->filepath) . "</small>";
       $form['files'][$key]['description'] = array('#type' => 'textfield', '#default_value' => !empty($file->description) ? $file->description : $file->filename, '#maxlength' => 256, '#description' => $description );
       $form['files'][$key]['size'] = array('#value' => format_size($file->filesize));
       $form['files'][$key]['remove'] = array('#type' => 'checkbox', '#default_value' => !empty($file->remove));
@@ -588,11 +588,16 @@ function _amazon_s3_upload_form($node) {
 /**
 * Function to get the bucket url
 */
-function _get_bucket_url() {
+function _get_file_url($filepath = null) {
   // Check if cloud url is set. Otherwise generate bucket url using bucket name.
   $bucket_url = variable_get('aws_cloud_url', '');
-  if (!$bucket_url) {
+  $file_url = '';
+  if ($filepath && (strpos($filepath, 'sites/') === 0)) {
+    $file_url = file_create_url($filepath);
+  }
+  elseif (!$bucket_url) {
     $bucket_url = 'http://' . variable_get('aws_bucket_name', '') . '.s3.amazonaws.com/';
+    $file_url = $bucket_url . $filepath;
   }
   else {
     if ("/" != substr($bucket_url, -1)) {
@@ -601,8 +606,9 @@ function _get_bucket_url() {
     if (strpos($bucket_url, 'http://') !== 0) {
       $bucket_url = "http://". $bucket_url;
     }
+    $file_url = $bucket_url . $filepath;
   }
-  return $bucket_url;
+  return $file_url;
 }
 
 /**
@@ -842,7 +848,7 @@ function theme_amazon_s3_attachments($files) {
   foreach ($files as $file) {
     $file = (object)$file;
     if ($file->list && empty($file->remove)) {
-      $href = _get_bucket_url() . $file->filepath;
+      $href = _get_file_url($file->filepath);
       $text = $file->description ? $file->description : $file->filename;
       $rows[] = array(l($text, $href), format_size($file->filesize));
     }
