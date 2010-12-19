@@ -389,7 +389,8 @@ function simplemenu_get_menu() {
         . ' id="simplemenu"' . substr($menu, $pos);
 
   variable_set('simplemenu_running', FALSE);
-  return '<div class="simplemenu-block">' . $menu . '</div>';
+  $simplemenu_path = drupal_get_path('module', 'simplemenu');
+  return '<table width="100%" cellspacing="0" cellpadding="0"><tr><td width="50px" class="simplemenu-left"><img src="'.url($simplemenu_path.'/logo.png').'" border="0" /></td><td class="simplemenu-right"><div class="simplemenu-block">' . $menu . '</div></td></tr></table>';
 }
 
 
