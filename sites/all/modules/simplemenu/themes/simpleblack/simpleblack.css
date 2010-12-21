@@ -1,15 +1,15 @@
 /* Simpleblack theme v1.0 for Simple Menu styled by duvien.com July 2010 */
 
 .simplemenu-left {
-background: #101010 url(bkg.png) bottom left repeat-x;
+background: #101010 url(bkg.png) repeat-x bottom left ;
 padding:5px 5px 5px 20px;
 height: 35px;
 border-bottom: 1px solid #999;
 }
 
 .simplemenu-right {
-background: #101010 url(bkg.png) bottom left repeat-x;
-padding:5px 5px 5px 0px;
+background: #101010 url(bkg.png) repeat-x bottom left ;
+padding:0px 5px 0px 0px;
 height: 35px;
 border-bottom: 1px solid #999;
 text-align: left;
@@ -41,7 +41,7 @@ text-align: left;
   border-right: 1px solid #323232;
   color: #eee;
   font-weight: bold;
-  padding: 4px 10px;
+  padding: 14px 10px;
   text-align: left;
   text-decoration: none; 
   text-shadow: 0px 1px 1px #000;
@@ -89,7 +89,7 @@ ul#simplemenu a.active {
   background: #111;
   /*filter:alpha(opacity=88);*/
   opacity: 0.88;
-  top: 7px;
+  top: 27px;
 }
 
 /* Third Sub level */
