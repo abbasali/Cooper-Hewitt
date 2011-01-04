@@ -47,7 +47,7 @@ body.simple #horiz-menu ul.columns2, body.simple #horiz-menu .columns2 > .drop-t
 #top-advertisement {background: #000;color: #fff;}
 
 /* Horizontal Menu */
-#horiz-menu {background: #161616;height:32px;margin:0px 10px 0px 10px}
+#horiz-menu {background: #161616;height:32px;margin:0px 0px 0px 0px}
 #horiz-menu li.root, #horiz-menu.splitmenu li {background: none;}
 #horiz-menu li.root > .item, #horiz-menu li.root.active > .item, #horiz-menu li.root:hover > .item, #horiz-menu.splitmenu li .item {color: #fff;background: none}
 #horiz-menu li.root > .daddy span {background: none}
