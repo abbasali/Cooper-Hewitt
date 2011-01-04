@@ -48,7 +48,7 @@ $theme_path = path_to_theme();
 	.x-c-s .col3 { left:<?php echo $current_rightcolumn_width; ?>px;width:<?php echo $current_rightcolumn_width; ?>px;}
 	
 	a, #top-right ul li a:hover, .abstract-menu li a:hover, #main-content .cart_totals div, #roksearch_results .roksearch_odd-hover h3, #roksearch_results .roksearch_even-hover h3, #horiz-menu.splitmenu li:hover .item span, #horiz-menu.splitmenu li.active .item span, #horiz-menu.splitmenu li.active:hover .item span {color: <?php echo $iridium_link_color; ?>}
-	#main-body ul.menu li > a, #main-body ul.menu li > .separator, #main-body ul.menu li > .item, #main-body ul.menu li li > a, #main-body ul.menu li li > .separator, #main-body ul.menu li li > .item, #horiz-menu li > .item, body #horiz-menu li.root:hover > .item span, body #horiz-menu li.root.active > .item span, body #horiz-menu li.root.active:hover > .item span, .feature-block a .readon1-r {color: <?php echo $iridium_link_color; ?>}	
+	#main-body ul.menu li > a, #main-body ul.menu li > .separator, #main-body ul.menu li > .item, #main-body ul.menu li li > a, #main-body ul.menu li li > .separator, #main-body ul.menu li li > .item, .feature-block a .readon1-r {color: <?php echo $iridium_link_color; ?>}	
 	.pagination .page-active, .pagination .page-inactive:hover, .rokstories-layout4 .feature-block .feature-number-sub.active {background: <?php echo $iridium_link_color; ?>}
 	
 </style>	
