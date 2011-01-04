@@ -16,14 +16,27 @@
 		<div class="module-inner">
 
 			<div class="article-rel-wrapper">
+                            <?php if ($node->type!="blog") { ?>
 				<h2 class="contentheading"><?php echo $title; ?></h2>
+                            <?php } else {
+                                $link = $node->links["comment_add"]["href"];
+                                ?>
+                                <h2 class="contentheading"><?php echo l($title,$link);?></h2>
+                            <?php } ?>
 			</div>
 					  
 			<?php if ($submitted): ?>	
 				  		
 				<div class="article-info-surround">
 					<div class="article-info-right">
-						<span class="createdby"><?php print $name; ?></span>
+					<span class="createdby"><?php
+                                            $uprofile = user_load(array('uid'=>$node->uid));
+                                            $user_fname = $uprofile->profile_;
+                                            if ($user_fname!="")
+                                                echo l($user_fname,'user/'.$node->uid);
+                                            else
+                                                echo $name;
+                                            ?></span>
 					</div>
 					<div class="iteminfo">
 	

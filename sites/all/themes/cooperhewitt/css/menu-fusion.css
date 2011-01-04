@@ -16,33 +16,79 @@
 /* Dropdowns */
 .menutop .subtext span {line-height: 18px;}
 .menutop .subtext em {line-height:13px;}
-.menutop ul {width:194px;padding:0 0 40px 13px;margin: 0;}
-.menutop .drop-top {width: 207px;height: 7px;}
+.menutop ul {width:185px;padding:0 0 30px 0px;margin:0;}
+.menutop .drop-top {width: 194px;height: 7px;}
 .menutop ul.columns2 {width:370px;}
 .menutop .columns2 > .drop-top {width:383px;}
 .menutop ul li {width:182px;}
+
 .menutop ul.columns2 li {width:178px;float:left;}
-.menutop li > .item {padding: 0;height: auto;line-height: 31px;display: block;font-size: 12px;}
-.menutop li > .bullet {padding: 3px 5px 5px 23px;}
-.menutop li > .item.image {padding:3px 10px 5px 5px;}
-.menutop li > .item img {float:left;margin: 6px 4px 0 5px;}
+.menutop li > .item {padding: 0;height: auto;line-height: 20px;display: block;font-size: 12px;}
+.menutop li > .bullet {padding: 3px 5px 5px 0px;}
+.menutop li > .item.image {padding:3px 0px 5px 0px;}
+.menutop li > .item img {float:left;margin: 6px 0px 0 5px;}
 .menutop li > .item span {display:block;padding: 0;width: 100%;}
 .menutop li a.item {cursor:pointer;}
 .menutop li span.item {cursor:default;outline:none;}
 .menutop .level2 > .drop-top {display: none;}
 
+#horiz-menu .menutop li.sfHover,
+#horiz-menu .menutop a:focus,
+#horiz-menu .menutop a:hover,
+#horiz-menu .menutop a:active {
+  color: #fff;
+}
+
+#horiz-menu .menutop a.active {
+  background: #555;
+  color: #fff;
+}
+
+/* Second Sub level */
+#horiz-menu .menutop li li a {
+  border-right: none;
+  border-top: 1px solid #323232;
+  padding: 6px 10px;
+  color:#fff;
+}
+
+#horiz-menu .menutop li li {
+  background: #111;
+  top: 0px;
+  margin-left: 2px;
+}
+/* Third Sub level */
+#horiz-menu .menutop li li li {
+  top: 1px;
+}
+
+/* Second-and-more-level hovering */
+#horiz-menu .menutop li li:hover {
+  background-color: #555;
+  text-shadow: 0 0 1px 0 #111;
+}
+#horiz-menu .menutop li li:hover a,
+#horiz-menu .menutop li li:hover li:hover a,
+#horiz-menu .menutop li li:hover li:hover li:hover a {
+  color: #fff;
+}
+
 /* Root Items */
-body #horiz-menu ul.level1 {background:none;}
-.menutop {list-style: none;margin: 0;padding: 0;position: relative;line-height: 1.0;float: left;}
-.menutop li.root {display: block;float: left;height: 47px;}
-.menutop li.root > .item {white-space: nowrap;display: block;float: left;font-weight: bold;font-size: 12px;text-decoration: none !important;z-index: 100;cursor: pointer;padding: 14px 12px 13px 12px;position:relative;margin: 0;outline: none;text-transform: uppercase;}
-.menutop li.root > .item span {display: block;padding: 0;margin: 0;outline: none;height:33px;}
+body #horiz-menu ul.level1 {
+  background:#161616;
+  color: #fff;
+  text-align: left;
+}
+.menutop {list-style: none;margin: 0;padding: 0;position: relative;float: left;}
+.menutop li.root {display: block;float: left;height: 31px;}
+.menutop li.root > .item {white-space: nowrap;display: block;float: left;color:#fff;font-size: 12px;text-decoration: none !important;z-index: 100;cursor: pointer;padding: 7px 10px 0px 10px;position:relative;margin: 0;outline: none}
+.menutop li.root > .item span {display: block;padding: 0;margin: 0;outline: none;height:25px;}
 .menutop li.root > .item em {font-size:11px;font-weight:normal;display:block;font-style:normal;text-transform: lowercase;}
-.menutop li.root > .daddy span {padding-right: 14px;}
+.menutop li.root > .daddy span {padding-right: 0px;}
 
 /* No JS */
-.menutop li:hover > .fusion-submenu-wrapper {left:165px;top:-14px;}
-.menutop li.root:hover > .fusion-submenu-wrapper {top:47px;left:-12px;}
+.menutop li:hover > .fusion-submenu-wrapper {left:165px;top:-18px;}
+.menutop li.root:hover > .fusion-submenu-wrapper {top:32px;left:-12px;}
 
 /* Fusion Pill */
 .fusion-pill-l {height: 47px;margin:0 2px 0 0;top:0;position:absolute;left:0;}

@@ -36,7 +36,7 @@ body.medium .feature-module {color: #333;background: url(../images/backgrounds/s
 body.simple #bg-tile {background: #E8E9EA url(../images/backgrounds/style2/bg-tile.png) 50% -115px repeat-x;}
 body.simple #header .wrapper {background: url(../images/backgrounds/style2/main-trans.png) 0 0;}
 body.simple .feature-module {color: #333;}
-body.simple #horiz-menu ul, body.simple #horiz-menu .drop-top {background-image: url(../images/style2/main/drop-bg-1-simple.png);}
+body.simple #horiz-menu ul, body.simple #horiz-menu .drop-top {background-image: none;}
 body.simple #horiz-menu ul.columns2, body.simple #horiz-menu .columns2 > .drop-top {background-image: url(../images/style2/main/drop-bg-2-simple.png);}
 
 /* Header */
@@ -47,19 +47,19 @@ body.simple #horiz-menu ul.columns2, body.simple #horiz-menu .columns2 > .drop-t
 #top-advertisement {background: #000;color: #fff;}
 
 /* Horizontal Menu */
-#horiz-menu {background: url(../images/backgrounds/style2/main-trans.png) 0 0;}
+#horiz-menu {background: #161616;height:32px;margin:0px 10px 0px 10px}
 #horiz-menu li.root, #horiz-menu.splitmenu li {background: none;}
-#horiz-menu li.root > .item, #horiz-menu li.root.active > .item, #horiz-menu li.root:hover > .item, #horiz-menu.splitmenu li .item {color: #333;background: url(../images/style2/main/horizmenu-div.png) 100% 50% no-repeat;}
-#horiz-menu li.root > .daddy span {background: url(../images/style2/main/horizmenu-bullet.png) 100% -272px no-repeat;}
+#horiz-menu li.root > .item, #horiz-menu li.root.active > .item, #horiz-menu li.root:hover > .item, #horiz-menu.splitmenu li .item {color: #fff;background: none}
+#horiz-menu li.root > .daddy span {background: none}
 #horiz-menu li.root:hover, #horiz-menu li.root.active, #horiz-menu li.root.f-menuparent-itemfocus, #horiz-menu.splitmenu li:hover,  #horiz-menu.splitmenu li.sfHover, #horiz-menu.splitmenu li.active {background: none;}
-#horiz-menu li:hover > .item, #horiz-menu li.active > .item, #horiz-menu li.f-menuparent-itemfocus .item  {color: #333;}
+#horiz-menu li:hover > .item, #horiz-menu li.active > .item, #horiz-menu li.f-menuparent-itemfocus .item  {}
 
 /* Menu Dropdowns */
-#horiz-menu li > .bullet {background: url(../images/style2/main/horizmenu-bullet.png) 5px -420px no-repeat;}
-#horiz-menu li:hover > .bullet, #horiz-menu li.f-menuparent-itemfocus .bullet, #horiz-menu li.active > .bullet {background: url(../images/style2/main/horizmenu-bullet.png) 5px -571px no-repeat;}
-#horiz-menu li {background: url(../images/style2/main/drop-div.png) 50% 100% no-repeat;}
+#horiz-menu li > .bullet {background: none}
+#horiz-menu li:hover > .bullet, #horiz-menu li.f-menuparent-itemfocus .bullet, #horiz-menu li.active > .bullet {background: none}
+#horiz-menu li {background: none;}
 #horiz-menu li:hover, #horiz-menu li.active, #horiz-menu li.f-menuparent-itemfocus {}
-#horiz-menu li > .daddy span {background: url(../images/style2/main/horizmenu-bullet.png) 100% -723px no-repeat;}
+#horiz-menu li > .daddy span {background: none}
 
 /* Modules */
 h3.module-title, .contentheading {background: #f7f7f7;color: #666;}
@@ -83,10 +83,94 @@ form.poll .readon-wrap1 a {color: #333;}
 .hilite3 h3.module-title span {background: url(../images/style2/modules/h3-main.png) 0 -400px repeat-x;color: #fff;}
 
 /* Side Menu */
-#main-body ul.menu li {border-bottom: 1px solid #ddd;}
+/*#main-body ul.menu li {border-bottom: 1px solid #ddd;}
 #main-body ul.menu li > a, #main-body ul.menu li > .separator, #main-body ul.menu li > .item, #main-body ul.menu li li > a, #main-body ul.menu li li > .separator, #main-body ul.menu li li > .item {background: url(../images/style2/main/arrows.png) 0 -58px no-repeat;}
 #main-body ul.menu li:hover > a, #main-body ul.menu li:hover > .separator, #main-body ul.menu li:hover > .item {background: url(../images/style2/main/arrows.png) 0 -607px no-repeat;color: #333;}
 #main-body ul.menu li.active > a, #main-body ul.menu li.active > .separator, #main-body ul.menu li.active > .item, #main-body ul.menu li.active:hover > a, #main-body ul.menu li.active:hover > .separator, #main-body ul.menu li.active:hover > .item {background: url(../images/style2/main/arrows.png) 0 -1126px no-repeat;color: #333;}
+*/
+
+.style-h3 h3.module-title {
+    font-family: Verdana, arial, san-serif;
+    font-size: 13px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#leftcol .module-inner {
+    padding-top: 1px;
+}
+#main-body ul.menu
+{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    line-height:2px;
+}
+
+#main-body ul.menu li
+{
+    border-bottom: 1px solid #E3EAEF;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+#main-body ul.menu li ul li
+{
+    border-bottom: 1px solid #E3EAEF;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+#main-body ul.menu li ul li.last
+{
+    border-bottom: 0px solid #E3EAEF;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin: 0px;
+    padding-left: 0px;
+}
+#main-body ul.menu li ul li.first
+{
+    margin-top: 5px;
+}
+
+
+#main-body ul.menu li a, #main-body ul.menu li a:link, #main-body ul.menu li a:visited
+{
+    font-weight:bold;
+    font-family: verdana, arial, san-serif;
+    font-size: 11px;
+    color: #698DA5;
+    text-decoration: none;
+    padding-left: 0;
+}
+
+#main-body ul.menu li a:hover
+{
+	color: #4E616E;
+}
+
+#main-body ul.menu li.active-trail a.active, #main-body ul.menu li.active-trail a.active:link, #main-body ul.menu li.active-trail a.active:visited
+{
+    font-weight:bold;
+    font-family: verdana, arial, san-serif;
+    font-size: 11px;
+    color: rgb(183, 0, 0);
+    text-decoration: none;
+    padding-left: 0;
+}
+
+#main-body ul.menu li.active-trail a.active:hover
+{
+	color: rgb(183, 0, 0);
+}
+
+
+
 
 /* RokAjaxSearch */
 #searchmod .search_options {color: #666;}
