@@ -5,7 +5,7 @@
  * @license		http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
  */
 /* This is the Main template logo, Edit this to match the width and height of your new logo image */
-#logo {width: 420px;height: 70px;}
+#logo {width: 420px;height: 160px;}
 
 /* Template Custom Fonts */
 @font-face {font-family: Bebas;src: url(../fonts/Bebas.eot);}
