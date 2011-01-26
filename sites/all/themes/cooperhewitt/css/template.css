@@ -143,7 +143,7 @@ h3.module-title span, .contentheading span {padding: 0 8px 0 18px;margin-left: -
 .inset h3.module-title span {background: none;text-transform: none;padding: 0;margin: 0;}
 .spacer.w99 .block {width: 100%;}
 .spacer.w49 .block {width: 49.8%;}
-.spacer.w33 .block {width: 33.3%;}
+/* .spacer.w33 .block {width: 33.3%;} */
 .moduletable {padding: 10px;position: relative;}
 .flush .moduletable {padding: 0;}
 .inset .moduletable {padding: 0 10px;}
