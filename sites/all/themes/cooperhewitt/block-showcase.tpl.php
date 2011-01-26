@@ -1,5 +1,6 @@
 
 <div class="block <?php echo $block->extraclass; ?>">
+<div class="flush">
 	<div class="moduletable">
 
 	<?php if ($block->subject) : ?>
@@ -10,6 +11,7 @@
 		<?php print $block->content; ?>
 	</div>
 
+	</div>
 	</div>
 </div>
 
