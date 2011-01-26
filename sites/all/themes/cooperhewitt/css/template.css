@@ -101,7 +101,7 @@ a.small:hover .button {background-position: 0 -39px;background-repeat: no-repeat
 #main-trans {padding: 0 10px 10px 10px;}
 #main-trans-top {padding: 10px 10px;}
 .colmask {clear:both;overflow:hidden;position:relative;width:100%;}
-.col1wrap {padding-bottom:2em;}
+/* .col1wrap {padding-bottom:2em;} */
 #maincol {position: relative;padding: 0;}
 .wrapper {position:relative;}
 #main-content a, #main-content .separator, #main-content .item {font-weight: bold;}
