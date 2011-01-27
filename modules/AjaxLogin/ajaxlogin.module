@@ -1,0 +1,119 @@
+<?php
+// $Id: ajaxlogin.module 316 2009-02-07 21:47:11Z lucky $
+
+/**
+ * @file
+ * Author: Todd Papaioannou (lucky@luckyspin.org)
+ * Ajaxlogin is a simple module that turns the login link into a modal popup that allows
+ * a user to login via Ajax. It is heavily inspired and influenced by the Thickbox module, 
+ * but in this case only applies the Thickbox behaviour to the user_login form. 
+ */
+
+/**
+ * Display our help and module information
+ * @param  path The path indicates which part of the site we're displaying help for
+ * @param  arg  An array that holds the current path as would be returned from arg() function
+ * @return help Some useful text about this module.
+ */
+function ajaxlogin_help($path, $arg) {
+	
+	// This is what we will return
+	$output = '';
+	
+	// What path did we receive?
+	switch ($path) {
+		case "admin/help#ajaxlogin" :
+			$output = '<p>' . t ( "Turns the login link into an Ajax modal dialog" ) . '</p>';
+			break;
+	}
+	
+	return $output;
+
+} // end of ajaxlogin_help
+
+
+/**
+ * Initialize our module by loading all our javascript and styles. 
+ */
+function ajaxlogin_init() {
+	
+	global $user;
+	
+	// What is our module path?
+	$module_path = drupal_get_path('module', 'ajaxlogin');
+	
+	// Load Thickbox files, but only if the user is not logged in and this module is enabled.
+	if (($user->uid == 0) && variable_get('ajaxlogin_enabled', 0)) {
+		drupal_add_css($module_path . "/thickbox/thickbox.css");
+		drupal_add_js($module_path . "/ajaxlogin.js");
+		drupal_add_js($module_path . "/thickbox/thickbox.js");
+    
+	}
+	
+} // end of ajaxlogin_init 
+
+
+/**
+ * This is our implementation of hook_menu().
+ */
+function ajaxlogin_menu() {
+	
+	// This is what we will return
+  $items = array();
+
+  // Call our menu form
+  $items['admin/settings/ajaxlogin'] = array(
+    'title' => 'Ajax Login',
+    'description' => 'Allows the user to configure the Ajax login settings.',
+    'file' => 'ajaxlogin.admin.inc',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ajaxlogin_admin_settings'),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  $items['user/login/ajaxlogin'] = array(
+    'title' => 'Login',
+    'page callback' => 'ajaxlogin_login',
+    'access callback' => 'user_is_anonymous',
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+  
+} // end of ajaxlogin_menu
+
+
+/**
+ * This is where we actually call the login form when the users clicks on the login link.
+ */
+function ajaxlogin_login() {
+  print drupal_get_form('user_login');
+  exit;
+  
+} // end of ajaxlogin_login
+
+
+/**
+ * Since we wish the ajax login process to be unobtrusive to the user, we need to 
+ * override the default action for the login form. See hook_form_alter for more details.
+ * 
+ * @param  form  The form passed to this function
+ * @param  form_state  The state of the form
+ * @param  form_id  The id of the form
+ */
+function ajaxlogin_form_alter(&$form, $form_state, $form_id) {
+	
+	// Is this actually the form we want?
+  if ($form_id == 'user_login' && arg(0) == 'user' && arg(1) == 'login' && arg(2) == 'ajaxlogin') {
+  	
+  	// Change the form action
+    $form['#action'] = url('user/login', array('query' => array('destination' => $_GET['destination'])));
+    
+    // Resize the fields
+    $form['name']['#size'] = 50;
+    $form['pass']['#size'] = 50;
+  }
+  
+} // end of ajaxlogin_form_alter 
+
