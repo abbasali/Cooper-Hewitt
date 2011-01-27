@@ -16,8 +16,8 @@
 @font-face {font-family: "Continuum";src:local("Continuum"), url(../fonts/Continuum-Bold.ttf) format("truetype");font-weight:bold;}
 
 /* Font Family Settings */
-#ff-iridium, a.iridium, #ff-iridium #horiz-menu li li span, #ff-iridium input.button {font-family: Helvetica,Arial,sans-serif;}
-#ff-iridium #horiz-menu li span, #ff-iridium .date-block, #ff-iridium h1, #ff-iridium h2, #ff-iridium h3, #ff-iridium h4, #ff-iridium h5, #ff-iridium .roktabs-links, #ff-iridium .feature-block span.feature-title {font-family: Geneva,Tahoma,Arial,sans-serif;}
+#ff-iridium, a.iridium, #ff-iridium #horiz-menu li li span, #ff-iridium input.button {font-family: 'Cantarell';}
+#ff-iridium #horiz-menu li span, #ff-iridium .date-block, #ff-iridium h1, #ff-iridium h2, #ff-iridium h3, #ff-iridium h4, #ff-iridium h5, #ff-iridium .roktabs-links, #ff-iridium .feature-block span.feature-title {font-family: 'Cantarell';}
 #ff-bebas, a.bebas, #ff-bebas #horiz-menu li li span, #ff-bebas h3.showtext, #ff-bebas input.button  {font-family: Helvetica,Arial,sans-serif;}
 #ff-bebas .date-block, #ff-bebas h1, #ff-bebas h2, #ff-bebas h3, #ff-bebas h4, #ff-bebas h5, #ff-bebas .feature-block span.feature-title {font-family: Bebas,Helvetica,Arial,sans-serif;}
 #ff-continuum, a.continuum, #ff-continuum #horiz-menu li li span, #ff-continuum h3.showtext, #ff-continuum input.button  {font-family: Helvetica,Arial,sans-serif;}
