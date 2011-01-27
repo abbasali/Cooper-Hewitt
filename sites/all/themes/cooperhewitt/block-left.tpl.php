@@ -13,9 +13,9 @@
 <?php endif; ?>
 
 
-	<?php if ($block->subject) : ?>
+<!-- 	<?php if ($block->subject) : ?>
 		<div class="style-h3"><h3 class="module-title"><?php print $block->subject; ?></h3></div>
-	<?php endif; ?>
+	<?php endif; ?> -->
 	<div class="module-inner">
 
 		<?php print $block->content; ?>
