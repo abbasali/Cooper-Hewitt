@@ -1,0 +1,16 @@
+<?php
+// $Id: fontsquirrel.install,v 1.2.2.1 2011/01/02 21:33:05 sreynen Exp $
+
+/**
+ * @file
+ * Removes fonts on disable.
+ */
+
+/**
+ * Implements hook_disable().
+ */
+function fontsquirrel_disable() {
+
+  fontyourface_provider_disable('fontsquirrel');
+
+} // fontsquirrel_disable

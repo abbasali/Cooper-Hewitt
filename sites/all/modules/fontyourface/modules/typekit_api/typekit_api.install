@@ -1,0 +1,16 @@
+<?php
+// $Id: typekit_api.install,v 1.1.4.2 2011/01/02 21:33:05 sreynen Exp $
+
+/**
+ * @file
+ * Removes fonts on disable.
+ */
+
+/**
+ * Implements hook_disable().
+ */
+function typekit_api_disable() {
+
+  fontyourface_provider_disable('typekit_api');
+
+} // typekit_api_disable
