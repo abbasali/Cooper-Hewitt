@@ -1,0 +1,254 @@
+/* @group Admin Tabs */
+
+ul.primary {
+  border-collapse: collapse;
+  padding: 0 0 0 10px; /* LTR */
+  white-space: nowrap;
+  list-style: none;
+  margin: 0;
+  height: 40px;
+  line-height: normal;
+  border-bottom: 0px solid #ccc;
+  background: #fff url(../images/tabs/tabs_bg.png) left bottom repeat-x;    /* LTR */
+}
+ul.primary li {
+  display: inline;
+  line-height: 45px;
+}
+ul.primary li a {
+  margin: -2px;
+  padding: 6px 20px 6px 20px;
+  background: #fff url(../images/tabs/tabs-off.png) left top no-repeat; /* LTR */
+  /*border-style: none none none none;*/ /* LTR */
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  text-decoration: none;
+  /*text-transform: lowercase;*/
+  color: #999;
+}
+ul.primary li.active a {
+  background: #fff url(../images/tabs/tabs-on.png) left top no-repeat; /* LTR */
+  border-top: 1.5px solid #ccc;
+  border-right: 1.5px solid #ccc;
+  border-left: 1.5px solid #ccc;
+  border-bottom: 0px solid #E4E4E4;
+  color: #555;
+}
+ul.primary li a:hover {
+  color: #000;
+}
+
+.item-list ul {border: 0;}
+.item-list ul li, ul.roknewspager li {list-style: none; padding: 7px 0 7px 0; margin-left: 0;}
+.item-list ul li a { padding: 2px 0 0 15px; font-weight: bold;}
+
+
+form .item-list ul {
+	padding: 10px 0 10px 0;
+}
+form .item-list ul li { 
+	text-align: left; 
+	padding: 0;
+}
+form .item-list ul li a { font-weight: normal; }
+
+/*.more-link {visibility: hidden;}*/
+
+
+#rightcol ul.menu {border: 0px solid #000;}
+
+#main-body ul.menu li.expanded ul.menu li, ul.menu .expanded ul.menu a, #rightcol ul.menu .expanded ul.menu a {padding-left: 15px;}
+
+ul.menu li.active-trail ul.menu a {font-weight: normal;}
+
+ul.menu li.active-trail a.active,
+ul.menu li.active-trail ul.menu li.active a.active,
+#rightcol ul.menu li.active-trail a.active,
+#rightcol ul.menu li.active-trail ul.menu a.active, 
+{font-weight: bold;}
+
+#rightcol .side-mod .item-list h3 { background: none; margin-left: -15px; border-bottom: 0;}
+
+body.style1 .poll .bar .foreground, body.light-red .poll .bar .foreground { background-color: #84A526; }
+body.style2 .poll .bar .foreground, body.light-blue .poll .bar .foreground { background-color: #61B4D6; }
+body.style3 .poll .bar .foreground, body.light-green .poll .bar .foreground { background-color: #C81E1D; }
+body.style4 .poll .bar .foreground, body.light-orange .poll .bar .foreground { background-color: #7F7E0F; }
+body.style5 .poll .bar .foreground, body.light-orange .poll .bar .foreground { background-color: #D72528; }
+body.style6 .poll .bar .foreground, body.light-orange .poll .bar .foreground { background-color: #DD5726; }
+
+.form-item {
+	border: 0;
+}
+
+
+
+#pollbutton input.button {
+	background: none;
+	cursor:pointer;
+	border: none;
+	overflow:hidden;
+	text-align: center;
+
+	line-height: 24px;
+	float: left;
+}
+
+.search #search-block-form {
+	border: 0px solid #000;
+	height: 25px;
+}
+
+
+#searchmod .form-text {
+	/*
+	background: transparent;
+	border: 0;
+	padding-left: 10px;
+	*/
+	background: none repeat scroll 0 0 transparent; 
+	border: 0 none;
+	font-size: 13px;
+	height: 16px;
+	outline: medium none;
+	padding: 3px 0 2px 20px;
+	width: 205px;
+
+}
+
+
+
+.Button {
+	margin-right: 10px;
+	border: 0;
+	background: transparent;
+	cursor:pointer;
+}
+
+#searchmod .Button {
+	visibility: hidden;
+	overflow: hidden;
+}
+
+#user-login-form .Button {
+	margin-top: -20px;
+	padding: 0;
+	width: 200px;
+	font-weight: bold;
+	color: #000;
+}
+
+
+
+#user-login-form {
+	text-align: left;
+}
+
+input.form-submit {
+	cursor:pointer;
+	text-align: center;
+	background-color: #E6E6E6;
+	padding: 2px 8px 2px 8px;
+	border: 1px solid #ccc;
+	text-transform: uppercase;
+}
+
+ul.secondary {
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+ul.secondary li.active {
+  border: 0;
+  background: transparent;
+  padding: 4px 1em;
+  margin: 0 0 0 1px; /* LTR */
+  height: auto;
+  text-decoration: none;
+  position: relative;
+  top: -1px;
+  display: inline-block;
+}
+
+ul.menu li.collapsed {
+	padding-left: 10px;
+}
+
+#forum table {
+	width: 100%;
+}
+
+#forum table tr td.forum {
+	background: transparent;
+}
+
+tr.even, tr.odd {
+	background-color: transparent;
+}
+
+#user-login-form #edit-name-wrapper, #user-login-form #edit-pass-wrapper {
+	text-align: left;
+	height: 30px;
+}
+
+#edit-name, #edit-pass {
+	background-color: #fff;
+	border: 1px solid #c6cacb;
+	font-size: 14px;
+	height: 25px;
+	width: 200px;
+}
+
+form#search-wipe-confirm a {
+	padding-left: 10px;
+}
+
+form#search-wipe-confirm .Button a {
+	padding-left: 0px;
+}
+
+form#user-login-form #edit-name, 
+form#user-login-form #edit-pass,
+form#user-pass #edit-name,
+form#user-register #edit-name,
+form#user-register #edit-mail,
+form#user-admin-new-role #edit-name {
+	background-color: #fff;
+	border: 1px solid #c6cacb;
+	font-size: 14px;
+	height: 25px;
+	width: 200px;
+}
+
+#top-right {
+	font-size: 12px;
+}
+
+
+
+hr.dotted {
+	color: #fff; 
+	background-color: #fff; 
+	border: 1px dotted #ccc; 
+	border-style: none none dotted; }
+
+#sl_lostpass {
+	display: none;
+}
+
+body.iridium-home #maincontent-block {
+	padding: 0;
+}
+
+
+tbody {
+  border-top: 0px solid #ccc;
+}
+
+.block-region {
+  padding: 1em;
+  background: transparent;
+  border: 2px dashed #ccc;
+  text-align: center;
+  font-size: 1.3em;
+}
