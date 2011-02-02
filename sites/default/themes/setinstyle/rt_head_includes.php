@@ -10,10 +10,10 @@ $theme_path = path_to_theme();
 
 
 <link href="<?php echo base_path() . path_to_theme(); ?>/css/template.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo base_path() . path_to_theme(); ?>/css/<?php echo $iridium_preset_style; ?>.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo base_path() . path_to_theme(); ?>/css/<?php echo $setinstyle_preset_style; ?>.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo base_path() . path_to_theme(); ?>/css/typography.css" rel="stylesheet" type="text/css" />
 
-<link href="<?php echo base_path() . path_to_theme(); ?>/css/menu-<?php echo $iridium_menu_type; ?>.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo base_path() . path_to_theme(); ?>/css/menu-<?php echo $setinstyle_menu_type; ?>.css" rel="stylesheet" type="text/css" />
 
 
 <?php 
@@ -47,9 +47,9 @@ $theme_path = path_to_theme();
 	.x-c-s .col1 { margin-left:<?php echo $current_rightcolumn_width; ?>px;}
 	.x-c-s .col3 { left:<?php echo $current_rightcolumn_width; ?>px;width:<?php echo $current_rightcolumn_width; ?>px;}
 	
-	a, #top-right ul li a:hover, .abstract-menu li a:hover, #main-content .cart_totals div, #roksearch_results .roksearch_odd-hover h3, #roksearch_results .roksearch_even-hover h3, #horiz-menu.splitmenu li:hover .item span, #horiz-menu.splitmenu li.active .item span, #horiz-menu.splitmenu li.active:hover .item span {color: <?php echo $iridium_link_color; ?>}
-	#main-body ul.menu li > a, #main-body ul.menu li > .separator, #main-body ul.menu li > .item, #main-body ul.menu li li > a, #main-body ul.menu li li > .separator, #main-body ul.menu li li > .item, .feature-block a .readon1-r {color: <?php echo $iridium_link_color; ?>}	
-	.pagination .page-active, .pagination .page-inactive:hover, .rokstories-layout4 .feature-block .feature-number-sub.active {background: <?php echo $iridium_link_color; ?>}
+	a, #top-right ul li a:hover, .abstract-menu li a:hover, #main-content .cart_totals div, #roksearch_results .roksearch_odd-hover h3, #roksearch_results .roksearch_even-hover h3, #horiz-menu.splitmenu li:hover .item span, #horiz-menu.splitmenu li.active .item span, #horiz-menu.splitmenu li.active:hover .item span {color: <?php echo $setinstyle_link_color; ?>}
+	#main-body ul.menu li > a, #main-body ul.menu li > .separator, #main-body ul.menu li > .item, #main-body ul.menu li li > a, #main-body ul.menu li li > .separator, #main-body ul.menu li li > .item, .feature-block a .readon1-r {color: <?php echo $setinstyle_link_color; ?>}	
+	.pagination .page-active, .pagination .page-inactive:hover, .rokstories-layout4 .feature-block .feature-number-sub.active {background: <?php echo $setinstyle_link_color; ?>}
 	
 </style>	
 
@@ -66,7 +66,7 @@ $theme_path = path_to_theme();
 <?php if (rok_isIe(6)) :?>
 <!--[if lte IE 6]>
 <link href="<?php echo base_path() . path_to_theme(); ?>/css/template_ie6.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo base_path() . path_to_theme(); ?>/css/<?php echo $iridium_preset_style; ?>_ie6.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo base_path() . path_to_theme(); ?>/css/<?php echo $setinstyle_preset_style; ?>_ie6.css" rel="stylesheet" type="text/css" />
 <script src="<?php echo base_path() . path_to_theme(); ?>/js/DD_belatedPNG.js"></script>
 <script type="text/javascript">
 	DD_belatedPNG.fix('.png, #main-trans, #main-trans2, #main-trans-top, .feature-module, .readon1-l, .feature-block .description, .readon1-m, .readon1-r, span.number-circle, .drop-top, .fusion-js-subs ul, #horiz-menu li li, .style2 #header, .style2 #header .wrapper, .style2 #horiz-menu, .style3 #header, .style3 #horiz-menu, .style4 #header, .style4 #horiz-menu, .style5 #header, .style5 #horiz-menu, .style5 .abstract-menu li a.am1, .style5 .abstract-menu li a.am2, .style5 .abstract-menu li a.am3, #horiz-menu li.root a, .style3 #header .wrapper, .style4 #header .wrapper, .style5 #logo, .style5 #header .wrapper, #main-trans-bottom');

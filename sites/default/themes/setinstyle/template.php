@@ -15,12 +15,12 @@ if (is_null(theme_get_setting('preset_style'))) {
 
   global $theme_key;
 
-	if (!(function_exists('iridium_settings_defaults'))){
+	if (!(function_exists('setinstyle_settings_defaults'))){
 		include('theme-settings.php');
 	}
 	
 	
-  $defaults = iridium_settings_defaults();
+  $defaults = setinstyle_settings_defaults();
 
   // Get default theme settings.
   $settings = theme_get_settings($theme_key);
@@ -51,7 +51,7 @@ if (is_null(theme_get_setting('preset_style'))) {
 * @param $hook
 *   The name of the theme function being called (not used in this case.)
 */
-function iridium_preprocess_search_block_form(&$variables) {
+function setinstyle_preprocess_search_block_form(&$variables) {
   $variables['form']['search_block_form']['#title'] = '';
   $variables['form']['search_block_form']['#size'] = 20;
   $variables['form']['search_block_form']['#value'] = 'Search...';
@@ -63,7 +63,7 @@ function iridium_preprocess_search_block_form(&$variables) {
   $variables['search_form'] = implode($variables['search']);
 }
 
-function iridium_blocks($region) {
+function setinstyle_blocks($region) {
   $output = '';
 
   if ($list = block_list($region)) {
@@ -98,7 +98,7 @@ function iridium_blocks($region) {
 
 
 
-function iridium_preprocess_block(&$variables){
+function setinstyle_preprocess_block(&$variables){
 	
 	static $feature_count;
 	if($variables['block']->region == 'feature'){
@@ -163,12 +163,12 @@ function iridium_preprocess_block(&$variables){
 }
 
 
-function iridium_preprocess_maintenance_page(&$vars) {
-	iridium_preprocess_page($vars);
+function setinstyle_preprocess_maintenance_page(&$vars) {
+	setinstyle_preprocess_page($vars);
 }
 
 
-function iridium_preprocess_page(&$variables) {
+function setinstyle_preprocess_page(&$variables) {
 	
 	
 	$variables['path'] = base_path() . path_to_theme();
@@ -181,40 +181,40 @@ function iridium_preprocess_page(&$variables) {
     $variables['tabs2'] = menu_secondary_local_tasks();
 	
 	
-	if( isset( $_COOKIE['iridium_preset_style'] ) )
-		$variables['iridium_preset_style'] = $_COOKIE['iridium_preset_style']; 
+	if( isset( $_COOKIE['setinstyle_preset_style'] ) )
+		$variables['setinstyle_preset_style'] = $_COOKIE['setinstyle_preset_style']; 
 	else
-		$variables['iridium_preset_style'] = theme_get_setting(preset_style);
+		$variables['setinstyle_preset_style'] = theme_get_setting(preset_style);
 
 	
-	if( isset( $_COOKIE['iridium_bg_style'] ) )
-		$variables['iridium_bg_style'] = $_COOKIE['iridium_bg_style']; 
+	if( isset( $_COOKIE['setinstyle_bg_style'] ) )
+		$variables['setinstyle_bg_style'] = $_COOKIE['setinstyle_bg_style']; 
 	else
-		$variables['iridium_bg_style'] =  theme_get_setting(bg_style);
+		$variables['setinstyle_bg_style'] =  theme_get_setting(bg_style);
 	
-	if( isset( $_COOKIE['iridium_link_color'] ) )
-		$variables['iridium_link_color'] = $_COOKIE['iridium_link_color']; 
+	if( isset( $_COOKIE['setinstyle_link_color'] ) )
+		$variables['setinstyle_link_color'] = $_COOKIE['setinstyle_link_color']; 
 	else
-		$variables['iridium_link_color'] =  theme_get_setting(link_color);
+		$variables['setinstyle_link_color'] =  theme_get_setting(link_color);
 
-	if( isset( $_COOKIE['iridium_font_family'] ) )
-		$variables['iridium_font_family'] = $_COOKIE['iridium_font_family']; 
+	if( isset( $_COOKIE['setinstyle_font_family'] ) )
+		$variables['setinstyle_font_family'] = $_COOKIE['setinstyle_font_family']; 
 	else
-		$variables['iridium_font_family'] = theme_get_setting(font_family);
+		$variables['setinstyle_font_family'] = theme_get_setting(font_family);
 	
-	if( isset( $_COOKIE['iridium_defaultfont'] ) )
-		$variables['iridium_defaultfont'] = $_COOKIE['iridium_defaultfont']; 
+	if( isset( $_COOKIE['setinstyle_defaultfont'] ) )
+		$variables['setinstyle_defaultfont'] = $_COOKIE['setinstyle_defaultfont']; 
 	else
-		$variables['iridium_defaultfont'] = theme_get_setting(default_font);
+		$variables['setinstyle_defaultfont'] = theme_get_setting(default_font);
 	
 
 		
 	
 	// set global for menu style if exists
-	if( isset( $_COOKIE['iridium_menu_type'] ) )
-		$variables['iridium_menu_type'] = $_COOKIE['iridium_menu_type']; 
+	if( isset( $_COOKIE['setinstyle_menu_type'] ) )
+		$variables['setinstyle_menu_type'] = $_COOKIE['setinstyle_menu_type']; 
 	else
-		$variables['iridium_menu_type'] = theme_get_setting('menu_type');
+		$variables['setinstyle_menu_type'] = theme_get_setting('menu_type');
 	
 		
 	
@@ -252,11 +252,11 @@ function iridium_preprocess_page(&$variables) {
 
 
 
-function iridium_change_theme($change, $changeVal, $bgVal='', $page=''){
+function setinstyle_change_theme($change, $changeVal, $bgVal='', $page=''){
 	
-	$theme_settings = variable_get('theme_iridium_settings', array());
+	$theme_settings = variable_get('theme_setinstyle_settings', array());
 	
-	$cookie_prefix = "iridium_";
+	$cookie_prefix = "setinstyle_";
 	$cookie_time = time()+31536000;
 	$cookie_path = base_path();
 	//print_r($theme_settings);
@@ -330,7 +330,7 @@ function iridium_change_theme($change, $changeVal, $bgVal='', $page=''){
 
 function change_font($change, $page=''){
 
-	$cookie_prefix = "iridium_";
+	$cookie_prefix = "setinstyle_";
 	$cookie_time = time()+31536000;
 	
 	$cookie_name = $cookie_prefix . "defaultfont";
@@ -413,8 +413,8 @@ function main_menu_tree_output($tree) {
   $output = '';
   $items = array();
 
-  if( isset( $_COOKIE['iridium_menu_type'] ) )
-	$this_mtype = $_COOKIE['iridium_menu_type']; 
+  if( isset( $_COOKIE['setinstyle_menu_type'] ) )
+	$this_mtype = $_COOKIE['setinstyle_menu_type']; 
   else
 	$this_mtype = theme_get_setting('menu_type');
   // Pull out just the menu items we are going to render so that we
@@ -622,8 +622,8 @@ function tri_menu_item($link, $has_children, $menu = '', $in_active_trail = FALS
  * @ingroup themeable
  */
 function main_menu_item_link($link, $has_children = FALSE) {
-  if( isset( $_COOKIE['iridium_menu_type'] ) )
-	$this_mtype = $_COOKIE['iridium_menu_type']; 
+  if( isset( $_COOKIE['setinstyle_menu_type'] ) )
+	$this_mtype = $_COOKIE['setinstyle_menu_type']; 
   else
 	$this_mtype = theme_get_setting('menu_type');
   
@@ -748,7 +748,7 @@ function tri_menu_item_link($link, $has_children = FALSE) {
 //******************************************************************************
 
 
-function iridium_more_link($url, $title) {
+function setinstyle_more_link($url, $title) {
 
   return '<div class="clr"></div><div class="readon-wrap1"><div class="readon1-l"></div><a class="readon-main" href="' . check_url($url) . '"><span class="readon1-m"><span class="readon1-r">Read More</span></span></a></div><div class="clr"></div>';
 }
@@ -761,7 +761,7 @@ function iridium_more_link($url, $title) {
 *
 * Register custom theme functions.
 */
-function iridium_theme() {
+function setinstyle_theme() {
   return array(
     // The form ID.
     'user_login_block' => array(
@@ -776,7 +776,7 @@ function iridium_theme() {
 }
 
 
-function iridium_user_login_block($form) {
+function setinstyle_user_login_block($form) {
   $form['name']['#title'] = t(''); //wrap any text in a t function
   $form['name']['#value'] = t('Username');
   $form['pass']['#title'] = t('');
@@ -786,7 +786,7 @@ function iridium_user_login_block($form) {
 }
 
 /*
-function iridium_user_login_block(&$form){
+function setinstyle_user_login_block(&$form){
 
 	$form['links'] = array('#value' => '<div id="sl_lostpass"><a href="/user/password">Request new password</a></div>');
 
@@ -795,7 +795,7 @@ function iridium_user_login_block(&$form){
 }
 */
 
-function iridium_button($element) {
+function setinstyle_button($element) {
   // Make sure not to overwrite classes.
   if (isset($element['#attributes']['class'])) {
     $element['#attributes']['class'] = 'Button form-' . $element['#button_type'] . ' ' . $element['#attributes']['class'];
@@ -825,7 +825,7 @@ function iridium_button($element) {
 
 
 
-function iridium_get_theme_headers($theme){
+function setinstyle_get_theme_headers($theme){
 	
 	$themes = array (
 		2 => 10,
@@ -839,7 +839,7 @@ function iridium_get_theme_headers($theme){
 
 
 
-function iridium_breadcrumb($breadcrumb) {
+function setinstyle_breadcrumb($breadcrumb) {
   if (!empty($breadcrumb)) {
 	$breadcrumb_new = array();
 	// Create new breadcrumb array without the top level image gallery link
@@ -858,7 +858,7 @@ function iridium_breadcrumb($breadcrumb) {
 /**
  * Allow themable wrapping of all comments.
  */
-function iridium_comment_wrapper($content, $node) {
+function setinstyle_comment_wrapper($content, $node) {
   if (!$content || $node->type == 'forum') {
     return '<div id="comments">'. $content .'</div>';
   }
@@ -875,11 +875,11 @@ function iridium_comment_wrapper($content, $node) {
  *
  * @ingroup themeable
  */
-function iridium_menu_local_tasks() {
+function setinstyle_menu_local_tasks() {
   return menu_primary_local_tasks();
 }
 
-function iridium_comment_submitted($comment) {
+function setinstyle_comment_submitted($comment) {
   return t('!datetime — !username',
     array(
       '!username' => theme('username', $comment),
@@ -887,7 +887,7 @@ function iridium_comment_submitted($comment) {
     ));
 }
 
-function iridium_node_submitted($node) {
+function setinstyle_node_submitted($node) {
   return t('!datetime — !username',
     array(
       '!username' => theme('username', $node),

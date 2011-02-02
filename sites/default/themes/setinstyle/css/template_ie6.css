@@ -105,7 +105,7 @@ ul.frontpage {margin: auto;}
 
 /* rok tabs */
 .roktabs-links ul.roktabs-top,.roktabs-links ul.roktabs-bottom {zoom:1;position:relative;}
-#ff-iridium .roktabs-links, #ff-iridium #horiz-menu li span, #ff-iridium #top-bar .date-block {font-family: Helvetica,Arial,sans-serif;font-weight: bold;}
+#ff-setinstyle .roktabs-links, #ff-setinstyle #horiz-menu li span, #ff-setinstyle #top-bar .date-block {font-family: Helvetica,Arial,sans-serif;font-weight: bold;}
 #top-bar .date1 {line-height: 20px;}
 .roktabs-wrapper .roktabs-links ul li {white-space: nowrap;}
 .roktabs-wrapper .roktabs-links ul li span {display: inline-block;}

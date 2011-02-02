@@ -40,8 +40,8 @@
 </script>
 
 <?php
-	if( isset( $_COOKIE['iridium_preset_style'] ) )
-		$this_preset_style = $_COOKIE['iridium_preset_style']; 
+	if( isset( $_COOKIE['setinstyle_preset_style'] ) )
+		$this_preset_style = $_COOKIE['setinstyle_preset_style']; 
 	else
 		$this_preset_style = theme_get_setting('preset_style');
 ?>

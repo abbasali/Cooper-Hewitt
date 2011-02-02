@@ -8,9 +8,9 @@
 * @return
 *   array A form array.
 */
-function iridium_settings($saved_settings){
+function setinstyle_settings($saved_settings){
 	
-	$defaults = iridium_settings_defaults();
+	$defaults = setinstyle_settings_defaults();
 
     // Merge the saved variables and their default values
     $settings = array_merge($defaults, $saved_settings);
@@ -428,7 +428,7 @@ function iridium_settings($saved_settings){
 	'#type' => 'select',
 	'#title' => t('Font family'),
 		'#options' => array(
-			'iridium' => 'iridium',
+			'setinstyle' => 'setinstyle',
 			'bebas'		=> 'Bebas',
 			'continuum' => 'Coninuum',
 			'optima' => 'Optima',
@@ -479,7 +479,7 @@ function iridium_settings($saved_settings){
 
 
 
-function iridium_settings_defaults(){
+function setinstyle_settings_defaults(){
 	
 	$defaults = array(
 	
@@ -487,7 +487,7 @@ function iridium_settings_defaults(){
 		'primary_style'			=> "style1",
 		'bg_style' 				=> "full",
 		'link_color'			=> "#A0C34B",
-		'font_family'           => "iridium",
+		'font_family'           => "setinstyle",
 		
 		'enable_ie6warn'        => "false",
 		'enable_fontspans'      => "true",
