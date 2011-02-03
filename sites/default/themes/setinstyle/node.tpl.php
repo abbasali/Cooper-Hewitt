@@ -15,50 +15,10 @@
 		
 		<div class="module-inner">
 
-			<div class="article-rel-wrapper">
-                            <?php if ($node->type!="blog") { ?>
-				<h2 class="contentheading"><?php echo $title; ?></h2>
-                            <?php } else {
-                                $link = $node->links["comment_add"]["href"];
-                                ?>
-                                <h2 class="contentheading"><?php echo l($title,$link);?></h2>
-                            <?php } ?>
-			</div>
-					  
-			<?php if ($submitted): ?>	
-				  		
-				<div class="article-info-surround">
-					<div class="article-info-right">
-					<span class="createdby"><?php
-                                            $uprofile = user_load(array('uid'=>$node->uid));
-                                            $user_fname = $uprofile->profile_;
-                                            if ($user_fname!="")
-                                                echo l($user_fname,'user/'.$node->uid);
-                                            else
-                                                echo $name;
-                                            ?></span>
-					</div>
-					<div class="iteminfo">
-	
-						<div class="article-info-left">
-							<span class="createdate">
-							
-								<span class="date1"><?php print format_date($node->created, 'custom', "F j, Y g:i a") ?></span>
-							</span>
-							<div class="clr"></div>
-						</div>
-	
-					</div>
-				</div>
-			
-			<?php endif; ?>	
 
-							
-			
 			
 			<?php print $content ?>
-			    
-			<?php print $links; ?>   
+			       
 			   
 		</div>
 		
