@@ -47,10 +47,10 @@ body.simple #horiz-menu ul.columns2, body.simple #horiz-menu .columns2 > .drop-t
 
 /* Horizontal Menu */
 #horiz-menu {background: url(../images/backgrounds/style3/header-bg.png) 0 -65px repeat-x;}
-#horiz-menu li.root, #horiz-menu.splitmenu li {background: url(../images/style3/main/horizmenu-bullet.png) 10px 0 no-repeat;}
+#horiz-menu li.root, #horiz-menu.splitmenu li {/*background: url(../images/style3/main/horizmenu-bullet.png) 10px 0 no-repeat; */}
 #horiz-menu li.root > .item, #horiz-menu li.root.active > .item, #horiz-menu li.root:hover > .item, #horiz-menu.splitmenu li .item {color: #fff;background: none;}
 #horiz-menu li.root > .daddy span {background: url(../images/style3/main/horizmenu-bullet.png) 100% -272px no-repeat;}
-#horiz-menu li.root:hover, #horiz-menu li.root.active, #horiz-menu li.root.f-menuparent-itemfocus, #horiz-menu.splitmenu li:hover,  #horiz-menu.splitmenu li.sfHover, #horiz-menu.splitmenu li.active {background: url(../images/style3/main/horizmenu-bullet.png) 10px -145px no-repeat;}
+#horiz-menu li.root:hover, #horiz-menu li.root.active, #horiz-menu li.root.f-menuparent-itemfocus, #horiz-menu.splitmenu li:hover,  #horiz-menu.splitmenu li.sfHover, #horiz-menu.splitmenu li.active {/*background: url(../images/style3/main/horizmenu-bullet.png) 10px -145px no-repeat; */}
 #horiz-menu li:hover > .item, #horiz-menu li.active > .item, #horiz-menu li.f-menuparent-itemfocus .item  {color: #fff;}
 
 /* Menu Dropdowns */
