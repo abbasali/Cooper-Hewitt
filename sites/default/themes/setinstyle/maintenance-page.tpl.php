@@ -95,7 +95,7 @@
 					<div id="horizmenu-surround">
 					<?php if($setinstyle_menu_type != "module") : ?>
 						<?php
-							$tree = menu_tree_page_data('primary-links');  
+							$tree = menu_tree_page_data('menu-set-in-style');  
 							$main_menu = main_menu_tree_output($tree, 1);
 						   	print $main_menu;	
 						?>
