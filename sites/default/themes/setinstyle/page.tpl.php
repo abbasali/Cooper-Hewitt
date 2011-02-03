@@ -54,7 +54,7 @@
 					<?php if ($logo_space) : ?>
 						<?php print $logo_space; ?>
 					<?php elseif (theme_get_setting(show_logo)) : ?>
-						<a href="<?php echo check_url($front_page); ?>" id="logo"></a>
+						<a href="microsites/set-in-style" id="logo"></a>
 					<?php endif; ?>
 				</div>
 				<?php endif; ?>
