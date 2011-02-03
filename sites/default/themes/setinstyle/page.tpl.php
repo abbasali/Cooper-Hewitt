@@ -199,9 +199,9 @@
 																<?php if ($tabs): print '<ul class="primary png">' . $tabs .'</ul>'; print "<br>"; endif; ?>
 																<?php if ($tabs2): print '<ul class="secondary">' . $tabs2 .'</ul>'; print "<br>"; endif; ?>
 															  	<!-- End Admin Tabs -->
-																
-																<?php print $content; ?>
 																<span class="st_twitter_hcount" displayText="Tweet"></span><span class="st_facebook_hcount" displayText="Share"></span><span class="st_email_hcount" displayText="Email"></span><span class="st_sharethis_hcount" displayText="Share"></span>
+																<?php print $content; ?>
+																
 															<?php endif; ?>
 															
 															
