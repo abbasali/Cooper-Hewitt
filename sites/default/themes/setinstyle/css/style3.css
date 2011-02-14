@@ -56,7 +56,7 @@ body.simple #horiz-menu ul.columns2, body.simple #horiz-menu .columns2 > .drop-t
 /* Menu Dropdowns */
 #horiz-menu li > .bullet {background: url(../images/style3/main/horizmenu-bullet.png) 5px -420px no-repeat;}
 #horiz-menu li:hover > .bullet, #horiz-menu li.f-menuparent-itemfocus .bullet, #horiz-menu li.active > .bullet {background: url(../images/style3/main/horizmenu-bullet.png) 5px -571px no-repeat;}
-#horiz-menu li {background: url(../images/style3/main/drop-div.png) 50% 100% no-repeat;}
+/* #horiz-menu li {background: url(../images/style3/main/drop-div.png) 50% 100% no-repeat;} */
 #horiz-menu li:hover, #horiz-menu li.active, #horiz-menu li.f-menuparent-itemfocus {}
 #horiz-menu li > .daddy span {background: url(../images/style3/main/horizmenu-bullet.png) 100% -723px no-repeat;}
 
