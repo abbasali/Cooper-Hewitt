@@ -16,7 +16,7 @@
 @font-face {font-family: "Continuum";src:local("Continuum"), url(../fonts/Continuum-Bold.ttf) format("truetype");font-weight:bold;}
 
 /* Font Family Settings */
-#ff-setinstyle, a.setinstyle, #ff-setinstyle #horiz-menu li li span, #ff-setinstyle input.button {font-family: news-gothic-std-1, news-gothic-std-2; line-height: 150%;}
+#ff-setinstyle, a.setinstyle, #ff-setinstyle #horiz-menu li li span, #ff-setinstyle input.button {font-family: ff-tisa-web-pro-1, ff-tisa-web-pro-2; line-height: 1.4em;}
 #ff-setinstyle #horiz-menu li span, #ff-setinstyle .date-block, #ff-setinstyle h1, #ff-setinstyle h2, #ff-setinstyle h3, #ff-setinstyle h4, #ff-setinstyle h5, #ff-setinstyle .roktabs-links, #ff-setinstyle .feature-block span.feature-title {font-family: 'Cantarell';}
 #ff-bebas, a.bebas, #ff-bebas #horiz-menu li li span, #ff-bebas h3.showtext, #ff-bebas input.button  {font-family: Helvetica,Arial,sans-serif;}
 #ff-bebas .date-block, #ff-bebas h1, #ff-bebas h2, #ff-bebas h3, #ff-bebas h4, #ff-bebas h5, #ff-bebas .feature-block span.feature-title {font-family: Bebas,Helvetica,Arial,sans-serif;}
