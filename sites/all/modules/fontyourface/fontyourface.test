@@ -1,5 +1,5 @@
 <?php
-// $Id: fontyourface.test,v 1.1.2.1 2011/01/02 21:33:04 sreynen Exp $
+// $Id: fontyourface.test,v 1.1.2.2 2011/01/27 05:05:56 sreynen Exp $
 
 /**
  * @file
@@ -56,9 +56,9 @@ class FontyourfaceSaveFontTestCase extends DrupalWebTestCase {
     $font = fontyourface_get_font($fids[0], TRUE);
 
     $this->assertTrue($font, 'Font loaded.');
-    
+
     // Check font matches.
-    
+
     $this->assertIdentical($font->name, $best_font_ever->name, 'Font name matches insert.');
     $this->assertIdentical($font->fid, $best_font_ever->fid, 'Font fid matches insert.');
 

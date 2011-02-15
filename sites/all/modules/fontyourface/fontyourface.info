@@ -5,8 +5,8 @@ package = @font-your-face
 dependencies[] = views
 core = 6.x
 ; Information added by drupal.org packaging script on January 1, 1970 - 00:00
-version = "6.x-2.1"
+version = "6.x-2.2"
 core = "6.x"
 project = "fontyourface"
-datestamp = "1295737594"
+datestamp = "1296425850"
 
