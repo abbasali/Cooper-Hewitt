@@ -17,7 +17,7 @@
 
 /* Font Family Settings */
 #ff-setinstyle, a.setinstyle, #ff-setinstyle #horiz-menu li li span, #ff-setinstyle input.button {font-family: vera-sans-1, vera-sans-2; line-height: 1.4em;}
-#ff-setinstyle #horiz-menu li span, #ff-setinstyle .date-block, #ff-setinstyle h1, #ff-setinstyle h2, #ff-setinstyle h3, #ff-setinstyle h4, #ff-setinstyle h5, #ff-setinstyle .roktabs-links, #ff-setinstyle .feature-block span.feature-title {font-family: 'Cantarell';}
+#ff-setinstyle #horiz-menu li span, #ff-setinstyle .date-block, #ff-setinstyle h1, #ff-setinstyle h2, #ff-setinstyle h3, #ff-setinstyle h4, #ff-setinstyle h5, #ff-setinstyle .roktabs-links, #ff-setinstyle .feature-block span.feature-title {font-family: vera-sans-1, vera-sans-2;}
 #ff-bebas, a.bebas, #ff-bebas #horiz-menu li li span, #ff-bebas h3.showtext, #ff-bebas input.button  {font-family: Helvetica,Arial,sans-serif;}
 #ff-bebas .date-block, #ff-bebas h1, #ff-bebas h2, #ff-bebas h3, #ff-bebas h4, #ff-bebas h5, #ff-bebas .feature-block span.feature-title {font-family: Bebas,Helvetica,Arial,sans-serif;}
 #ff-continuum, a.continuum, #ff-continuum #horiz-menu li li span, #ff-continuum h3.showtext, #ff-continuum input.button  {font-family: Helvetica,Arial,sans-serif;}
