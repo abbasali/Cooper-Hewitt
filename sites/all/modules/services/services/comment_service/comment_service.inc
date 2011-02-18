@@ -69,9 +69,9 @@ function comment_service_load_node_comments($nid, $count = 0, $start = 0) {
   
   //<k2x4 mod>
   if ($nid==1039) {
-  	$result = db_query("SELECT cid FROM {comments} ORDER BY thread DESC". $limit);
+  	$result = db_query("SELECT cid FROM {comments} ORDER BY cid DESC". $limit);
   }else{
-  	$result = db_query("SELECT cid FROM {comments} WHERE nid = %d ORDER BY thread DESC". $limit, $nid);	
+  	$result = db_query("SELECT cid FROM {comments} WHERE nid = %d ORDER BY cid DESC". $limit, $nid);	
   }
 
   //$result = db_query("SELECT cid FROM {comments} WHERE nid = %d ORDER BY thread DESC". $limit, $nid);
