@@ -66,8 +66,18 @@ function comment_service_save($comment) {
 function comment_service_load_node_comments($nid, $count = 0, $start = 0) {
   $comments = array();
   $limit = ((int)$count > 0 ? ' LIMIT '. (int)$start .', '. (int)$count .' ' : '');
+  
+  //<k2x4 mod>
+  if ($nid==1039) {
+  	$result = db_query("SELECT cid FROM {comments} ORDER BY thread DESC". $limit);
+  }else{
+  	$result = db_query("SELECT cid FROM {comments} WHERE nid = %d ORDER BY thread DESC". $limit, $nid);	
+  }
 
-  $result = db_query("SELECT cid FROM {comments} WHERE nid = %d ORDER BY thread DESC". $limit, $nid);
+  //$result = db_query("SELECT cid FROM {comments} WHERE nid = %d ORDER BY thread DESC". $limit, $nid);
+
+  //</k2x4 mod>
+
   while ($comment = db_fetch_array($result)) {
     $comments[] = _comment_load($comment['cid']);
   }
@@ -97,7 +107,12 @@ function comment_service_load($cid) {
  *   Number of comments that node has.
  */
 function comment_service_node_comments_count_all($nid) {
-  return comment_num_all($nid);
+  //<k2x4 mod>
+  if ($nid==1039) {
+    return db_result(db_query("SELECT COUNT(cid) FROM {comments}"));
+  }else 
+  	return comment_num_all($nid);
+  //</k2x4 mod>
 }
 
 /**
