@@ -36,9 +36,9 @@ html {height: 100%;margin-bottom: 1px;}
 body {margin: 0;}
 form {margin: 0;padding: 0;}
 body.f-small, body#ff-optima.f-small, body#ff-georgia.f-small {font-size: 11px;}
-body, body.f-default {font-size: 14px;}
-body#ff-optima, body#ff-optima.f-default, body#ff-georgia, body#ff-georgia.f-default {font-size: 13px;}
-body.f-large, body#ff-optima.f-large, body#ff-georgia.f-large {font-size: 14px;}
+body, body.f-default {font-size: 12px;}
+body#ff-optima, body#ff-optima.f-default, body#ff-georgia, body#ff-georgia.f-default {font-size: 12px;}
+body.f-large, body#ff-optima.f-large, body#ff-georgia.f-large {font-size: 12px;}
 p {margin-top: 10px;margin-bottom: 15px;}
 h1, h2, h3, h4, h5 {padding-bottom: 5px;margin: 25px 0 10px 0;font-weight: normal;line-height: 135%;}
 h1 {font-size: 250%;}
