@@ -1,0 +1,46 @@
+/**
+ * @version		1.5.3 August 18, 2010
+ * @author		RocketTheme, LLC http://www.rockettheme.com
+ * @copyright 	Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license		http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+/* fixes for things ie6 doesn't understand */
+
+#horiz-menu li .bullet {background: url(../images/style2/main/horizmenu-bullet.png) 5px -420px no-repeat;}
+.fusion-js-container li .bullet {background: url(../images/style2/main/horizmenu-bullet.png) 5px -420px no-repeat;}
+.fusion-js-container li.sfHover .bullet, .fusion-js-container li.f-menuparent-itemfocus .bullet, .fusion-js-container li.active .bullet {background: url(../images/style2/main/horizmenu-bullet.png) 5px -571px no-repeat !important;}
+
+.fusion-js-container li.active .active span {color: #333 !important;}
+.fusion-js-container li.active span {}
+#horiz-menu li.root .daddy span {background: url(../images/style2/main/horizmenu-bullet.png) 100% -272px no-repeat;}
+.fusion-js-container li .daddy span {background: url(../images/style2/main/horizmenu-bullet.png) 100% -571px no-repeat;}
+.fusion-js-container li.sfHover, .fusion-js-container li.f-menuparent-itemfocus {background: none !important;}
+
+#horiz-menu .drop-top {background-image: url(../images/style2/main/drop-bg-1.png);}
+#horiz-menu .columns2 .drop-top, #horiz-menu .columns2 .columns2 {background-image: url(../images/style2/main/drop-bg-2.png);}
+#horiz-menu li .daddy span {background:url(../images/style2/main/horizmenu-bullet.png) 100% -723px transparent no-repeat;}
+
+body.simple #horiz-menu .columns2 .drop-top {background-image: url(../images/style2/main/drop-bg-2-simple.png);}
+
+#horiz-menu li.active  {background: none;}
+#horiz-menu li.active li.active, #horiz-menu li li.sfHover, #horiz-menu .fusion-js-subs li.active, #horiz-menu li li.active, #horiz-menu li.f-submenu-item-sfHover, #horiz-menu li li.f-menuparent-itemfocus {background: url(../images/style2/main/drop-div.png) 50% 100% no-repeat;}
+
+#horiz-menu li.root .item, .splitmenu .menutop li .item {color: #333;background:url(../images/style2/main/horizmenu-div.png) 99.9% 50% no-repeat;}
+#horiz-menu li .item {}
+#horiz-menu .level2 .item span {}
+
+#horiz-menu li.active-sfHover .item span {}
+#horiz-menu li.sfHover .item span, #horiz-menu li.active .item span, #horiz-menu li.f-menuparent-itemfocus .item span, #horiz-menu .level2 .item:hover span {}
+
+
+#horiz-menu li.root, .splitmenu li {background: url(../images/style2/main/horizmenu-bullet.png) 10px 0 no-repeat;}
+#horiz-menu li.root-sfHover, #horiz-menu li.active, #horiz-menu li.root-f-menuparent-itemfocus, .splitmenu li.sfHover, .splitmenu li.active {background: url(../images/style2/main/horizmenu-bullet.png) 10px -145px no-repeat;}
+
+#main-body ul.menu li {background: url(../images/style2/mainbody/sidecol-h3.png) 0 100% repeat-x;}
+#main-body ul.menu li a, #main-body ul.menu li .separator, #main-body ul.menu li .item, #main-body ul.menu li li a, #main-body ul.menu li li .separator, #main-body ul.menu li li .item {background: url(../images/style2/main/arrows.png) 0 -58px no-repeat;}
+#main-body ul.menu .item:hover, #main-body ul.menu li.active .active .item {background: url(../images/style2/main/arrows.png) 0 -607px no-repeat;color: #333;}
+#main-body ul.menu li.active .daddy, #main-body ul.menu li.active .daddy:hover {background: url(../images/style2/main/arrows.png) 0 -1126px no-repeat;color: #333;}
+#main-body ul.menu li li.active .item, #main-body ul.menu li li.active .item span, #main-body ul.menu li.active .daddy span, #main-body ul.menu .item:hover, #main-body ul.menu .item:hover span {color: #333;} 
+#horiz-menu li li.sfHover .item span, #horiz-menu li li.active .item span, #horiz-menu li li.f-menuparent-itemfocus .item span, .fusion-js-subs .item-sfHover span {color: #333;}
+
+.inset .module-inner {border: 0;}
