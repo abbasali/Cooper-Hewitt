@@ -2,15 +2,3 @@ backups/*
 tmp/*
 sites/default/files/*
 sites/default/settings.php
-
-sites/nationaldesignawards.org/files/*
-sites/nationaldesignawards.org/settings.php
-
-sites/peoplesdesignaward.org/files/*
-sites/peoplesdesignaward.org/settings.php
-
-sites/educatorresourcecenter.org/files/*
-sites/educatorresourcecenter.org/settings.php
-
-sites/edesignonline.org/files/*
-sites/designonline.org/settings.php
