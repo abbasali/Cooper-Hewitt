@@ -109,9 +109,9 @@ body.style6 .poll .bar .foreground, body.light-orange .poll .bar .foreground { b
 	background: none repeat scroll 0 0 transparent; 
 	border: 0 none;
 	font-size: 13px;
-	height: 16px;
+	height: 20px;
 	outline: medium none;
-	padding: 3px 0 2px 20px;
+	padding: 3px 0 3px 22px;
 	width: 205px;
 
 }
