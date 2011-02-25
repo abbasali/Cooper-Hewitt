@@ -438,7 +438,7 @@ form.josForm label.hasTip {display: block;float: left;height: 25px;line-height: 
 #top-button {width: 90px;height: 20px;text-align: center;line-height: 22px;font-weight: bold;font-size: 12px;margin: 0 auto;}
 #top-button a:hover {text-decoration: none;}
 .top-button-spacer {height: 15px;}
-.copyright-block {margin: 15px 0;padding: 20px 0 0 0;position: relative;}
+.copyright-block {position: relative;}
 .footer-div {height: 2px;width: 100%;position: absolute;top: 0;left: 0;}
 #copyright {margin: 0 auto;text-align: center;line-height: 200%;}
 #rocket {width: 111px;height: 16px;display: block;margin: 0 auto;}
@@ -448,7 +448,7 @@ form.josForm label.hasTip {display: block;float: left;height: 25px;line-height: 
 #bottom ul li:hover a {text-decoration: none;}
 #footer {position: relative;overflow: hidden;}
 body.full #footer-bg2, body.medium #footer-bg2 {position: relative;z-index: 1;padding-bottom: 90px;}
-.footer-mod {padding: 15px 0;}
+/*.footer-mod {padding: 15px 0;} */
 #footer a {font-weight: bold;}
 #mainmodules3 a {font-weight: bold;}
 #bottom .moduletable {padding: 15px;}
