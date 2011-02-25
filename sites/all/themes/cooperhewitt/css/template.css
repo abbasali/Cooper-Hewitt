@@ -41,11 +41,11 @@ body#ff-optima, body#ff-optima.f-default, body#ff-georgia, body#ff-georgia.f-def
 body.f-large, body#ff-optima.f-large, body#ff-georgia.f-large {font-size: 14px;}
 p {margin-top: 10px;margin-bottom: 15px;}
 h1, h2, h3, h4, h5 {padding-bottom: 5px;margin: 25px 0 10px 0;font-weight: normal;line-height: 135%;}
-h1 {font-size: 250%;}
-h2 {font-size: 200%;}
-h3 {font-size: 175%;}
-h4 {font-size: 120%;line-height: 130%;}
-h5 {font-size: 120%;text-transform: uppercase;}
+h1 {font-size: 175%;}
+h2 {font-size: 150%;}
+h3 {font-size: 125%;}
+h4 {font-size: 115%;line-height: 115%;}
+h5 {font-size: 115%;text-transform: uppercase;}
 a {text-decoration: none;outline: none;}
 a:hover {text-decoration: underline;}
 .clr, .clear {clear: both;}
@@ -257,7 +257,7 @@ form.search_result .display {float: left;margin-left: 20px;height: 20px;margin-t
 #breadcrumbs {margin: 0;display: block;position:relative;overflow: hidden;height: 20px;padding: 10px;}
 #breadcrumbs-home {width: 13px;height: 13px;display: block;float: left;margin-top: 2px;}
 #breadcrumbs h3, .leading_separator {display: none;}
-span.breadcrumbs {display: block;font-size: 110%;font-weight: bold;overflow: hidden;}
+span.breadcrumbs {display: block;font-size: 100%;font-weight: bold;overflow: hidden;}
 span.breadcrumbs img {width: 4px;height: 23px;float: left;}
 span.breadcrumbs a, span.no-link {padding: 0 8px;float: left;display: block;height: 23px;line-height: 20px;}
 #maincol .contentheading a, span.breadcrumbs span.no-link {font-weight: normal;}

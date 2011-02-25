@@ -194,12 +194,14 @@
 															
 															<?php else : ?>
 																
-																<!-- Begin Admin Tabs -->
-																<?php if ($tabs): print '<ul class="primary png">' . $tabs .'</ul>'; print "<br>"; endif; ?>
-																<?php if ($tabs2): print '<ul class="secondary">' . $tabs2 .'</ul>'; print "<br>"; endif; ?>
-															  	<!-- End Admin Tabs -->
+															
 																
 																<?php print $content; ?>
+																
+																	<!-- Begin Admin Tabs -->
+																	<?php if ($tabs): print '<ul class="primary png">' . $tabs .'</ul>'; print "<br>"; endif; ?>
+																	<?php if ($tabs2): print '<ul class="secondary">' . $tabs2 .'</ul>'; print "<br>"; endif; ?>
+																  	<!-- End Admin Tabs -->
 																
 															<?php endif; ?>
 															
