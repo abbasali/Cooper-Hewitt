@@ -64,7 +64,7 @@ a:hover {text-decoration: underline;}
 .inset .rokchecks-active, #footer .rokchecks-active, .hilite2 .rokchecks-active {background-position: 0 -1125px;background-repeat: no-repeat;}
 
 /* Header */
-#header .padding {padding: 15px 20px 0px 20px;overflow: hidden;}
+#header .padding {padding: 10px;overflow: hidden;}
 #logo {float: left;margin: 0 25px 0 0;}
 .logo-module {width: 420px;float: left;overflow: hidden;}
 .logo-module .moduletable {clear: both;}
