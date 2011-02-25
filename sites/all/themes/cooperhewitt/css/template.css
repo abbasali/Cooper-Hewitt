@@ -16,8 +16,8 @@
 @font-face {font-family: "Continuum";src:local("Continuum"), url(../fonts/Continuum-Bold.ttf) format("truetype");font-weight:bold;}
 
 /* Font Family Settings */
-#ff-cooperhewitt, a.cooperhewitt, #ff-cooperhewitt #horiz-menu li li span, #ff-cooperhewitt input.button {font-family: 'Cantarell';}
-#ff-cooperhewitt #horiz-menu li span, #ff-cooperhewitt .date-block, #ff-cooperhewitt h1, #ff-cooperhewitt h2, #ff-cooperhewitt h3, #ff-cooperhewitt h4, #ff-cooperhewitt h5, #ff-cooperhewitt .roktabs-links, #ff-cooperhewitt .feature-block span.feature-title {font-family: 'Cantarell';}
+#ff-cooperhewitt, a.cooperhewitt, #ff-cooperhewitt #horiz-menu li li span, #ff-cooperhewitt input.button {font-family: vera-sans-1, vera-sans-2;}
+#ff-cooperhewitt #horiz-menu li span, #ff-cooperhewitt .date-block, #ff-cooperhewitt h1, #ff-cooperhewitt h2, #ff-cooperhewitt h3, #ff-cooperhewitt h4, #ff-cooperhewitt h5, #ff-cooperhewitt .roktabs-links, #ff-cooperhewitt .feature-block span.feature-title {font-family: vera-sans-1, vera-sans-2;}
 #ff-bebas, a.bebas, #ff-bebas #horiz-menu li li span, #ff-bebas h3.showtext, #ff-bebas input.button  {font-family: Helvetica,Arial,sans-serif;}
 #ff-bebas .date-block, #ff-bebas h1, #ff-bebas h2, #ff-bebas h3, #ff-bebas h4, #ff-bebas h5, #ff-bebas .feature-block span.feature-title {font-family: Bebas,Helvetica,Arial,sans-serif;}
 #ff-continuum, a.continuum, #ff-continuum #horiz-menu li li span, #ff-continuum h3.showtext, #ff-continuum input.button  {font-family: Helvetica,Arial,sans-serif;}
