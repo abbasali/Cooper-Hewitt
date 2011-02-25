@@ -15,8 +15,8 @@
 .colmask, #mainmodules7 {background: #fff;}
 
 /* Backgrounds - Full */
-body {background: #E8E9EA;}
-body.full #bg-tile {background: #E8E9EA url(../images/backgrounds/style2/bg-tile.png) 50% 0 repeat-x;}
+body {background: #EBEBEB;}
+body.full #bg-tile {background: #EBEBEB url(../images/backgrounds/style2/bg-tile.png) 50% 0 repeat-x;}
 body.full #bg-main {background: url(../images/backgrounds/style2/bg-main.png) 50% 0 no-repeat;}
 body.full #footer-bg {background: url(../images/backgrounds/style2/footer-bg.png) 0 100% no-repeat;}
 body.full #footer-bg2 {background: url(../images/backgrounds/style2/footer-bg2.png) 100% 100% no-repeat;}
@@ -26,14 +26,14 @@ body.full #header {background: url(../images/backgrounds/style2/main-trans.png) 
 #horiz-menu ul.columns2, #horiz-menu .columns2 > .drop-top {background-image: url(../images/style2/main/drop-bg-2.png);}
 
 /* Backgrounds - Medium */
-body.medium #bg-tile {background: #E8E9EA url(../images/backgrounds/style2/bg-tile.png) 50% 0 repeat-x;}
+body.medium #bg-tile {background: #EBEBEB url(../images/backgrounds/style2/bg-tile.png) 50% 0 repeat-x;}
 body.medium #bg-main {background: url(../images/backgrounds/style2/bg-main-med.png) 50% 112px repeat-x;}
 body.medium #footer-bg {background: url(../images/backgrounds/style2/footer-bg.png) 0 100% no-repeat;}
 body.medium #footer-bg2 {background: url(../images/backgrounds/style2/footer-bg2.png) 100% 100% no-repeat;}
 body.medium .feature-module {color: #333;background: url(../images/backgrounds/style2/feature-underlay.png) 100% 100% no-repeat;}
 
 /* Backgrounds - Simple */
-body.simple #bg-tile {background: #E8E9EA url(../images/backgrounds/style2/bg-tile.png) 50% -115px repeat-x;}
+body.simple #bg-tile {background: #EBEBEB url(../images/backgrounds/style2/bg-tile.png) 50% -115px repeat-x;}
 body.simple #header .wrapper {background: url(../images/backgrounds/style2/main-trans.png) 0 0;}
 body.simple .feature-module {color: #333;}
 body.simple #horiz-menu ul, body.simple #horiz-menu .drop-top {background-image: none;}
@@ -214,8 +214,8 @@ body ul.roknewspager .roknewspager-div {border-bottom: 1px dotted #ccc;}
 body .hilite2 ul.roknewspager .roknewspager-div {border-bottom: 1px dotted #333;}
 
 /* Bottom */
-#bottom-main {background: #E8E9EA;}
-#footer {background: #E8E9EA;color: #666;}
+#bottom-main {background: #EBEBEB;}
+#footer {background: #EBEBEB;color: #666;}
 #footer a.readon-main, #footer input.button {color: #000;}
 /* #rocket {background: url(../images/style2/main/header-tools.png) -127px -53px no-repeat;} */
 
