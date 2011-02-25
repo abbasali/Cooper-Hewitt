@@ -23,7 +23,7 @@
 .menutop ul li {width:182px;}
 
 .menutop ul.columns2 li {width:178px;float:left;}
-.menutop li > .item {padding: 0;height: auto;line-height: 20px;display: block;font-size: 12px;}
+.menutop li > .item {padding: 0;height: auto;line-height: 25px;display: block;font-size: 12px;}
 .menutop li > .bullet {padding: 3px 5px 5px 0px;}
 .menutop li > .item.image {padding:3px 0px 5px 0px;}
 .menutop li > .item img {float:left;margin: 6px 0px 0 5px;}
