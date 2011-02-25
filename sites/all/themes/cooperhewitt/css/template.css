@@ -455,6 +455,9 @@ li.leaf {
 	list-style-type: none;
     margin: 0;
     padding: 0.2em 0.5em 0 0;
+	display: inline;
+	font-size: 0.9em;
+	float: right;
 }
 #mainmodules3 a {font-weight: bold;}
 #bottom .moduletable {padding: 15px;}
