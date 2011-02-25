@@ -106,7 +106,7 @@ a.small:hover .button {background-position: 0 -39px;background-repeat: no-repeat
 .wrapper {position:relative;}
 #main-content a, #main-content .separator, #main-content .item {font-weight: bold;}
 .blog .module-inner, .full-article .module-inner, .blog .article_row, .blog .leading {padding: 0;}
-#maincontent-block {padding: 10px 10px 0 10px;}
+#maincontent-block {padding: 0px 10px 0 10px;}
 body #inset-block-right {float: right;padding-top: 10px;}
 body #inset-block-left {float: left;padding-top: 10px;}
 table.mainbody, table.blog {width: 100%;border: 0;padding: 0;}
