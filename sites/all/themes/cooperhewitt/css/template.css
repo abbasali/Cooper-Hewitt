@@ -451,6 +451,8 @@ body.full #footer-bg2, body.medium #footer-bg2 {position: relative;z-index: 1;pa
 /*.footer-mod {padding: 15px 0;} */
 #footer a {color: #1f1f1f;}
 li.leaf {
+	list-style-image: none;
+	list-style-type: none;
     margin: 0;
     padding: 0.2em 0.5em 0 0;
 }
