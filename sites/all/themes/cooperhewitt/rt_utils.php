@@ -11,14 +11,14 @@
 
 	
 	// set left column width
-	if(((theme_get_setting(splitmenu_col) == "leftcol") and $iridium_menu_type == "splitmenu" AND $thisTitle != "" and !$is_front) or $left) {
+	if(((theme_get_setting(splitmenu_col) == "leftcol") and $cooperhewitt_menu_type == "splitmenu" AND $thisTitle != "" and !$is_front) or $left) {
 		$current_leftcolumn_width = theme_get_setting('leftcolumn_width');
 	}
 	else {
 		$current_leftcolumn_width = 0;
 	}
 	// set right column width
-	if(((theme_get_setting(splitmenu_col) == "rightcol") and $iridium_menu_type == "splitmenu" AND $thisTitle != "" and !$is_front) or $right) {
+	if(((theme_get_setting(splitmenu_col) == "rightcol") and $cooperhewitt_menu_type == "splitmenu" AND $thisTitle != "" and !$is_front) or $right) {
 		$current_rightcolumn_width = theme_get_setting('rightcolumn_width');
 	}
 	else {

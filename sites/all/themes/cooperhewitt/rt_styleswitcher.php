@@ -6,10 +6,10 @@
 			$bgVar = $_GET['bgstyle'];
 			if (isset($_GET['page']) ) {
 				$thisPage= $_GET['page'];
-				iridium_change_theme($change, $styleVar, $bgVar, $thisPage);
+				cooperhewitt_change_theme($change, $styleVar, $bgVar, $thisPage);
 			}
 			else {
-				iridium_change_theme($change, $styleVar, $bgVar);
+				cooperhewitt_change_theme($change, $styleVar, $bgVar);
 			}
 		}
 ?>
@@ -17,7 +17,7 @@
 <?php
 		if (isset($_GET['fontsize']) ) {
 		
-			$current_font = $iridium_defaultfont;
+			$current_font = $cooperhewitt_defaultfont;
 			$change = $_GET['fontsize'];
 			
 			// support the font size toggler

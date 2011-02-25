@@ -17,7 +17,6 @@
 
 			<div class="article-rel-wrapper">
                             <?php if ($node->type!="blog") { ?>
-				<h2 class="contentheading"><?php echo $title; ?></h2>
                             <?php } else {
                                 $link = $node->links["comment_add"]["href"];
                                 ?>

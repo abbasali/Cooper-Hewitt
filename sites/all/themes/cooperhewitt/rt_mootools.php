@@ -25,7 +25,7 @@
 <?php endif; ?>
 
 <!-- FUSION MENU -->
-<?php if($iridium_menu_type=="fusion" AND theme_get_setting(f_enablejs)) : ?>
+<?php if($cooperhewitt_menu_type=="fusion" AND theme_get_setting(f_enablejs)) : ?>
 	
 	<?php if(f_enablejs) : ?>
 	

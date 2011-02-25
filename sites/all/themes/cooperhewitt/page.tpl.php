@@ -6,7 +6,7 @@
 		
 		<?php
 			$pageclass = "";
-			if($is_front) {$pageclass="iridium-home";}
+			if($is_front) {$pageclass="cooperhewitt-home";}
 			$rt_utils_includes = path_to_theme() . "/rt_utils.php";
 			include $rt_utils_includes;
 			$style_switcher = path_to_theme() . "/rt_styleswitcher.php";
@@ -25,7 +25,7 @@
 			if (isset($_GET['tstyle']) ) {
 				$change = "tstyle";
 				$styleVar = $_GET['tstyle'];
-				iridium_change_theme($change, $styleVar);
+				cooperhewitt_change_theme($change, $styleVar);
 			}
 		?>
 		
@@ -33,7 +33,7 @@
 
 	</head>
 	
-	<body id="ff-<?php echo $iridium_font_family; ?>" class="f-<?php echo $iridium_defaultfont; ?> <?php echo $iridium_preset_style; ?> <?php echo $iridium_bg_style; ?> <?php echo $pageclass; ?> iehandle">
+	<body id="ff-<?php echo $cooperhewitt_font_family; ?>" class="f-<?php echo $cooperhewitt_defaultfont; ?> <?php echo $cooperhewitt_preset_style; ?> <?php echo $cooperhewitt_bg_style; ?> <?php echo $pageclass; ?> iehandle">
 	<!--Begin Top Advertisement-->
 	<?php if ($advertisement) : ?>
 	<div id="top-advertisement">
@@ -88,12 +88,12 @@
 	<!--End Header-->
 	<div class="wrapper">
 		<!--Begin Horizontal Menu-->
-		<?php if($iridium_menu_type != "none") : ?>
-		<div id="horiz-menu" class="<?php echo $iridium_menu_type; ?>">
+		<?php if($cooperhewitt_menu_type != "none") : ?>
+		<div id="horiz-menu" class="<?php echo $cooperhewitt_menu_type; ?>">
 			<div class="wrapper">
 				<div class="padding">
 					<div id="horizmenu-surround">
-					<?php if($iridium_menu_type != "module") : ?>
+					<?php if($cooperhewitt_menu_type != "module") : ?>
 						<?php
 							$tree = menu_tree_page_data('primary-links');  
 							$main_menu = main_menu_tree_output($tree, 1);
@@ -230,7 +230,7 @@
 					        <?php if ($current_leftcolumn_width != 0) : ?>
 						    <div class="col2">
 								<div id="leftcol">
-									<?php if ($iridium_menu_type == "splitmenu" and theme_get_setting(splitmenu_col) == "leftcol" and !$is_front) : ?>
+									<?php if ($cooperhewitt_menu_type == "splitmenu" and theme_get_setting(splitmenu_col) == "leftcol" and !$is_front) : ?>
 										<?php include 'subnav.php'; ?>
 									<?php endif; ?>
 									<?php print $left; ?>
@@ -243,7 +243,7 @@
 						    <?php if ($current_rightcolumn_width != 0) : ?>
 						    <div class="col3">
 								<div id="rightcol">
-									<?php if ($iridium_menu_type == "splitmenu" and theme_get_setting(splitmenu_col) == "rightcol" and !$is_front) : ?>
+									<?php if ($cooperhewitt_menu_type == "splitmenu" and theme_get_setting(splitmenu_col) == "rightcol" and !$is_front) : ?>
 									<div class="sidenav-block">
 										<?php include 'subnav.php'; ?>
 									</div>

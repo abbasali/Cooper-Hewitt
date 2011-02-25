@@ -1,6 +1,6 @@
 <?php
 /**
- * @package   Iridium Template - RocketTheme
+ * @package   cooperhewitt Template - RocketTheme
  *
  */
 
@@ -9,7 +9,7 @@ global $stylesList;
 
 
 $stylesList = array(
-	'style1'  => array('style1', 'full', 'iridium', '#8BB036'),
+	'style1'  => array('style1', 'full', 'cooperhewitt', '#8BB036'),
 	'style2'  => array('style2', 'full', 'georgia', '#07A7A7'),
 	'style3'  => array('style3', 'full', 'helvetica', '#E4B300'),
 	'style4'  => array('style4', 'full', 'georgia', '#5FB12A'),
