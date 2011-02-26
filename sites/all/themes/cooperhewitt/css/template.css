@@ -450,6 +450,7 @@ form.josForm label.hasTip {display: block;float: left;height: 25px;line-height: 
 body.full #footer-bg2, body.medium #footer-bg2 {position: relative;z-index: 1;padding-bottom: 90px;}
 /*.footer-mod {padding: 15px 0;} */
 #footer a {color: #1f1f1f;}
+#footer ul {padding:17px 0 0 0;}
 li.leaf {
 	list-style-image: none;
 	list-style-type: none;
