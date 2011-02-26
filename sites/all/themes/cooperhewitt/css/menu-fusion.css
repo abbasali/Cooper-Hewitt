@@ -16,7 +16,7 @@
 /* Dropdowns */
 .menutop .subtext span {line-height: 18px;}
 .menutop .subtext em {line-height:13px;}
-.menutop ul {width:185px;padding:0 0 30px 0px;margin:0;}
+.menutop ul {width:185px;padding:8px 0 0px 15;margin:0;}
 .menutop .drop-top {width: 194px;height: 7px;}
 .menutop ul.columns2 {width:370px;}
 .menutop .columns2 > .drop-top {width:383px;}
@@ -80,7 +80,7 @@ body #horiz-menu ul.level1 {
   text-align: left;
 }
 .menutop {list-style: none;margin: 0;padding: 0;position: relative;float: left;}
-.menutop li.root {display: block;float: left;height: 31px;}
+.menutop li.root {display: block;float: left;height: 40px;}
 .menutop li.root > .item {white-space: nowrap;display: block;float: left;color:#fff;font-size: 12px;text-decoration: none !important;z-index: 100;cursor: pointer;padding: 7px 10px 0px 10px;position:relative;margin: 0;outline: none}
 .menutop li.root > .item span {display: block;padding: 0;margin: 0;outline: none;height:25px;}
 .menutop li.root > .item em {font-size:11px;font-weight:normal;display:block;font-style:normal;text-transform: lowercase;}
