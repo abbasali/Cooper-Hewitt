@@ -254,7 +254,7 @@ form.search_result .display {float: left;margin-left: 20px;height: 20px;margin-t
 #roksearch_results .google-search a#roksearch_link {margin-top: 5px;}
 
 /* Main Body Items */
-#breadcrumbs {margin: 0;display: block;position:relative;overflow: hidden;height: 20px;padding: 10px;}
+#breadcrumbs {margin: 0;display: block;position:relative;overflow: hidden;height: 20px;padding-left: 10px;}
 #breadcrumbs-home {width: 13px;height: 13px;display: block;float: left;margin-top: 2px;}
 #breadcrumbs h3, .leading_separator {display: none;}
 span.breadcrumbs {display: block;font-size: 100%;font-weight: bold;overflow: hidden;}
