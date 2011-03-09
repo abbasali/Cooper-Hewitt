@@ -146,11 +146,11 @@ HERE;
     if (!empty($url_custom)) {
       $url_custom = drupal_to_js($url_custom);
     }
-    print_r($url_custom);
+    
 // todo add code for url custom
 
     $script .= _getclicky_output_js_code($site_id_number);
-    print_r($script);
+    
     return $script;
   }
 
