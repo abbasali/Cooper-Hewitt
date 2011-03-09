@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -30,7 +29,8 @@
 		?>
 		
 		<link href="<?php echo base_path() . path_to_theme(); ?>/css/general.css" rel="stylesheet" type="text/css" />
-
+<!--[if IE 7]><link type="text/css" rel="stylesheet" media="all" href="<?php print base_path().path_to_theme() ?>/css/ie7.css" /><![endif]-->
+<!--[if IE 8]><link type="text/css" rel="stylesheet" media="all" href="<?php print base_path().path_to_theme() ?>/css/ie8.css" /><![endif]-->
 	</head>
 	
 	<body id="ff-<?php echo $cooperhewitt_font_family; ?>" class="f-<?php echo $cooperhewitt_defaultfont; ?> <?php echo $cooperhewitt_preset_style; ?> <?php echo $cooperhewitt_bg_style; ?> <?php echo $pageclass; ?> iehandle">

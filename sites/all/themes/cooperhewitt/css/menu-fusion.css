@@ -16,7 +16,7 @@
 /* Dropdowns */
 .menutop .subtext span {line-height: 18px;}
 .menutop .subtext em {line-height:13px;}
-.menutop ul {width:185px;padding:8px 0 0px 15;margin:0;}
+.menutop ul {width:185px;padding:8px 0 0px 0;margin:0 0 0 10px;}
 .menutop .drop-top {width: 194px;height: 7px;}
 .menutop ul.columns2 {width:370px;}
 .menutop .columns2 > .drop-top {width:383px;}
@@ -51,12 +51,19 @@
   padding: 6px 10px;
   color:#fff;
 }
-
+/*Begins - added by EStar Solutions*/
 #horiz-menu .menutop li li {
   background: #111;
   top: 0px;
-  margin-left: 2px;
+  margin:0 0 0 2px;
+  float:left;
+  
+} 
+#horiz-menu .menutop ul.level3{
+	margin-left:15px;
+	margin-top:1px;
 }
+/*Ends - added by EStar Solutions*/
 /* Third Sub level */
 #horiz-menu .menutop li li li {
   top: 1px;
@@ -87,7 +94,7 @@ body #horiz-menu ul.level1 {
 .menutop li.root > .daddy span {padding-right: 0px;}
 
 /* No JS */
-.menutop li:hover > .fusion-submenu-wrapper {left:165px;top:-18px;}
+.menutop li:hover > .fusion-submenu-wrapper {left:165px;top:-17px;}
 .menutop li.root:hover > .fusion-submenu-wrapper {top:32px;left:-12px;}
 
 /* Fusion Pill */

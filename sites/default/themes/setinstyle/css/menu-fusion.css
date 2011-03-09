@@ -16,14 +16,14 @@
 /* Dropdowns */
 .menutop .subtext span {line-height: 18px;}
 .menutop .subtext em {line-height:13px;}
-.menutop ul {width:185px;padding:0 0 30px 0px;margin:0;}
+.menutop ul {width:185px;padding:8px 0 0px 0;margin:0 0 0 10px;}
 .menutop .drop-top {width: 194px;height: 7px;}
 .menutop ul.columns2 {width:370px;}
 .menutop .columns2 > .drop-top {width:383px;}
 .menutop ul li {width:182px;}
 
 .menutop ul.columns2 li {width:178px;float:left;}
-.menutop li > .item {padding: 0;height: auto;line-height: 20px;display: block;font-size: 12px;}
+.menutop li > .item {padding: 0;height: auto;line-height: 25px;display: block;font-size: 12px;}
 .menutop li > .bullet {padding: 3px 5px 5px 0px;}
 .menutop li > .item.image {padding:3px 0px 5px 0px;}
 .menutop li > .item img {float:left;margin: 6px 0px 0 5px;}
@@ -51,12 +51,19 @@
   padding: 6px 10px;
   color:#fff;
 }
-
+/*Begins - added by EStar Solutions*/
 #horiz-menu .menutop li li {
   background: #111;
   top: 0px;
-  margin-left: 2px;
+  margin:0 0 0 2px;
+  float:left;
+  
+} 
+#horiz-menu .menutop ul.level3{
+	margin-left:15px;
+	margin-top:1px;
 }
+/*Ends - added by EStar Solutions*/
 /* Third Sub level */
 #horiz-menu .menutop li li li {
   top: 1px;
@@ -75,18 +82,19 @@
 
 /* Root Items */
 body #horiz-menu ul.level1 {
+  background:#161616;
   color: #fff;
   text-align: left;
 }
 .menutop {list-style: none;margin: 0;padding: 0;position: relative;float: left;}
-.menutop li.root {display: block;float: left;height: 31px;}
+.menutop li.root {display: block;float: left;height: 40px;}
 .menutop li.root > .item {white-space: nowrap;display: block;float: left;color:#fff;font-size: 12px;text-decoration: none !important;z-index: 100;cursor: pointer;padding: 7px 10px 0px 10px;position:relative;margin: 0;outline: none}
 .menutop li.root > .item span {display: block;padding: 0;margin: 0;outline: none;height:25px;}
 .menutop li.root > .item em {font-size:11px;font-weight:normal;display:block;font-style:normal;text-transform: lowercase;}
 .menutop li.root > .daddy span {padding-right: 0px;}
 
 /* No JS */
-.menutop li:hover > .fusion-submenu-wrapper {left:165px;top:-18px;}
+.menutop li:hover > .fusion-submenu-wrapper {left:165px;top:-17px;}
 .menutop li.root:hover > .fusion-submenu-wrapper {top:32px;left:-12px;}
 
 /* Fusion Pill */

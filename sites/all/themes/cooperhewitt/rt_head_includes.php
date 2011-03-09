@@ -1,5 +1,4 @@
 <?php
-
 // This information has been pulled out to make the template more readible.
 //
 // This data goes between the <head></head> tags of the template
@@ -56,7 +55,7 @@ $theme_path = path_to_theme();
 <?php if (rok_isIe()) :?>
 <!--[if IE 8]>
 <style type="text/css">
-#horizmenu-surround {width: auto !important;}
+<link href="<?php echo base_path() . path_to_theme(); ?>/css/template_ie8.css" rel="stylesheet" type="text/css" />	
 </style>
 <![endif]-->
 <!--[if IE 7]>

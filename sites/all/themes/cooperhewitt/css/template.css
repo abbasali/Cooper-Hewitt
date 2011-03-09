@@ -144,10 +144,13 @@ h3.module-title span, .contentheading span {padding: 0 8px 0 18px;margin-left: -
 .spacer.w99 .block {width: 100%;}
 .spacer.w49 .block {width: 49.8%;}
 /* .spacer.w33 .block {width: 33.3%;} */
-.moduletable {padding: 10px;position: relative;}
+.moduletable {padding: 10px;position: relative; }
 .flush .moduletable {padding: 0;}
 .inset .moduletable {padding: 0 10px;}
 #showmodules, #showmodules2, #featuremodules, #mainmodules, #mainmodules2, #mainmodules3, #mainmodules4, #mainmodules5, #mainmodules6, #mainmodules7 {overflow: hidden;}
+/*Begins - added by EStar Solutions*/
+#mainmodules3 *{overflow: hidden;}
+/*Ends - added by EStar Solutions*/
 #mainmodules2 {padding-top: 15px;}
 #mainmodules3 {padding: 5px 10px;}
 #mainmodules4 {padding: 5px;}

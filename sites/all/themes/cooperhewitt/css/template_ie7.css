@@ -17,7 +17,7 @@ h3, #bg-main, #horizmenu-surround, .wrapper, .module-inner, #maincontent-block, 
 #horiz-menu li.parent:hover {z-index:800 !important;}
 .menutop {z-index: 200;}
 .fusion-js-container {position:absolute !important;}
-#horiz-menu li.root >.daddy span {margin-right:-15px;padding-right:29px;}
+/*#horiz-menu li.root >.daddy span {margin-right:-15px;padding-right:29px;}*/
 
 /* rok module fixes */
 #roksearch_results .roksearch_even {zoom:1;}
@@ -69,3 +69,5 @@ body#ff-georgia .item_price {line-height:1.1em;}
 .style4 .image-full img:first-child {background: url(../images/feature/4.jpg) no-repeat;}
 .style5 .image-full img:first-child {background: url(../images/feature/5.jpg) no-repeat;}
 .style6 .image-full img:first-child {background: url(../images/feature/6.jpg) no-repeat;}
+
+/*Added by EStar Solutions*/
