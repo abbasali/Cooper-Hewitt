@@ -18,6 +18,23 @@
 	background-color: transparent;
 }
 
+#fb-link {
+	position:absolute;
+	top: 53px;
+	left: 861px;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+}
+
+#tw-link {
+	position:absolute;
+	top: 53px;
+	left: 905px;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+}
 /* Backgrounds */
 #main-trans, #main-trans2, #main-trans-bottom {background: url(../images/backgrounds/style6/main-trans.png) 0 0;}
 #main-trans2 {padding: 0 10px 10px 10px;}
