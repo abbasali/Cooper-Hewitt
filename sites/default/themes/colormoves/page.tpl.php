@@ -55,7 +55,7 @@
 					<?php if ($logo_space) : ?>
 						<?php print $logo_space; ?>
 					<?php elseif (theme_get_setting(show_logo)) : ?>
-						<a href="http://cooperhewitt.org" id="logo-link"><a href="http://beta.cooperhewitt.org/microsites/set-in-style/" id="logo"></a></a>
+						<a href="http://beta.cooperhewitt.org/microsites/colormoves/" id="logo"></a>
 					<?php endif; ?>
 				</div>
 				<?php endif; ?>
