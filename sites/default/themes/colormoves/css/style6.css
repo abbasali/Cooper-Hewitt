@@ -9,6 +9,15 @@
 /* Logo Image */
 #logo {background: url(../images/style6/logo.png) 0 0 no-repeat;}
 
+#logo-link {
+	position:absolute;
+	top: 25px;
+	left: 268px;
+	width: 418px;
+	height: 69px;
+	background-color: transparent;
+}
+
 /* Backgrounds */
 #main-trans, #main-trans2, #main-trans-bottom {background: url(../images/backgrounds/style6/main-trans.png) 0 0;}
 #main-trans2 {padding: 0 10px 10px 10px;}
