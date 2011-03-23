@@ -77,7 +77,7 @@ body.simple #horiz-menu ul.columns2, body.simple #horiz-menu .columns2 > .drop-t
 #top-advertisement {background: #000;color: #fff;}
 
 /* Horizontal Menu */
-#horiz-menu li.root, #horiz-menu.splitmenu li {background: url(../images/style6/main/horizmenu-bullet.png) 10px 0 no-repeat;}
+/*#horiz-menu li.root, #horiz-menu.splitmenu li {background: url(../images/style6/main/horizmenu-bullet.png) 10px 0 no-repeat;} */
 #horiz-menu li.root > .item, #horiz-menu li.root.active > .item, #horiz-menu li.root:hover > .item, #horiz-menu.splitmenu li .item {color: #fff;background: none;}
 #horiz-menu li.root > .daddy span {background: url(../images/style6/main/horizmenu-bullet.png) 100% -272px no-repeat;}
 #horiz-menu li.root:hover, #horiz-menu li.root.active, #horiz-menu li.root.f-menuparent-itemfocus, #horiz-menu.splitmenu li:hover,  #horiz-menu.splitmenu li.sfHover, #horiz-menu.splitmenu li.active {background: url(../images/style6/main/horizmenu-bullet.png) 10px -145px no-repeat;}
