@@ -47,7 +47,7 @@ body.full #bg-main {background: url(../images/backgrounds/style6/bg-main.png) 50
 body.full #header {background: #BC2F00;}
 body.full #footer-bg {background: url(../images/backgrounds/style6/footer-bg.png) 50% 100% no-repeat;}
 body.full .feature-module {color: #fff;background: url(../images/backgrounds/style6/feature-underlay.png) 100% 100% no-repeat;}
-#horiz-menu ul, #horiz-menu .drop-top {background-image: url(../images/style6/main/drop-bg-1.png);}
+#horiz-menu ul, #horiz-menu .drop-top {}
 #horiz-menu ul.columns2, #horiz-menu .columns2 > .drop-top {background-image: url(../images/style6/main/drop-bg-2.png);}
 
 /* Backgrounds - Medium */
@@ -66,7 +66,7 @@ body.simple #header .wrapper {background: #BC2F00;}
 body.simple #main-trans, body.simple #main-trans2 {background: #bbb;}
 body.simple #main-trans-top, body.simple #main-trans-bottom {background: #bbb;}
 body.simple #horiz-menu {background: #BC2F00;}
-body.simple #horiz-menu ul, body.simple #horiz-menu .drop-top {background-image: url(../images/style6/main/drop-bg-1-simple.png);}
+body.simple #horiz-menu ul, body.simple #horiz-menu .drop-top {}
 body.simple #horiz-menu ul.columns2, body.simple #horiz-menu .columns2 > .drop-top {background-image: url(../images/style6/main/drop-bg-2-simple.png);}
 
 /* Header */
