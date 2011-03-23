@@ -90,7 +90,7 @@ a.small:hover .button {background-position: 0 -39px;background-repeat: no-repeat
 #top-advertisement .moduletable {padding: 15px 15px 25px 15px;}
 
 /* Horizontal Menu */
-#horiz-menu {display: block;height: 12px;margin: 0;}
+#horiz-menu {display: block;margin: 0;}
 #horiz-menu .padding {padding: 0 10px;}
 #horizmenu-surround {position: relative;}
 #horiz-menu ul {float: left;}
