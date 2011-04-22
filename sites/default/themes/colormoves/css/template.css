@@ -5,7 +5,7 @@
  * @license		http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
  */
 /* This is the Main template logo, Edit this to match the width and height of your new logo image */
-#logo {width: 960px;height: 117px;}
+#logo {width: 940px;height: 155px;}
 
 /* Template Custom Fonts */
 @font-face {font-family: Bebas;src: url(../fonts/Bebas.eot);}
@@ -64,7 +64,7 @@ a:hover {text-decoration: underline;}
 .inset .rokchecks-active, #footer .rokchecks-active, .hilite2 .rokchecks-active {background-position: 0 -1125px;background-repeat: no-repeat;}
 
 /* Header */
-#header .padding {padding: 15px 10px 0px 10px;overflow: hidden;}
+#header .padding {padding: 15px;overflow: hidden;}
 #logo {float: left;margin: 0;}
 .logo-module {width: 960px;float: left;overflow: hidden;}
 .logo-module .moduletable {clear: both;}
@@ -99,7 +99,7 @@ a.small:hover .button {background-position: 0 -39px;background-repeat: no-repeat
 
 /* Main Layout */
 #main-trans {padding: 0 10px 10px 10px;}
-#main-trans-top {padding: 10px 10px;}
+#main-trans-top {padding: 5px 10px;}
 .colmask {clear:both;overflow:hidden;position:relative;width:100%;}
 /* .col1wrap {padding-bottom:2em;} */
 #maincol {position: relative;padding: 0;}
@@ -144,13 +144,13 @@ h3.module-title span, .contentheading span {padding: 0 8px 0 18px;margin-left: -
 .spacer.w99 .block {width: 100%;}
 .spacer.w49 .block {width: 49.8%;}
 /* .spacer.w33 .block {width: 33.3%;} */
-.moduletable {padding: 10px;position: relative;}
+.moduletable {padding: 0px;position: relative;}
 .flush .moduletable {padding: 0;}
 .inset .moduletable {padding: 0 10px;}
 #showmodules, #showmodules2, #featuremodules, #mainmodules, #mainmodules2, #mainmodules3, #mainmodules4, #mainmodules5, #mainmodules6, #mainmodules7 {overflow: hidden;}
 #mainmodules2 {padding-top: 15px;}
 #mainmodules3 {padding: 5px 10px;}
-#mainmodules4 {padding-top: 20px;}
+#mainmodules4 {padding-top: 0px;}
 #mainmodules5, #mainmodules6 {margin: 0 -10px;}
 
 /* Module Variations */
@@ -448,8 +448,17 @@ form.josForm label.hasTip {display: block;float: left;height: 25px;line-height: 
 #bottom ul li:hover a {text-decoration: none;}
 #footer {position: relative;overflow: hidden;}
 body.full #footer-bg2, body.medium #footer-bg2 {position: relative;z-index: 1;padding-bottom: 90px;}
-.footer-mod {padding: 15px 0;}
-#footer a {font-weight: bold;}
+/*.footer-mod {padding: 15px 0;}*/
+#footer a {color: #666666;}
+#footer ul {padding:17px 0 0 0;}
+li.leaf {
+list-style-image: none;
+list-style-type: none;
+    margin: 0;
+    padding: 0.2em 0.5em 0 0;
+font-size: 0.9em;
+float: right;
+}
 #mainmodules3 a {font-weight: bold;}
 #bottom .moduletable {padding: 15px;}
 

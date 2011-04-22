@@ -55,9 +55,7 @@
 					<?php if ($logo_space) : ?>
 						<?php print $logo_space; ?>
 					<?php elseif (theme_get_setting(show_logo)) : ?>
-						<a href="http://facebook.com/cooperhewitt" id="fb-link"></a>
-						<a href="http://twitter.com/cooperhewitt" id="tw-link"></a>
-						<a href="http://cooperhewitt.org" id="logo-link"><a href="http://beta.cooperhewitt.org/microsites/colormoves/" id="logo"></a></a>
+					<a href="http://beta.cooperhewitt.org/microsites/colormoves/" id="logo"></a>
 					<?php endif; ?>
 				</div>
 				<?php endif; ?>
@@ -296,7 +294,6 @@
 					<?php endif; ?>
 					<!--Begin Copyright Section-->
 					
-					<span class="st_twitter_hcount" displayText="Tweet"></span><span class="st_facebook_hcount" displayText="Share"></span><span class="st_email_hcount" displayText="Email"></span><span class="st_sharethis_hcount" displayText="Share"></span>
 					
 					<?php if ($footer4 or theme_get_setting(show_copyright) or theme_get_setting(show_topbutton)) : ?>
 					<div class="copyright-block">

@@ -62,7 +62,7 @@ body.medium .feature-module {color: #fff;background: url(../images/backgrounds/s
 /* Backgrounds - Simple */
 body.simple #bg-tile {background: #fff url(../images/backgrounds/style6/bg-tile.png) 50% -115px repeat-x;}
 body.simple .feature-module {color: #fff;}
-body.simple #header .wrapper {background: #BC2F00;}
+body.simple #header .wrapper {background: #000;}
 body.simple #main-trans, body.simple #main-trans2 {background: #bbb;}
 body.simple #main-trans-top, body.simple #main-trans-bottom {background: #bbb;}
 body.simple #horiz-menu {background: #BC2F00;}
@@ -162,7 +162,7 @@ body .hilite2 ul.roknewspager .roknewspager-div {border-bottom: 1px dotted #333;
 
 /* Bottom */
 #bottom-main {background: #fff;}
-#footer {background: #D3D3D3;color: #333;}
+#footer {background: #ebebeb;color: #333;}
 #footer-bg2 {padding-left: 10px;padding-right: 10px;}
 #footer a.readon-main, #footer input.button {color: #000;}
 #rocket {background: url(../images/style6/main/header-tools.png) -127px -53px no-repeat;}
