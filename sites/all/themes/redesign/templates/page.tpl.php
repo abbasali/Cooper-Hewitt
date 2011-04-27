@@ -129,7 +129,7 @@
     <div id="header">
 	  <div id="logo">
 	 
-       <a href="<?php print  url('node/1118');?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+       <a href="<?php print  url('/redesign/home');?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
 	  </div>
 	  <div id="navigation">
 	  <?php if ($redesign_top_menu): ?>
