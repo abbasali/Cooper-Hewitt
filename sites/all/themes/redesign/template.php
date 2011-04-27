@@ -92,6 +92,9 @@ function redesign_breadcrumb($breadcrumb) {
       elseif (theme_get_setting('zen_breadcrumb_trailing')) {
         $trailing_separator = $breadcrumb_separator;
       }
+	  if(arg(0)=="node" && arg(1)==1105){//redesign homepage
+		return '';
+	 }
 	  $title="<strong>$title</strong>";
       return '<div class="breadcrumb">' . implode($breadcrumb_separator, $breadcrumb) . "$trailing_separator$title</div>";
     }
