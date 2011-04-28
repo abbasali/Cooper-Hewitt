@@ -2,6 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title><?php print $head_title ?></title>
+			<?php
+			if ($_GET["format"] == "simple") {
+			  $theme = path_to_theme() . '/simple.tpl.php';
+			  include ($theme);
+			  return;
+			}
+			?>
 		<?php
 			$pageclass = "";
 			if($is_front) {$pageclass="cooperhewitt-home";}
