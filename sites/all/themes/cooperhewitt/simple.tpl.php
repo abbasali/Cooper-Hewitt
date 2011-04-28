@@ -10,7 +10,13 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language ?>" lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
   <head>
-   
+   	 <title><?php print $head_title ?></title>
+	    <?php print $head ?>
+	    <?php print $styles ?>
+	    <?php print $scripts ?>
+	    <!--[if lt IE 7]>
+	      <?php print phptemplate_get_ie_styles(); ?>
+	    <![endif]-->
   </head>
   <body>
 
