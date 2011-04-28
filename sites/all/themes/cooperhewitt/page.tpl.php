@@ -3,12 +3,6 @@
 	<head>
 		<title><?php print $head_title ?></title>
 		<?php
-		if ($_GET["format"] == "simple") {
-		  include ('simple.tpl.php');
-		  return;
-		}
-		?>
-		<?php
 			$pageclass = "";
 			if($is_front) {$pageclass="cooperhewitt-home";}
 			$rt_utils_includes = path_to_theme() . "/rt_utils.php";
