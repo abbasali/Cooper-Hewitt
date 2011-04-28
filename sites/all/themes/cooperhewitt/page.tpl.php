@@ -2,7 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title><?php print $head_title ?></title>
-		
+		<?php
+		if ($_GET["format"] == "simple") {
+		  include ('simple.tpl.php');
+		  return;
+		}
+		?>
 		<?php
 			$pageclass = "";
 			if($is_front) {$pageclass="cooperhewitt-home";}
