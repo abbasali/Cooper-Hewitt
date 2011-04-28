@@ -25,7 +25,7 @@
    
 
     <?php print $content ?>
-
+    <?php print $links; ?>
   
 </body>
 </html>
