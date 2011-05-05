@@ -16,7 +16,7 @@
 		<div class="module-inner">
 
 			<div class="article-rel-wrapper">
-                            <?php if ($node->type!="blog") { ?>
+                            <?php if (($node->type!="blog") || ($node->type!="story")) { ?>
                             <?php } else {
                                 $link = $node->links["comment_add"]["href"];
                                 ?>
