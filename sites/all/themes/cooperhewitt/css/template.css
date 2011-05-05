@@ -273,7 +273,7 @@ p.buttonheading {position: absolute;top: 0;right: 10px;}
 .buttonheading .pdf {background-position: 0 -38px;background-repeat: no-repeat;}
 .buttonheading .print {background-position: 0 -22px;background-repeat: no-repeat;}
 .buttonheading .email {background-position: 0 -51px;background-repeat: no-repeat;}
-.article-info-surround {padding: 10px;margin: -15px 0 15px 0;overflow: hidden;}
+.article-info-surround {padding: 10px;margin:0;overflow: hidden;}
 p.articleinfo, .iteminfo {margin: 0;line-height: 140%;}
 .iteminfo {display: block;float: left;}
 p.pageinfo {padding: 2px 5px;margin-top: 0;display: block;}
