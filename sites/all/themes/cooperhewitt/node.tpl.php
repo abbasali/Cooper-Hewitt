@@ -16,7 +16,7 @@
 		<div class="module-inner">
 
 			<div class="article-rel-wrapper">
-                            <?php if (($node->type!="blog") || ($node->type!="story")) { ?>
+                            <?php if ($node->type!="blog") { ?>
                             <?php } else {
                                 $link = $node->links["comment_add"]["href"];
                                 ?>
@@ -40,6 +40,7 @@
 					<div class="iteminfo">
 	
 						<div class="article-info-left">
+							<?php echo l($title,$link);?>
 							<span class="createdate">
 							
 								<span class="date1"><?php print format_date($node->created, 'custom', "F j, Y g:i a") ?></span>
