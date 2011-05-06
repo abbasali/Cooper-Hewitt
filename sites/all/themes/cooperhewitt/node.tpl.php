@@ -40,10 +40,10 @@
 					<div class="iteminfo">
 	
 						<div class="article-info-left">
-							<h2><?php echo $node->title ?></h2>
+							<h2><a href="<?php $node->path ?>"<?php echo $node->title ?></a></h2>
 							<span class="createdate">
 							
-								<span class="date1"><?php print format_date($node->created, 'custom', "F j, Y g:i a") ?></span>
+								<span class="date1"><?php print format_date($node->created, 'custom', "F j, Y") ?></span>
 							</span>
 							<div class="clr"></div>
 						</div>
