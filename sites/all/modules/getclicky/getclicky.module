@@ -1,5 +1,4 @@
 <?php
-// $id$
 /*
  * Drupal Module: getclicky
  * Adds the required Javascript to the bottom of all your Drupal pages
@@ -146,11 +145,11 @@ HERE;
     if (!empty($url_custom)) {
       $url_custom = drupal_to_js($url_custom);
     }
-    
+//    print_r($url_custom);
 // todo add code for url custom
 
     $script .= _getclicky_output_js_code($site_id_number);
-    
+//    print_r($script);
     return $script;
   }
 
@@ -215,13 +214,15 @@ function _getclicky_output_js_code_secure_or_unsecure($site_id_number, $secure) 
   else {
     $http_or_https = "http";
   }
-  
-  
-  $js_code .= "
-  <script src='" . $http_or_https . "://static.getclicky.com/js' type='text/javascript'></script>
-  <script type='text/javascript'>clicky.init(" . $site_id_number . ");</script>
-  <noscript><p><img alt='Clicky' src='" . $http_or_https . "://static.getclicky.com/" . $site_id_number . "ns.gif' /></p></noscript>
-  ";
+
+
+  $js_code .= '
+  <script src="' . $http_or_https . '://static.getclicky.com/js" type="text/javascript"></script>
+  <script type="text/javascript"><!--//--><![CDATA[//><!--
+  clicky.init(' . $site_id_number . ');
+  //--><!]]></script>
+  <noscript><p><img alt="Clicky" src="' . $http_or_https . '://static.getclicky.com/' . $site_id_number . 'ns.gif" /></p></noscript>';
+
 
   // Add any custom code snippets if specified
   $codesnippet = variable_get('getclicky_codesnippet', '');  

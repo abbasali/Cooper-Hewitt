@@ -1,5 +1,4 @@
 <?php
-// $Id: views_handler_field_fontyourface_tag_font_tid.inc,v 1.1.2.2 2011/01/03 05:03:23 sreynen Exp $
 
 /**
  * @file

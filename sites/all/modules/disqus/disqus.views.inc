@@ -1,5 +1,4 @@
 <?php
-// $Id: disqus.views.inc,v 1.1.2.5 2010/03/19 11:08:20 robloach Exp $
 
 /**
 * Implementation of hook_views_data_alter.

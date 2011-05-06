@@ -1,5 +1,4 @@
 <?php
-// $Id: fontsquirrel.module,v 1.2.2.4 2011/01/30 00:10:03 sreynen Exp $
 
 /**
  * Implements hook_fontyourface_info().

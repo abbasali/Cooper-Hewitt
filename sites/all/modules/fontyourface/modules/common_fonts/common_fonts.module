@@ -1,5 +1,4 @@
 <?php
-// $Id: common_fonts.module,v 1.1.4.2 2011/01/02 21:33:04 sreynen Exp $
 
 /**
  * Implements hook_fontyourface_info().

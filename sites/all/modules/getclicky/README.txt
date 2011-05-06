@@ -1,4 +1,3 @@
-; $Id$
 
 Module: GetClicky
 Authors: gloscon, rsvelko (after Sep 2009)

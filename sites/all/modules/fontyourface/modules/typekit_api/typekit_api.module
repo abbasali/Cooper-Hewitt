@@ -1,5 +1,4 @@
 <?php
-// $Id: typekit_api.module,v 1.1.4.3 2011/01/27 05:05:57 sreynen Exp $
 
 define('TYPEKIT_API_BASE_URL', 'https://typekit.com/api/v1/json/');
 
@@ -143,7 +142,7 @@ function typekit_api_form_alter(&$form, &$form_state, $form_id) {
       ),
       'typekit_api_save' => array(
         '#type' => 'submit',
-        '#value' => 'Update',
+        '#value' => 'Update Typekit',
       ),
     );
     

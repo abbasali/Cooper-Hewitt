@@ -1,5 +1,4 @@
 <?php
-// $Id: views_handler_relationship_fontyourface_tag.inc,v 1.1.2.1 2011/01/02 21:33:05 sreynen Exp $
 
 /**
  * @file

@@ -1,5 +1,4 @@
 <?php
-// $Id: disqus.install,v 1.1.2.4 2009/08/27 23:40:14 robloach Exp $
 
 /**
  * @file
@@ -14,7 +13,52 @@ function disqus_uninstall() {
   variable_del('disqus_userapikey');
   variable_del('disqus_nodetypes');
   variable_del('disqus_developer');
+  variable_del('disqus_sso');
+  variable_del('disqus_secretkey');
+  variable_del('disqus_publickey');
+  drupal_uninstall_schema('disqus');
 }
+
+/**
+ * Implementation of hook_install().
+ */
+function disqus_install() {
+  drupal_install_schema('disqus');
+}
+
+/**
+ * Implementation of hook_schema().
+ */
+function disqus_schema() {
+  $schema = array();
+  $schema['disqus'] = array(
+    'fields' => array(
+      'did' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'nid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'status' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('did'),
+    'indexes' => array(
+      'nid' => array('nid'),
+      'status' => array('status'),
+    ),
+  );
+  return $schema;
+}
+
 
 /**
  * Updates the paths on the Disqus side to use the straight node URLs instead of the aliases.
@@ -81,7 +125,7 @@ function disqus_update_6000(&$sandbox = NULL) {
           ),
         );
       }
-    
+
       // Setup the batch API.
       $sandbox['forum_api_key'] = $forum_api_key;
       $sandbox['progress'] = 0;
@@ -136,4 +180,11 @@ function disqus_update_6000(&$sandbox = NULL) {
     $ret['#finished'] = empty($sandbox['max']) ? 1 : ($sandbox['progress'] / $sandbox['max']);
   }
   return $ret;
+}
+
+/**
+ * Update to add the new schema.
+ */
+function disqus_update_6001(&$sandbox = NULL) {
+  return drupal_install_schema('disqus');
 }

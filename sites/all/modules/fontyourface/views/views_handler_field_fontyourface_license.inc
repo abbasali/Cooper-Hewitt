@@ -1,5 +1,4 @@
 <?php
-// $Id: views_handler_field_fontyourface_license.inc,v 1.1.2.2 2011/01/02 21:33:05 sreynen Exp $
 
 /**
  * @file

@@ -1,11 +1,10 @@
-; $Id: disqus.info,v 1.1 2008/06/09 15:44:19 robloach Exp $
 name = Disqus
 description = Uses the Disqus web service to enhance comments.
 core = 6.x
 
-; Information added by drupal.org packaging script on 2010-03-19
-version = "6.x-1.6"
+; Information added by drupal.org packaging script on 2011-04-07
+version = "6.x-1.8"
 core = "6.x"
 project = "disqus"
-datestamp = "1268997906"
+datestamp = "1302217015"
 

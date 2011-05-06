@@ -1,5 +1,4 @@
 <?php
-// $Id: kernest.module,v 1.2.2.3 2011/01/27 05:05:57 sreynen Exp $
 
 /**
  * Implements hook_fontyourface_info().
