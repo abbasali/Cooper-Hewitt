@@ -40,7 +40,7 @@ body, body.f-default {font-size: 12px;}
 body#ff-optima, body#ff-optima.f-default, body#ff-georgia, body#ff-georgia.f-default {font-size: 13px;}
 body.f-large, body#ff-optima.f-large, body#ff-georgia.f-large {font-size: 14px;}
 p {margin-top: 10px;margin-bottom: 15px;}
-h1, h2, h3, h4, h5 {padding-bottom: 5px;margin: 25px 0 10px 0;font-weight: normal;line-height: 135%;}
+h1, h2, h3, h4, h5 {padding-bottom: 5px;margin: 15px 0 10px 0;font-weight: normal;line-height: 135%;}
 h1 {font-size: 175%;}
 h2 {font-size: 150%;}
 h3 {font-size: 125%;}
