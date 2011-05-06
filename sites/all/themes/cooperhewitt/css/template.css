@@ -106,7 +106,7 @@ a.small:hover .button {background-position: 0 -39px;background-repeat: no-repeat
 .wrapper {position:relative;}
 #main-content a, #main-content .separator, #main-content .item {font-weight: bold;}
 .blog .module-inner, .full-article .module-inner, .blog .article_row, .blog .leading {padding: 0;}
-#maincontent-block {padding: 0px 10px 0 10px;}
+#maincontent-block {padding: 10px 10px 0 10px;}
 body #inset-block-right {float: right;padding-top: 10px;}
 body #inset-block-left {float: left;padding-top: 10px;}
 table.mainbody, table.blog {width: 100%;border: 0;padding: 0;}
@@ -306,7 +306,7 @@ p.counter {text-align: right;margin: 15px 10px 0 0;}
 .blog_more {padding-top: 15px;}
 .blog h2 {margin-top: 0;}
 body #main-body .componentheading {margin: 0 0 15px 0;font-size: 180%;line-height: 130%;padding: 0;text-transform: none;}
-#main-content .date1 {font-size: 130%;display: block;float: left;margin-right: 5px;}
+#main-content .date1 {font-size: 100%;display: block;float: left;margin-right: 5px;}
 #main-content .date2 {font-size: 110%;float: left;line-height: 20px;margin-left: 5px;}
 .date-div {padding-right: 8px;}
 .article-info-right {float: right;}
