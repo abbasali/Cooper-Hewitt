@@ -40,7 +40,7 @@
 					<div class="iteminfo">
 	
 						<div class="article-info-left">
-							<h2><a href="<?php url('node/'.$node->nid); ?>"><?php echo $node->title ?></a></h2>
+							<h2><a href="<?php $node->links["comment_add"]["href"] ?>"><?php echo $node->title ?></a></h2>
 							<span class="createdate">
 							
 								<span class="date1"><?php print format_date($node->created, 'custom', "F j, Y") ?></span>
