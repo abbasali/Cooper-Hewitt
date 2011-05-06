@@ -305,7 +305,8 @@ body #main-body .componentheading {margin: 0 0 15px 0;font-size: 180%;line-heigh
 #main-content .date2 {font-size: 110%;float: left;line-height: 20px;margin-left: 5px;}
 .date-div {padding-right: 8px;}
 .article-info-right {float: right;}
-.article-info-left {margin-bottom: 0px;padding-bottom:5px;}
+.article-info-left {margin-bottom: 5px;}
+.article-info-left h2 {margin:0;padding-bottom:5px;}
 .createdby {font-weight: bold;margin-bottom: 5px;text-align: right;}
 
 /* Extra Joomla Elements */
