@@ -58,8 +58,7 @@
 			
 			<?php print $content ?>
 			    
-			<?php print $links; ?>
-			   
+		
 		</div>
 		
 		<div class="module-bm">

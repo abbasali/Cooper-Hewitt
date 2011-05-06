@@ -165,6 +165,11 @@ h3.module-title span, .contentheading span {padding: 0 8px 0 18px;margin-left: -
 .ad h3.module-title {color: #999;display: block;font-size: 10px;font-weight: bold;margin-bottom: 5px;padding: 0;margin-top: 10px;margin-left: 5px;text-transform: uppercase;background: none;line-height: 12px;font-family: Helvetica,Arial,sans-serif !important;}
 .ad h3.module-title span {background: none;color: #999;margin: 0;padding: 0;line-height: 12px;}
 
+#disqus_thread {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
 /* RokStories */
 .rokstories-layout4 .feature-block .image-container {margin-left: 0;}
 .rokstories-layout4 .feature-block .article_link {font-weight:bold;}
