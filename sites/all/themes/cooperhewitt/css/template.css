@@ -155,7 +155,7 @@ h3.module-title span, .contentheading span {padding: 0 8px 0 18px;margin-left: -
 #mainmodules3 {padding: 5px 10px;}
 #mainmodules4 {padding: 5px;}
 #mainmodules5, #mainmodules6 {margin: 0 -10px;}
-
+.profile .picture {margin:35px 0em 1em 0;}
 /* Module Variations */
 #main-body .hilite1 .module-inner {border-top: 0;}
 .hilite1 .readon1-l {background-position: 0 -47px;background-repeat: no-repeat;}
