@@ -37,6 +37,7 @@
 		<link href="<?php echo base_path() . path_to_theme(); ?>/css/general.css" rel="stylesheet" type="text/css" />
 <!--[if IE 7]><link type="text/css" rel="stylesheet" media="all" href="<?php print base_path().path_to_theme() ?>/css/ie7.css" /><![endif]-->
 <!--[if IE 8]><link type="text/css" rel="stylesheet" media="all" href="<?php print base_path().path_to_theme() ?>/css/ie8.css" /><![endif]-->
+<script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'808fd4d2-4b3f-457d-afda-337d5e5aa268'});</script>
 	</head>
 	
 	<body id="ff-<?php echo $cooperhewitt_font_family; ?>" class="f-<?php echo $cooperhewitt_defaultfont; ?> <?php echo $cooperhewitt_preset_style; ?> <?php echo $cooperhewitt_bg_style; ?> <?php echo $pageclass; ?> iehandle">
