@@ -58,7 +58,7 @@
 			
 			<?php print $content ?>
 			    
-			<?php print $links; ?>   
+			/*<?php print $links; ?>  */ 
 			   
 		</div>
 		
