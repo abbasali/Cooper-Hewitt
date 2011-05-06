@@ -58,9 +58,7 @@
 			
 			<?php print $content ?>
 			    
-			<?php print $links; 
-			unset($links['comment_add']);
-			?>
+			<?php print $links; ?>
 			   
 		</div>
 		
