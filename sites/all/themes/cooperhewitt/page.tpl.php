@@ -33,7 +33,7 @@
 				cooperhewitt_change_theme($change, $styleVar);
 			}
 		?>
-		
+	    <link href="<?php echo base_path() . path_to_theme(); ?>/css/nivo-slider.css" rel="stylesheet" type="text/css" />
 		<link href="<?php echo base_path() . path_to_theme(); ?>/css/general.css" rel="stylesheet" type="text/css" />
 <!--[if IE 7]><link type="text/css" rel="stylesheet" media="all" href="<?php print base_path().path_to_theme() ?>/css/ie7.css" /><![endif]-->
 <!--[if IE 8]><link type="text/css" rel="stylesheet" media="all" href="<?php print base_path().path_to_theme() ?>/css/ie8.css" /><![endif]-->
@@ -340,6 +340,14 @@
 	</div></div>
 	
 	<?php print $closure;?>
+	<script type="text/javascript" src="<?php echo base_path() . path_to_theme(); ?>/js/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_path() . path_to_theme(); ?>/js/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+	
 	<script type="text/javascript">
 	    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 	    var disqus_shortname = 'cooperhewitt'; // required: replace example with your forum shortname
