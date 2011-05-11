@@ -62,7 +62,7 @@ body.simple #horiz-menu ul.columns2, body.simple #horiz-menu .columns2 > .drop-t
 #horiz-menu li > .daddy span {background: none}
 
 /* Modules */
-h3.module-title, .contentheading {background: #f7f7f7;color: #666;}
+h3.module-title, .contentheading {color: #666; font-size:90%;}
 h3.module-title span, .contentheading span {background: url(../images/style2/modules/h3-main.png) 0 0 repeat-x;color: #fff;padding: 0 8px 0 30px;}
 .logo-module .moduletable {color: #fff;}
 .inset .module-inner {background: #f0f0f0;color: #333;border: 1px solid #DDDEDF;}
