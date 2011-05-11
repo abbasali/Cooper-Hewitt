@@ -346,7 +346,10 @@
     <script type="text/javascript">
     $(window).load(function() {
         $('#slider').nivoSlider({
-	controlNav:true}
+	controlNav:true,
+	effect:'fade',
+	pauseTime:5000
+	}
 	);
     });
     </script>
