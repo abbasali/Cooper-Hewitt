@@ -2292,7 +2292,7 @@ function node_access_needs_rebuild($rebuild = NULL) {
     return variable_get('node_access_needs_rebuild', FALSE);
   }
   elseif ($rebuild) {
-    variable_set('node_access_needs_rebuild', FALSE);
+    variable_set('node_access_needs_rebuild', TRUE);
   }
   else {
     variable_del('node_access_needs_rebuild');
@@ -2325,7 +2325,7 @@ function node_access_rebuild($batch_mode = FALSE) {
   db_query("DELETE FROM {node_access}");
   // Only recalculate if the site is using a node_access module.
   if (count(module_implements('node_grants'))) {
-    if ($batch_mode) {
+    if (FALSE) {
       $batch = array(
         'title' => t('Rebuilding content access permissions'),
         'operations' => array(
