@@ -2292,7 +2292,7 @@ function node_access_needs_rebuild($rebuild = NULL) {
     return variable_get('node_access_needs_rebuild', FALSE);
   }
   elseif ($rebuild) {
-    variable_set('node_access_needs_rebuild', TRUE);
+    variable_set('node_access_needs_rebuild', FALSE);
   }
   else {
     variable_del('node_access_needs_rebuild');
