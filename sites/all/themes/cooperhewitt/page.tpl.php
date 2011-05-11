@@ -33,9 +33,7 @@
 				cooperhewitt_change_theme($change, $styleVar);
 			}
 		?>
-	    <link href="<?php echo base_path() . path_to_theme(); ?>/css/nivo-slider.css" rel="stylesheet" type="text/css" />
-	 <link href="<?php echo base_path() . path_to_theme(); ?>/css/style.css" rel="stylesheet" type="text/css" />
-	 
+	    <link href="<?php echo base_path() . path_to_theme(); ?>/css/nivo-slider.css" rel="stylesheet" type="text/css" />	 
 		<link href="<?php echo base_path() . path_to_theme(); ?>/css/general.css" rel="stylesheet" type="text/css" />
 <!--[if IE 7]><link type="text/css" rel="stylesheet" media="all" href="<?php print base_path().path_to_theme() ?>/css/ie7.css" /><![endif]-->
 <!--[if IE 8]><link type="text/css" rel="stylesheet" media="all" href="<?php print base_path().path_to_theme() ?>/css/ie8.css" /><![endif]-->
