@@ -345,7 +345,9 @@
     <script type="text/javascript" src="<?php echo base_path() . path_to_theme(); ?>/js/jquery.nivo.slider.pack.js"></script>
     <script type="text/javascript">
     $(window).load(function() {
-        $('#slider').nivoSlider();
+        $('#slider').nivoSlider({
+	controlNav:true}
+	);
     });
     </script>
 	
