@@ -331,7 +331,7 @@ function _getclicky_output_stats_dashboard() {
   
   if ( $site_id && $site_key) {
   
-    $iframe = '<iframe frameborder="0" style="margin-left: 20px; width: 850px; height: 1400px;" src="http://getclicky.com/stats/wp-iframe?site_id=' . $site_id . '&sitekey=' . $site_key . '"></iframe>'; 
+    $iframe = '<iframe frameborder="0" style="width: 850px; height: 1200px;" src="http://getclicky.com/stats/wp-iframe?site_id=' . $site_id . '&sitekey=' . $site_key . '"></iframe>'; 
   
   }
   else {
