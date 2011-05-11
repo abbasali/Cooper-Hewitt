@@ -1,8 +1,8 @@
 #slider {
 	position:relative;
-    width:618px;
-    height:246px;
-    margin-left:190px;
+    width:900px;
+    height:369px;
+    /*margin-left:190px;*/
 	background:url(images/loading.gif) no-repeat 50% 50%;
 }
 #slider img {
