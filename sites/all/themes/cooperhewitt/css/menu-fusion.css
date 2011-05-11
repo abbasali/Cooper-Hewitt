@@ -55,7 +55,7 @@
 #horiz-menu .menutop li li {
   background: #111;
   top: 0px;
-  margin:0 0 0 2px;
+  margin:-2px 0 0 14px;
   float:left;
   
 } 
