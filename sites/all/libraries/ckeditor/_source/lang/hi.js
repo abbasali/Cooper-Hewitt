@@ -1,5 +1,5 @@
 ﻿/*
-Copyright (c) 2003-2010, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
@@ -34,8 +34,8 @@ CKEDITOR.lang['hi'] =
 	editorTitle : 'Rich text editor, %1, press ALT 0 for help.', // MISSING
 
 	// ARIA descriptions.
-	toolbar	: 'Toolbar', // MISSING
-	editor	: 'Rich Text Editor', // MISSING
+	toolbars	: 'Editor toolbars', // MISSING
+	editor		: 'Rich Text Editor', // MISSING
 
 	// Toolbar buttons without dialogs.
 	source			: 'सोर्स',
@@ -56,6 +56,7 @@ CKEDITOR.lang['hi'] =
 	superscript		: 'अभिलेख',
 	horizontalrule	: 'हॉरिज़ॉन्टल रेखा इन्सर्ट करें',
 	pagebreak		: 'पेज ब्रेक इन्सर्ट् करें',
+	pagebreakAlt		: 'Page Break', // MISSING
 	unlink			: 'लिंक हटायें',
 	undo			: 'अन्डू',
 	redo			: 'रीडू',
@@ -109,6 +110,17 @@ CKEDITOR.lang['hi'] =
 		langDirRTL		: 'Right to Left (RTL)', // MISSING
 		styles			: 'Style', // MISSING
 		cssClasses		: 'Stylesheet Classes', // MISSING
+		width			: 'चौड़ाई',
+		height			: 'ऊँचाई',
+		align			: 'ऍलाइन',
+		alignLeft		: 'दायें',
+		alignRight		: 'दायें',
+		alignCenter		: 'बीच में',
+		alignTop		: 'ऊपर',
+		alignMiddle		: 'मध्य',
+		alignBottom		: 'नीचे',
+		invalidHeight	: 'Height must be a number.', // MISSING
+		invalidWidth	: 'Width must be a number.', // MISSING
 
 		// Put the voice-only part of the label in the span.
 		unavailable		: '%1<span class="cke_accessibility">, unavailable</span>' // MISSING
@@ -155,9 +167,7 @@ CKEDITOR.lang['hi'] =
 		popupFullScreen	: 'फ़ुल स्क्रीन (IE)',
 		popupScrollBars	: 'स्क्रॉल बार',
 		popupDependent	: 'डिपेन्डॅन्ट (Netscape)',
-		popupWidth		: 'चौड़ाई',
 		popupLeft		: 'बायीं तरफ',
-		popupHeight		: 'ऊँचाई',
 		popupTop		: 'दायीं तरफ',
 		id				: 'Id', // MISSING
 		langDir			: 'भाषा लिखने की दिशा',
@@ -165,18 +175,19 @@ CKEDITOR.lang['hi'] =
 		langDirRTL		: 'दायें से बायें (RTL)',
 		acccessKey		: 'ऍक्सॅस की',
 		name			: 'नाम',
-		langCode		: 'भाषा लिखने की दिशा',
-		tabIndex		: 'टैब इन्डॅक्स',
-		advisoryTitle	: 'परामर्श शीर्शक',
+		langCode			: 'भाषा लिखने की दिशा',
+		tabIndex			: 'टैब इन्डॅक्स',
+		advisoryTitle		: 'परामर्श शीर्शक',
 		advisoryContentType	: 'परामर्श कन्टॅन्ट प्रकार',
 		cssClasses		: 'स्टाइल-शीट क्लास',
 		charset			: 'लिंक रिसोर्स करॅक्टर सॅट',
 		styles			: 'स्टाइल',
-		selectAnchor	: 'ऐंकर चुनें',
+		rel			: 'Relationship', // MISSING
+		selectAnchor		: 'ऐंकर चुनें',
 		anchorName		: 'ऐंकर नाम से',
-		anchorId		: 'ऍलीमॅन्ट Id से',
-		emailAddress	: 'ई-मेल पता',
-		emailSubject	: 'संदेश विषय',
+		anchorId			: 'ऍलीमॅन्ट Id से',
+		emailAddress		: 'ई-मेल पता',
+		emailSubject		: 'संदेश विषय',
 		emailBody		: 'संदेश',
 		noAnchors		: '(डॉक्यूमॅन्ट में ऐंकर्स की संख्या)',
 		noUrl			: 'लिंक URL टाइप करें',
@@ -243,15 +254,9 @@ CKEDITOR.lang['hi'] =
 		rows		: 'पंक्तियाँ',
 		columns		: 'कालम',
 		border		: 'बॉर्डर साइज़',
-		align		: 'ऍलाइन्मॅन्ट',
-		alignLeft	: 'दायें',
-		alignCenter	: 'बीच में',
-		alignRight	: 'बायें',
-		width		: 'चौड़ाई',
 		widthPx		: 'पिक्सैल',
 		widthPc		: 'प्रतिशत',
 		widthUnit	: 'width unit', // MISSING
-		height		: 'ऊँचाई',
 		cellSpace	: 'सैल अंतर',
 		cellPad		: 'सैल पैडिंग',
 		caption		: 'शीर्षक',
@@ -287,9 +292,6 @@ CKEDITOR.lang['hi'] =
 			wordWrap		: 'Word Wrap', // MISSING
 			hAlign			: 'Horizontal Alignment', // MISSING
 			vAlign			: 'Vertical Alignment', // MISSING
-			alignTop		: 'Top', // MISSING
-			alignMiddle		: 'Middle', // MISSING
-			alignBottom		: 'Bottom', // MISSING
 			alignBaseline	: 'Baseline', // MISSING
 			bgColor			: 'Background Color', // MISSING
 			borderColor		: 'Border Color', // MISSING
@@ -410,24 +412,17 @@ CKEDITOR.lang['hi'] =
 		btnUpload	: 'इसे सर्वर को भेजें',
 		upload		: 'अपलोड',
 		alt			: 'वैकल्पिक टेक्स्ट',
-		width		: 'चौड़ाई',
-		height		: 'ऊँचाई',
 		lockRatio	: 'लॉक अनुपात',
 		unlockRatio	: 'Unlock Ratio', // MISSING
 		resetSize	: 'रीसॅट साइज़',
 		border		: 'बॉर्डर',
 		hSpace		: 'हॉरिज़ॉन्टल स्पेस',
 		vSpace		: 'वर्टिकल स्पेस',
-		align		: 'ऍलाइन',
-		alignLeft	: 'दायें',
-		alignRight	: 'दायें',
 		alertUrl	: 'तस्वीर का URL टाइप करें ',
 		linkTab		: 'लिंक',
 		button2Img	: 'Do you want to transform the selected image button on a simple image?', // MISSING
 		img2Button	: 'Do you want to transform the selected image on a image button?', // MISSING
 		urlMissing	: 'Image source URL is missing.', // MISSING
-		validateWidth	: 'Width must be a whole number.', // MISSING
-		validateHeight	: 'Height must be a whole number.', // MISSING
 		validateBorder	: 'Border must be a whole number.', // MISSING
 		validateHSpace	: 'HSpace must be a whole number.', // MISSING
 		validateVSpace	: 'VSpace must be a whole number.' // MISSING
@@ -451,16 +446,10 @@ CKEDITOR.lang['hi'] =
 		accessAlways	: 'Always', // MISSING
 		accessSameDomain: 'Same domain', // MISSING
 		accessNever		: 'Never', // MISSING
-		align			: 'ऍलाइन',
-		alignLeft		: 'दायें',
 		alignAbsBottom	: 'Abs नीचे',
 		alignAbsMiddle	: 'Abs ऊपर',
 		alignBaseline	: 'मूल रेखा',
-		alignBottom		: 'नीचे',
-		alignMiddle		: 'मध्य',
-		alignRight		: 'दायें',
 		alignTextTop	: 'टेक्स्ट ऊपर',
-		alignTop		: 'ऊपर',
 		quality			: 'Quality', // MISSING
 		qualityBest		: 'Best', // MISSING
 		qualityHigh		: 'High', // MISSING
@@ -474,13 +463,9 @@ CKEDITOR.lang['hi'] =
 		windowMode		: 'Window mode', // MISSING
 		flashvars		: 'Variables for Flash', // MISSING
 		bgcolor			: 'बैक्ग्राउन्ड रंग',
-		width			: 'चौड़ाई',
-		height			: 'ऊँचाई',
 		hSpace			: 'हॉरिज़ॉन्टल स्पेस',
 		vSpace			: 'वर्टिकल स्पेस',
 		validateSrc		: 'लिंक URL टाइप करें',
-		validateWidth	: 'Width must be a number.', // MISSING
-		validateHeight	: 'Height must be a number.', // MISSING
 		validateHSpace	: 'HSpace must be a number.', // MISSING
 		validateVSpace	: 'VSpace must be a number.' // MISSING
 	},
@@ -615,6 +600,15 @@ CKEDITOR.lang['hi'] =
 		remove				: 'Remove Div' // MISSING
   	},
 
+	iframe :
+	{
+		title		: 'IFrame Properties', // MISSING
+		toolbar		: 'IFrame', // MISSING
+		noUrl		: 'Please type the iframe URL', // MISSING
+		scrolling	: 'Enable scrollbars', // MISSING
+		border		: 'Show frame border' // MISSING
+	},
+
 	font :
 	{
 		label		: 'फ़ॉन्ट',
@@ -721,6 +715,8 @@ CKEDITOR.lang['hi'] =
 	{
 		title		: 'About CKEditor', // MISSING
 		dlgTitle	: 'About CKEditor', // MISSING
+		help	: 'Check $1 for help.', // MISSING
+		userGuide : 'CKEditor User\'s Guide', // MISSING
 		moreInfo	: 'For licensing information please visit our web site:', // MISSING
 		copy		: 'Copyright &copy; $1. All rights reserved.' // MISSING
 	},
@@ -730,10 +726,11 @@ CKEDITOR.lang['hi'] =
 
 	fakeobjects :
 	{
-		anchor	: 'Anchor', // MISSING
-		flash	: 'Flash Animation', // MISSING
-		div		: 'Page Break', // MISSING
-		unknown	: 'Unknown Object' // MISSING
+		anchor		: 'Anchor', // MISSING
+		flash		: 'Flash Animation', // MISSING
+		iframe		: 'IFrame', // MISSING
+		hiddenfield	: 'Hidden Field', // MISSING
+		unknown		: 'Unknown Object' // MISSING
 	},
 
 	resize : 'Drag to resize', // MISSING
@@ -750,9 +747,64 @@ CKEDITOR.lang['hi'] =
 	toolbarCollapse	: 'Collapse Toolbar', // MISSING
 	toolbarExpand	: 'Expand Toolbar', // MISSING
 
+	toolbarGroups :
+	{
+		document : 'Document', // MISSING
+		clipboard : 'Clipboard/Undo', // MISSING
+		editing : 'Editing', // MISSING
+		forms : 'Forms', // MISSING
+		basicstyles : 'Basic Styles', // MISSING
+		paragraph : 'Paragraph', // MISSING
+		links : 'Links', // MISSING
+		insert : 'Insert', // MISSING
+		styles : 'Styles', // MISSING
+		colors : 'Colors', // MISSING
+		tools : 'Tools' // MISSING
+	},
+
 	bidi :
 	{
 		ltr : 'Text direction from left to right', // MISSING
 		rtl : 'Text direction from right to left' // MISSING
+	},
+
+	docprops :
+	{
+		label : 'Document Properties', // MISSING
+		title : 'Document Properties', // MISSING
+		design : 'Design', // MISSING
+		meta : 'Meta Tags', // MISSING
+		chooseColor : 'Choose', // MISSING
+		other : 'Other...', // MISSING
+		docTitle :	'Page Title', // MISSING
+		charset : 	'Character Set Encoding', // MISSING
+		charsetOther : 'Other Character Set Encoding', // MISSING
+		charsetASCII : 'ASCII', // MISSING
+		charsetCE : 'Central European', // MISSING
+		charsetCT : 'Chinese Traditional (Big5)', // MISSING
+		charsetCR : 'Cyrillic', // MISSING
+		charsetGR : 'Greek', // MISSING
+		charsetJP : 'Japanese', // MISSING
+		charsetKR : 'Korean', // MISSING
+		charsetTR : 'Turkish', // MISSING
+		charsetUN : 'Unicode (UTF-8)', // MISSING
+		charsetWE : 'Western European', // MISSING
+		docType : 'Document Type Heading', // MISSING
+		docTypeOther : 'Other Document Type Heading', // MISSING
+		xhtmlDec : 'Include XHTML Declarations', // MISSING
+		bgColor : 'Background Color', // MISSING
+		bgImage : 'Background Image URL', // MISSING
+		bgFixed : 'Non-scrolling (Fixed) Background', // MISSING
+		txtColor : 'Text Color', // MISSING
+		margin : 'Page Margins', // MISSING
+		marginTop : 'Top', // MISSING
+		marginLeft : 'Left', // MISSING
+		marginRight : 'Right', // MISSING
+		marginBottom : 'Bottom', // MISSING
+		metaKeywords : 'Document Indexing Keywords (comma separated)', // MISSING
+		metaDescription : 'Document Description', // MISSING
+		metaAuthor : 'Author', // MISSING
+		metaCopyright : 'Copyright', // MISSING
+		previewHtml : '<p>This is some <strong>sample text</strong>. You are using <a href="javascript:void(0)">CKEditor</a>.</p>' // MISSING
 	}
 };

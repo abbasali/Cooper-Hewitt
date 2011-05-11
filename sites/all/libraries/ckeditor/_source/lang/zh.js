@@ -1,5 +1,5 @@
 ﻿/*
-Copyright (c) 2003-2010, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
@@ -34,8 +34,8 @@ CKEDITOR.lang['zh'] =
 	editorTitle : 'Rich text editor, %1, press ALT 0 for help.', // MISSING
 
 	// ARIA descriptions.
-	toolbar	: 'Toolbar', // MISSING
-	editor	: 'Rich Text Editor', // MISSING
+	toolbars	: 'Editor toolbars', // MISSING
+	editor		: 'Rich Text Editor', // MISSING
 
 	// Toolbar buttons without dialogs.
 	source			: '原始碼',
@@ -56,6 +56,7 @@ CKEDITOR.lang['zh'] =
 	superscript		: '上標',
 	horizontalrule	: '插入水平線',
 	pagebreak		: '插入分頁符號',
+	pagebreakAlt		: 'Page Break', // MISSING
 	unlink			: '移除超連結',
 	undo			: '復原',
 	redo			: '重複',
@@ -109,6 +110,17 @@ CKEDITOR.lang['zh'] =
 		langDirRTL		: 'Right to Left (RTL)', // MISSING
 		styles			: 'Style', // MISSING
 		cssClasses		: 'Stylesheet Classes', // MISSING
+		width			: '寬度',
+		height			: '高度',
+		align			: '對齊',
+		alignLeft		: '靠左對齊',
+		alignRight		: '靠右對齊',
+		alignCenter		: '置中',
+		alignTop		: '靠上對齊',
+		alignMiddle		: '置中對齊',
+		alignBottom		: '靠下對齊',
+		invalidHeight	: '高度必須為數字格式',
+		invalidWidth	: '寬度必須為數字格式',
 
 		// Put the voice-only part of the label in the span.
 		unavailable		: '%1<span class="cke_accessibility">, 已關閉</span>'
@@ -155,9 +167,7 @@ CKEDITOR.lang['zh'] =
 		popupFullScreen	: '全螢幕 (IE)',
 		popupScrollBars	: '捲軸',
 		popupDependent	: '從屬 (NS)',
-		popupWidth		: '寬',
 		popupLeft		: '左',
-		popupHeight		: '高',
 		popupTop		: '右',
 		id				: 'ID',
 		langDir			: '語言方向',
@@ -165,18 +175,19 @@ CKEDITOR.lang['zh'] =
 		langDirRTL		: '由右而左 (RTL)',
 		acccessKey		: '存取鍵',
 		name			: '名稱',
-		langCode		: '語言方向',
-		tabIndex		: '定位順序',
-		advisoryTitle	: '標題',
+		langCode			: '語言方向',
+		tabIndex			: '定位順序',
+		advisoryTitle		: '標題',
 		advisoryContentType	: '內容類型',
 		cssClasses		: '樣式表類別',
 		charset			: '連結資源之編碼',
 		styles			: '樣式',
-		selectAnchor	: '請選擇錨點',
+		rel			: 'Relationship', // MISSING
+		selectAnchor		: '請選擇錨點',
 		anchorName		: '依錨點名稱',
-		anchorId		: '依元件 ID',
-		emailAddress	: '電子郵件',
-		emailSubject	: '郵件主旨',
+		anchorId			: '依元件 ID',
+		emailAddress		: '電子郵件',
+		emailSubject		: '郵件主旨',
 		emailBody		: '郵件內容',
 		noAnchors		: '(本文件尚無可用之錨點)',
 		noUrl			: '請輸入欲連結的 URL',
@@ -243,15 +254,9 @@ CKEDITOR.lang['zh'] =
 		rows		: '列數',
 		columns		: '欄數',
 		border		: '邊框',
-		align		: '對齊',
-		alignLeft	: '靠左對齊',
-		alignCenter	: '置中',
-		alignRight	: '靠右對齊',
-		width		: '寬度',
 		widthPx		: '像素',
 		widthPc		: '百分比',
 		widthUnit	: 'width unit', // MISSING
-		height		: '高度',
 		cellSpace	: '間距',
 		cellPad		: '內距',
 		caption		: '標題',
@@ -287,9 +292,6 @@ CKEDITOR.lang['zh'] =
 			wordWrap		: '自動換行',
 			hAlign			: '水平對齊',
 			vAlign			: '垂直對齊',
-			alignTop		: '向上對齊',
-			alignMiddle		: '置中對齊',
-			alignBottom		: '向下對齊',
 			alignBaseline	: '基線對齊',
 			bgColor			: '背景顏色',
 			borderColor		: '邊框顏色',
@@ -410,24 +412,17 @@ CKEDITOR.lang['zh'] =
 		btnUpload	: '上傳至伺服器',
 		upload		: '上傳',
 		alt			: '替代文字',
-		width		: '寬度',
-		height		: '高度',
 		lockRatio	: '等比例',
 		unlockRatio	: 'Unlock Ratio', // MISSING
 		resetSize	: '重設為原大小',
 		border		: '邊框',
 		hSpace		: '水平距離',
 		vSpace		: '垂直距離',
-		align		: '對齊',
-		alignLeft	: '靠左對齊',
-		alignRight	: '靠右對齊',
 		alertUrl	: '請輸入影像 URL',
 		linkTab		: '超連結',
 		button2Img	: '要把影像按鈕改成影像嗎？',
 		img2Button	: '要把影像改成影像按鈕嗎？',
 		urlMissing	: 'Image source URL is missing.', // MISSING
-		validateWidth	: 'Width must be a whole number.', // MISSING
-		validateHeight	: 'Height must be a whole number.', // MISSING
 		validateBorder	: 'Border must be a whole number.', // MISSING
 		validateHSpace	: 'HSpace must be a whole number.', // MISSING
 		validateVSpace	: 'VSpace must be a whole number.' // MISSING
@@ -451,16 +446,10 @@ CKEDITOR.lang['zh'] =
 		accessAlways	: '永遠',
 		accessSameDomain: '相同域名',
 		accessNever		: '永不',
-		align			: '對齊',
-		alignLeft		: '靠左對齊',
 		alignAbsBottom	: '絕對下方',
 		alignAbsMiddle	: '絕對中間',
 		alignBaseline	: '基準線',
-		alignBottom		: '靠下對齊',
-		alignMiddle		: '置中對齊',
-		alignRight		: '靠右對齊',
 		alignTextTop	: '文字上方',
-		alignTop		: '靠上對齊',
 		quality			: '質素',
 		qualityBest		: '最好',
 		qualityHigh		: '高',
@@ -474,13 +463,9 @@ CKEDITOR.lang['zh'] =
 		windowMode		: '視窗模式',
 		flashvars		: 'Flash 變數',
 		bgcolor			: '背景顏色',
-		width			: '寬度',
-		height			: '高度',
 		hSpace			: '水平距離',
 		vSpace			: '垂直距離',
 		validateSrc		: '請輸入欲連結的 URL',
-		validateWidth	: '寬度必須為數字格式',
-		validateHeight	: '高度必須為數字格式',
 		validateHSpace	: '水平間距必須為數字格式',
 		validateVSpace	: '垂直間距必須為數字格式'
 	},
@@ -615,6 +600,15 @@ CKEDITOR.lang['zh'] =
 		remove				: 'Remove Div' // MISSING
   	},
 
+	iframe :
+	{
+		title		: 'IFrame Properties', // MISSING
+		toolbar		: 'IFrame', // MISSING
+		noUrl		: 'Please type the iframe URL', // MISSING
+		scrolling	: 'Enable scrollbars', // MISSING
+		border		: 'Show frame border' // MISSING
+	},
+
 	font :
 	{
 		label		: '字體',
@@ -721,6 +715,8 @@ CKEDITOR.lang['zh'] =
 	{
 		title		: '關於 CKEditor',
 		dlgTitle	: '關於 CKEditor',
+		help	: 'Check $1 for help.', // MISSING
+		userGuide : 'CKEditor User\'s Guide', // MISSING
 		moreInfo	: '訪問我們的網站以獲取更多關於協議的信息',
 		copy		: 'Copyright &copy; $1. All rights reserved.'
 	},
@@ -730,10 +726,11 @@ CKEDITOR.lang['zh'] =
 
 	fakeobjects :
 	{
-		anchor	: '錨點',
-		flash	: 'Flash 動畫',
-		div		: '分頁',
-		unknown	: '不明物件'
+		anchor		: '錨點',
+		flash		: 'Flash 動畫',
+		iframe		: 'IFrame', // MISSING
+		hiddenfield	: 'Hidden Field', // MISSING
+		unknown		: '不明物件'
 	},
 
 	resize : '拖拽改變大小',
@@ -750,9 +747,64 @@ CKEDITOR.lang['zh'] =
 	toolbarCollapse	: 'Collapse Toolbar', // MISSING
 	toolbarExpand	: 'Expand Toolbar', // MISSING
 
+	toolbarGroups :
+	{
+		document : 'Document', // MISSING
+		clipboard : 'Clipboard/Undo', // MISSING
+		editing : 'Editing', // MISSING
+		forms : 'Forms', // MISSING
+		basicstyles : 'Basic Styles', // MISSING
+		paragraph : 'Paragraph', // MISSING
+		links : 'Links', // MISSING
+		insert : 'Insert', // MISSING
+		styles : 'Styles', // MISSING
+		colors : 'Colors', // MISSING
+		tools : 'Tools' // MISSING
+	},
+
 	bidi :
 	{
 		ltr : 'Text direction from left to right', // MISSING
 		rtl : 'Text direction from right to left' // MISSING
+	},
+
+	docprops :
+	{
+		label : 'Document Properties', // MISSING
+		title : 'Document Properties', // MISSING
+		design : 'Design', // MISSING
+		meta : 'Meta Tags', // MISSING
+		chooseColor : 'Choose', // MISSING
+		other : 'Other...', // MISSING
+		docTitle :	'Page Title', // MISSING
+		charset : 	'Character Set Encoding', // MISSING
+		charsetOther : 'Other Character Set Encoding', // MISSING
+		charsetASCII : 'ASCII', // MISSING
+		charsetCE : 'Central European', // MISSING
+		charsetCT : 'Chinese Traditional (Big5)', // MISSING
+		charsetCR : 'Cyrillic', // MISSING
+		charsetGR : 'Greek', // MISSING
+		charsetJP : 'Japanese', // MISSING
+		charsetKR : 'Korean', // MISSING
+		charsetTR : 'Turkish', // MISSING
+		charsetUN : 'Unicode (UTF-8)', // MISSING
+		charsetWE : 'Western European', // MISSING
+		docType : 'Document Type Heading', // MISSING
+		docTypeOther : 'Other Document Type Heading', // MISSING
+		xhtmlDec : 'Include XHTML Declarations', // MISSING
+		bgColor : 'Background Color', // MISSING
+		bgImage : 'Background Image URL', // MISSING
+		bgFixed : 'Non-scrolling (Fixed) Background', // MISSING
+		txtColor : 'Text Color', // MISSING
+		margin : 'Page Margins', // MISSING
+		marginTop : 'Top', // MISSING
+		marginLeft : 'Left', // MISSING
+		marginRight : 'Right', // MISSING
+		marginBottom : 'Bottom', // MISSING
+		metaKeywords : 'Document Indexing Keywords (comma separated)', // MISSING
+		metaDescription : 'Document Description', // MISSING
+		metaAuthor : 'Author', // MISSING
+		metaCopyright : 'Copyright', // MISSING
+		previewHtml : '<p>This is some <strong>sample text</strong>. You are using <a href="javascript:void(0)">CKEditor</a>.</p>' // MISSING
 	}
 };

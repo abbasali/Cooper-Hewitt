@@ -1,5 +1,5 @@
 ﻿/*
-Copyright (c) 2003-2010, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
@@ -34,8 +34,8 @@ CKEDITOR.lang['ms'] =
 	editorTitle : 'Rich text editor, %1, press ALT 0 for help.', // MISSING
 
 	// ARIA descriptions.
-	toolbar	: 'Toolbar', // MISSING
-	editor	: 'Rich Text Editor', // MISSING
+	toolbars	: 'Editor toolbars', // MISSING
+	editor		: 'Rich Text Editor', // MISSING
 
 	// Toolbar buttons without dialogs.
 	source			: 'Sumber',
@@ -56,6 +56,7 @@ CKEDITOR.lang['ms'] =
 	superscript		: 'Superscript',
 	horizontalrule	: 'Masukkan Garisan Membujur',
 	pagebreak		: 'Insert Page Break for Printing', // MISSING
+	pagebreakAlt		: 'Page Break', // MISSING
 	unlink			: 'Buang Sambungan',
 	undo			: 'Batalkan',
 	redo			: 'Ulangkan',
@@ -109,6 +110,17 @@ CKEDITOR.lang['ms'] =
 		langDirRTL		: 'Right to Left (RTL)', // MISSING
 		styles			: 'Style', // MISSING
 		cssClasses		: 'Stylesheet Classes', // MISSING
+		width			: 'Lebar',
+		height			: 'Tinggi',
+		align			: 'Jajaran',
+		alignLeft		: 'Kiri',
+		alignRight		: 'Kanan',
+		alignCenter		: 'Tengah',
+		alignTop		: 'Atas',
+		alignMiddle		: 'Pertengahan',
+		alignBottom		: 'Bawah',
+		invalidHeight	: 'Height must be a number.', // MISSING
+		invalidWidth	: 'Width must be a number.', // MISSING
 
 		// Put the voice-only part of the label in the span.
 		unavailable		: '%1<span class="cke_accessibility">, unavailable</span>' // MISSING
@@ -155,9 +167,7 @@ CKEDITOR.lang['ms'] =
 		popupFullScreen	: 'Skrin Penuh (IE)',
 		popupScrollBars	: 'Bar-bar skrol',
 		popupDependent	: 'Bergantungan (Netscape)',
-		popupWidth		: 'Lebar',
 		popupLeft		: 'Posisi Kiri',
-		popupHeight		: 'Tinggi',
 		popupTop		: 'Posisi Atas',
 		id				: 'Id', // MISSING
 		langDir			: 'Arah Tulisan',
@@ -165,18 +175,19 @@ CKEDITOR.lang['ms'] =
 		langDirRTL		: 'Kanan ke Kiri (RTL)',
 		acccessKey		: 'Kunci Akses',
 		name			: 'Nama',
-		langCode		: 'Arah Tulisan',
-		tabIndex		: 'Indeks Tab ',
-		advisoryTitle	: 'Tajuk Makluman',
+		langCode			: 'Arah Tulisan',
+		tabIndex			: 'Indeks Tab ',
+		advisoryTitle		: 'Tajuk Makluman',
 		advisoryContentType	: 'Jenis Kandungan Makluman',
 		cssClasses		: 'Kelas-kelas Stylesheet',
 		charset			: 'Linked Resource Charset',
 		styles			: 'Stail',
-		selectAnchor	: 'Sila pilih pautan',
+		rel			: 'Relationship', // MISSING
+		selectAnchor		: 'Sila pilih pautan',
 		anchorName		: 'dengan menggunakan nama pautan',
-		anchorId		: 'dengan menggunakan ID elemen',
-		emailAddress	: 'Alamat E-Mail',
-		emailSubject	: 'Subjek Mesej',
+		anchorId			: 'dengan menggunakan ID elemen',
+		emailAddress		: 'Alamat E-Mail',
+		emailSubject		: 'Subjek Mesej',
 		emailBody		: 'Isi Kandungan Mesej',
 		noAnchors		: '(Tiada pautan terdapat dalam dokumen ini)',
 		noUrl			: 'Sila taip sambungan URL',
@@ -243,15 +254,9 @@ CKEDITOR.lang['ms'] =
 		rows		: 'Barisan',
 		columns		: 'Jaluran',
 		border		: 'Saiz Border',
-		align		: 'Penjajaran',
-		alignLeft	: 'Kiri',
-		alignCenter	: 'Tengah',
-		alignRight	: 'Kanan',
-		width		: 'Lebar',
 		widthPx		: 'piksel-piksel',
 		widthPc		: 'peratus',
 		widthUnit	: 'width unit', // MISSING
-		height		: 'Tinggi',
 		cellSpace	: 'Ruangan Antara Sel',
 		cellPad		: 'Tambahan Ruang Sel',
 		caption		: 'Keterangan',
@@ -287,9 +292,6 @@ CKEDITOR.lang['ms'] =
 			wordWrap		: 'Word Wrap', // MISSING
 			hAlign			: 'Horizontal Alignment', // MISSING
 			vAlign			: 'Vertical Alignment', // MISSING
-			alignTop		: 'Top', // MISSING
-			alignMiddle		: 'Middle', // MISSING
-			alignBottom		: 'Bottom', // MISSING
 			alignBaseline	: 'Baseline', // MISSING
 			bgColor			: 'Background Color', // MISSING
 			borderColor		: 'Border Color', // MISSING
@@ -410,24 +412,17 @@ CKEDITOR.lang['ms'] =
 		btnUpload	: 'Hantar ke Server',
 		upload		: 'Muat Naik',
 		alt			: 'Text Alternatif',
-		width		: 'Lebar',
-		height		: 'Tinggi',
 		lockRatio	: 'Tetapkan Nisbah',
 		unlockRatio	: 'Unlock Ratio', // MISSING
 		resetSize	: 'Saiz Set Semula',
 		border		: 'Border',
 		hSpace		: 'Ruang Melintang',
 		vSpace		: 'Ruang Menegak',
-		align		: 'Jajaran',
-		alignLeft	: 'Kiri',
-		alignRight	: 'Kanan',
 		alertUrl	: 'Sila taip URL untuk fail gambar',
 		linkTab		: 'Sambungan',
 		button2Img	: 'Do you want to transform the selected image button on a simple image?', // MISSING
 		img2Button	: 'Do you want to transform the selected image on a image button?', // MISSING
 		urlMissing	: 'Image source URL is missing.', // MISSING
-		validateWidth	: 'Width must be a whole number.', // MISSING
-		validateHeight	: 'Height must be a whole number.', // MISSING
 		validateBorder	: 'Border must be a whole number.', // MISSING
 		validateHSpace	: 'HSpace must be a whole number.', // MISSING
 		validateVSpace	: 'VSpace must be a whole number.' // MISSING
@@ -451,16 +446,10 @@ CKEDITOR.lang['ms'] =
 		accessAlways	: 'Always', // MISSING
 		accessSameDomain: 'Same domain', // MISSING
 		accessNever		: 'Never', // MISSING
-		align			: 'Jajaran',
-		alignLeft		: 'Kiri',
 		alignAbsBottom	: 'Bawah Mutlak',
 		alignAbsMiddle	: 'Pertengahan Mutlak',
 		alignBaseline	: 'Garis Dasar',
-		alignBottom		: 'Bawah',
-		alignMiddle		: 'Pertengahan',
-		alignRight		: 'Kanan',
 		alignTextTop	: 'Atas Text',
-		alignTop		: 'Atas',
 		quality			: 'Quality', // MISSING
 		qualityBest		: 'Best', // MISSING
 		qualityHigh		: 'High', // MISSING
@@ -474,13 +463,9 @@ CKEDITOR.lang['ms'] =
 		windowMode		: 'Window mode', // MISSING
 		flashvars		: 'Variables for Flash', // MISSING
 		bgcolor			: 'Warna Latarbelakang',
-		width			: 'Lebar',
-		height			: 'Tinggi',
 		hSpace			: 'Ruang Melintang',
 		vSpace			: 'Ruang Menegak',
 		validateSrc		: 'Sila taip sambungan URL',
-		validateWidth	: 'Width must be a number.', // MISSING
-		validateHeight	: 'Height must be a number.', // MISSING
 		validateHSpace	: 'HSpace must be a number.', // MISSING
 		validateVSpace	: 'VSpace must be a number.' // MISSING
 	},
@@ -615,6 +600,15 @@ CKEDITOR.lang['ms'] =
 		remove				: 'Remove Div' // MISSING
   	},
 
+	iframe :
+	{
+		title		: 'IFrame Properties', // MISSING
+		toolbar		: 'IFrame', // MISSING
+		noUrl		: 'Please type the iframe URL', // MISSING
+		scrolling	: 'Enable scrollbars', // MISSING
+		border		: 'Show frame border' // MISSING
+	},
+
 	font :
 	{
 		label		: 'Font',
@@ -721,6 +715,8 @@ CKEDITOR.lang['ms'] =
 	{
 		title		: 'About CKEditor', // MISSING
 		dlgTitle	: 'About CKEditor', // MISSING
+		help	: 'Check $1 for help.', // MISSING
+		userGuide : 'CKEditor User\'s Guide', // MISSING
 		moreInfo	: 'For licensing information please visit our web site:', // MISSING
 		copy		: 'Copyright &copy; $1. All rights reserved.' // MISSING
 	},
@@ -730,10 +726,11 @@ CKEDITOR.lang['ms'] =
 
 	fakeobjects :
 	{
-		anchor	: 'Anchor', // MISSING
-		flash	: 'Flash Animation', // MISSING
-		div		: 'Page Break', // MISSING
-		unknown	: 'Unknown Object' // MISSING
+		anchor		: 'Anchor', // MISSING
+		flash		: 'Flash Animation', // MISSING
+		iframe		: 'IFrame', // MISSING
+		hiddenfield	: 'Hidden Field', // MISSING
+		unknown		: 'Unknown Object' // MISSING
 	},
 
 	resize : 'Drag to resize', // MISSING
@@ -750,9 +747,64 @@ CKEDITOR.lang['ms'] =
 	toolbarCollapse	: 'Collapse Toolbar', // MISSING
 	toolbarExpand	: 'Expand Toolbar', // MISSING
 
+	toolbarGroups :
+	{
+		document : 'Document', // MISSING
+		clipboard : 'Clipboard/Undo', // MISSING
+		editing : 'Editing', // MISSING
+		forms : 'Forms', // MISSING
+		basicstyles : 'Basic Styles', // MISSING
+		paragraph : 'Paragraph', // MISSING
+		links : 'Links', // MISSING
+		insert : 'Insert', // MISSING
+		styles : 'Styles', // MISSING
+		colors : 'Colors', // MISSING
+		tools : 'Tools' // MISSING
+	},
+
 	bidi :
 	{
 		ltr : 'Text direction from left to right', // MISSING
 		rtl : 'Text direction from right to left' // MISSING
+	},
+
+	docprops :
+	{
+		label : 'Document Properties', // MISSING
+		title : 'Document Properties', // MISSING
+		design : 'Design', // MISSING
+		meta : 'Meta Tags', // MISSING
+		chooseColor : 'Choose', // MISSING
+		other : 'Other...', // MISSING
+		docTitle :	'Page Title', // MISSING
+		charset : 	'Character Set Encoding', // MISSING
+		charsetOther : 'Other Character Set Encoding', // MISSING
+		charsetASCII : 'ASCII', // MISSING
+		charsetCE : 'Central European', // MISSING
+		charsetCT : 'Chinese Traditional (Big5)', // MISSING
+		charsetCR : 'Cyrillic', // MISSING
+		charsetGR : 'Greek', // MISSING
+		charsetJP : 'Japanese', // MISSING
+		charsetKR : 'Korean', // MISSING
+		charsetTR : 'Turkish', // MISSING
+		charsetUN : 'Unicode (UTF-8)', // MISSING
+		charsetWE : 'Western European', // MISSING
+		docType : 'Document Type Heading', // MISSING
+		docTypeOther : 'Other Document Type Heading', // MISSING
+		xhtmlDec : 'Include XHTML Declarations', // MISSING
+		bgColor : 'Background Color', // MISSING
+		bgImage : 'Background Image URL', // MISSING
+		bgFixed : 'Non-scrolling (Fixed) Background', // MISSING
+		txtColor : 'Text Color', // MISSING
+		margin : 'Page Margins', // MISSING
+		marginTop : 'Top', // MISSING
+		marginLeft : 'Left', // MISSING
+		marginRight : 'Right', // MISSING
+		marginBottom : 'Bottom', // MISSING
+		metaKeywords : 'Document Indexing Keywords (comma separated)', // MISSING
+		metaDescription : 'Document Description', // MISSING
+		metaAuthor : 'Author', // MISSING
+		metaCopyright : 'Copyright', // MISSING
+		previewHtml : '<p>This is some <strong>sample text</strong>. You are using <a href="javascript:void(0)">CKEditor</a>.</p>' // MISSING
 	}
 };
