@@ -347,7 +347,7 @@
     $(window).load(function() {
         $('#slider').nivoSlider({
 	controlNav:true,
-	effect:'fade',
+	effect:'sliceDown',
 	pauseTime:5000
 	}
 	);
