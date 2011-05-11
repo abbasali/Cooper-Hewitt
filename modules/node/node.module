@@ -2325,7 +2325,7 @@ function node_access_rebuild($batch_mode = FALSE) {
   db_query("DELETE FROM {node_access}");
   // Only recalculate if the site is using a node_access module.
   if (count(module_implements('node_grants'))) {
-    if (FALSE) {
+    if ($batch_mode) {
       $batch = array(
         'title' => t('Rebuilding content access permissions'),
         'operations' => array(
