@@ -1,10 +1,13 @@
 name = Protected Node
-description = Controls whether selected nodes are protected with a password.
+description = Controls whether selected nodes are protected with a password. Works even better with the Token module.
 core = 6.x
 package = Access
-; Information added by drupal.org packaging script on 2009-02-28
-version = "6.x-1.5"
+recommends[] = tokens
+recommends[] = upload
+
+; Information added by drupal.org packaging script on 2011-05-08
+version = "6.x-1.6-alpha4"
 core = "6.x"
 project = "protected_node"
-datestamp = "1235815531"
+datestamp = "1304881016"
 
