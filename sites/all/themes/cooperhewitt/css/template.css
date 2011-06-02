@@ -134,7 +134,7 @@ table.mainbody, table.blog {width: 100%;border: 0;padding: 0;}
 .x-c-s .col3 {float:right;position:relative;}
 
 /* Modules */
-.module-inner {position: relative;overflow: auto;}
+.module-inner {position: relative;overflow: hidden;}
 .hilite1 .module-inner, .hilite2 .module-inner, .inset .module-inner {padding: 15px;}
 .moduletable h3 {margin-top: 0;font-size: 125%;}
 h3.module-title {margin: 0;padding: 0 0 0 10px;line-height: 30px;font-weight: bold;}
