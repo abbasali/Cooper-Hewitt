@@ -227,8 +227,8 @@ body .hilite2 ul.roknewspager .roknewspager-div {border-bottom: 1px dotted #333;
 span.highlight {color:#D5040B;}
 .highlight1 span.highlight {color:#000;}
 div.highlight1, div.highlight2 {color:#666;}
-div.highlight1 {background: #FEFFFE url(../images/typo/highlight1-2.jpg) 0 0 no-repeat;border:1px solid #DFE1E2;}
-div.highlight2 {background: #D4D6D7 url(../images/typo/highlight2-2.jpg) 0 0 no-repeat;border:1px solid #D4D6D7;}
+div.highlight1 {background: #FEFFFE;border:1px solid #DFE1E2;}
+div.highlight2 {background: #D4D6D7;border:1px solid #D4D6D7;}
 
 #breadcrumbs-home {background: url(../images/style2/main/typo-assets.png) 0 0 no-repeat;}
 span.breadcrumbs img {background: url(../images/style2/main/arrows.png) 0 -1794px no-repeat;}
