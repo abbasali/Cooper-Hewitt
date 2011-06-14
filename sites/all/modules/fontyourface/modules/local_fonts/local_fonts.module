@@ -87,7 +87,7 @@ function local_fonts_delete_button_submit($form, &$form_state) {
 function local_fonts_add_fontface($form_state) {
 
   $form = array();
-  
+
   $form['local_fonts']['information'] = array(
     '#type' => 'fieldset',
     '#title' => t('Font Information'),
@@ -137,7 +137,7 @@ function local_fonts_add_fontface($form_state) {
     '#title' => t('EOT font file'),
     '#description' => t('Embedded Open Type. This format is supported by IE 5-8.'),
   );
-  
+
   $form['local_fonts']['upload']['ttf'] = array(
     '#type' => 'file',
     '#title' => t('TTF font file'),
@@ -185,7 +185,7 @@ function local_fonts_add_fontface_validate($form, &$form_state) {
   ) {
 
     // Validate the files against their extension
-  
+
     $files = $_FILES['files']['name'];
 
     foreach ($files as $key => $filename) {
@@ -244,7 +244,7 @@ function local_fonts_add_fontface_submit($form, &$form_state) {
     (file_check_directory($destination_directory, FILE_CREATE_DIRECTORY))
   ) {
 
-    foreach($files as $key => $filename) {
+    foreach ($files as $key => $filename) {
 
       $format = $key;
 
@@ -256,43 +256,49 @@ function local_fonts_add_fontface_submit($form, &$form_state) {
 
       if (!empty($filename)) {
 
-        if ($file = file_save_upload($key, array(), $destination_directory . '/' . $filename)) {
+        if ($file = file_save_upload($key, array(), $destination_directory . '/' . $filename . '.tmp', FILE_EXISTS_REPLACE)) {
 
-          if ($format == 'eot') {
+          // Copy the temporary file to permanent location.
 
-            // EOT goes on its own line and doesn't take a format.
-            // Because IE is a "special needs" browser.
+          if (file_copy($file, $destination_directory . '/' . $filename, FILE_EXISTS_REPLACE)) {
 
-            $src .= '  src: url("' . $file->filename . '");' . "\n";
+            if ($format == 'eot') {
 
-          } // if
-          else if ($format == 'svg') {
+              // EOT goes on its own line and doesn't take a format.
+              // Because IE is a "special needs" browser.
 
-            // Get the font ID from the SVG file.
-
-            $svg = file_get_contents($file->filepath);
-            $hash = '';
-
-            if (preg_match('#<font([^>]+)>#i', $svg, $font_tag_match)) {
-
-              if (preg_match('#id="([^"]+)"#i', $font_tag_match[1], $id_match)) {
-                $hash = $id_match[1];
-              } // if
-              elseif (preg_match("#id='([^']+)'#i", $font_tag_match[1], $id_match)) {
-                $hash = $id_match[1];
-              } // elseif
+              $src .= '  src: url("' . $file->filename . '");' . "\n";
 
             } // if
+            elseif ($format == 'svg') {
 
-            $url = $file->filename . '#' . $hash;
-            $combined_sources[] = 'url("' . $url . '") format("' . $format . '")';
+              // Get the font ID from the SVG file.
 
-          } // 
-          else {
+              $svg = file_get_contents($file->filepath);
+              $hash = '';
 
-            $combined_sources[] = 'url("' . $file->filename . '") format("' . $format . '")';
+              if (preg_match('#<font([^>]+)>#i', $svg, $font_tag_match)) {
 
-          } // else
+                if (preg_match('#id="([^"]+)"#i', $font_tag_match[1], $id_match)) {
+                  $hash = $id_match[1];
+                } // if
+                elseif (preg_match("#id='([^']+)'#i", $font_tag_match[1], $id_match)) {
+                  $hash = $id_match[1];
+                } // elseif
+
+              } // if
+
+              $url = $file->filename . '#' . $hash;
+              $combined_sources[] = 'url("' . $url . '") format("' . $format . '")';
+
+            } // elseif
+            else {
+
+              $combined_sources[] = 'url("' . $file->filename . '") format("' . $format . '")';
+
+            } // else
+
+          } // if
 
         } // if
 
@@ -316,7 +322,7 @@ function local_fonts_add_fontface_submit($form, &$form_state) {
     $generated_css .= '}' . "\n";
 
     $css_file = file_save_data($generated_css, $destination_css_file);
-    
+
     $local_font = new stdClass;
     $local_font->name = $font_family . ' ' . $font_style . ' ' . $font_weight;
     $local_font->url = 'http://localhost/#' . md5($local_font->name);
@@ -346,7 +352,7 @@ function local_fonts_delete_fontface($form_state, $fid) {
   $form = array(
     'fid' => array(
       '#type' => 'value',
-      '#value'=> $fid,
+      '#value' => $fid,
     ),
     'confirm' => array(
       '#type' => 'fieldset',
@@ -394,12 +400,12 @@ function local_fonts_fontyourface_delete($font) {
   $metadata = unserialize($font->metadata);
 
   $directory = dirname($metadata['path']);
-  
+
   // Delete all the files.
-  
+
   $files = scandir($directory);
 
-  foreach ($files as $file) { 
+  foreach ($files as $file) {
 
     if ($file != '.' && $file != '..') {
       unlink($directory . '/' . $file);
@@ -408,9 +414,9 @@ function local_fonts_fontyourface_delete($font) {
   } // foreach
 
   // Delete the directory.
-  
+
   rmdir($directory);
-  
+
   return TRUE;
 
 } // local_fonts_fontyourface_delete
