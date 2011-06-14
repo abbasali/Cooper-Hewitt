@@ -1,5 +1,0 @@
-; $Id: ajaxlogin.info 317 2009-02-07 21:51:46Z lucky $
-name = Ajax Login
-description = Enables Ajax login for your site.
-core = 6.x
-version = "6.x-1.0"
