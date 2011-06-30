@@ -41,7 +41,7 @@
 <script>
 	
 			$(document).ready(function(){
-			          $.fn.colorbox({width:620, height:450, iframe:true, href:"http://dev1.cooperhewitt.net/sites/default/files/demo.png"});
+			          $.fn.colorbox({width:625, height:470, iframe:true, href:"/sites/default/files/announcement.html"});
 			});
 
 </script>
