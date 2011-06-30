@@ -41,7 +41,7 @@
 <script>
 	
 			$(document).ready(function(){
-			          $.fn.colorbox({width:625, height:470, iframe:true, href:"/sites/default/files/announcement.html"});
+			          $.fn.colorbox({width:725, height:440, iframe:true, href:"/sites/default/files/announcement.html"});
 			});
 
 </script>

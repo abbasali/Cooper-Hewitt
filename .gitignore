@@ -2,6 +2,8 @@ backups/*
 tmp/*
 sites/default/files/*
 !sites/default/files/announcement.html
+!sites/default/files/logo.png
+
 sites/default/settings.php
 
 .DS_Store
