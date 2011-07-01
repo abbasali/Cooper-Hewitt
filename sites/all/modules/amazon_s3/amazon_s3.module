@@ -453,57 +453,56 @@ function amazon_s3_node_form_submit(&$form, &$form_state) {
     'file_validate_image_resolution' => array($limits['resolution']),
     'file_validate_size' => array($limits['file_size'], $limits['user_size']),
   );
-  $s3 = amazon_s3_get_instance();
-  $existingFiles = $s3->getBucket(variable_get('aws_bucket_name', ''));
-  if ($existingFiles) { 
     // Save new file uploads.
     if (user_access('upload files') && ($file = file_save_upload('upload', $validators, file_directory_path()))) {
-      $file->list = variable_get('upload_list_default', 1);
+      $s3 = amazon_s3_get_instance();
+      $existingFiles = $s3->getBucket(variable_get('aws_bucket_name', ''));
+      if ($existingFiles) { 
+        $file->list = variable_get('upload_list_default', 1);
 
-      
+        $fpath = $_SERVER['DOCUMENT_ROOT'] . base_path() . $file->filepath;
+        $fname = date('Y/m/d/') . $file->filename;
+        $mfilename = $fname;
 
-      $fpath = $_SERVER['DOCUMENT_ROOT'] . base_path() . $file->filepath;
-      $fname = date('Y/m/d/') . $file->filename;
-      $mfilename = $fname;
-
-      $ext = '.'. substr(strrchr($fname, "."), 1);
-      $i = 0;
-      while ($mfilename) {
-         if (array_key_exists($mfilename, $existingFiles)) {
-           $mfilename = substr($fname, 0, (strlen($fname) - strlen($ext))) . "_$i" . $ext;  
-           $i++; 
-         } 
-         else {
-          $fname = $mfilename;
-          $mfilename = FALSE;
+        $ext = '.'. substr(strrchr($fname, "."), 1);
+        $i = 0;
+        while ($mfilename) {
+           if (array_key_exists($mfilename, $existingFiles)) {
+             $mfilename = substr($fname, 0, (strlen($fname) - strlen($ext))) . "_$i" . $ext;  
+             $i++; 
+           } 
+           else {
+            $fname = $mfilename;
+            $mfilename = FALSE;
+          }
         }
-      }
-   
-      // Set headers to upload file on s3
-      $requestHeaders['Cache-control'] = "public";
+     
+        // Set headers to upload file on s3
+        $requestHeaders['Cache-control'] = "public";
 
-      if ($s3->putObject($s3->inputResource(fopen($fpath, 'rb'), filesize($fpath)), variable_get('aws_bucket_name', ''), $fname, S3::ACL_PUBLIC_READ, array(), $requestHeaders)) {
-        // Update files table to add s3 account file path.
-        $file->filepath = $fname;
-        db_query("UPDATE {files} SET filepath = '%s' WHERE fid = %d", $fname, $file->fid);
-        if (db_affected_rows()) { 
+        if ($s3->putObject($s3->inputResource(fopen($fpath, 'rb'), filesize($fpath)), variable_get('aws_bucket_name', ''), $fname, S3::ACL_PUBLIC_READ, array(), $requestHeaders)) {
+          // Update files table to add s3 account file path.
+          $file->filepath = $fname;
+          db_query("UPDATE {files} SET filepath = '%s' WHERE fid = %d", $fname, $file->fid);
+          if (db_affected_rows()) { 
+            file_delete($fpath);
+          }
+          $file->description = $file->filename;
+          $file->weight = 0;
+          $file->new = TRUE;
+          $form['#node']->files[$file->fid] = $file;
+          $form_state['values']['files'][$file->fid] = (array)$file;
+
+        } 
+        else {
           file_delete($fpath);
         }
-        $file->description = $file->filename;
-        $file->weight = 0;
-        $file->new = TRUE;
-        $form['#node']->files[$file->fid] = $file;
-        $form_state['values']['files'][$file->fid] = (array)$file;
-
       } 
       else {
-        file_delete($fpath);
+        return FALSE;
       }
     }
-  } 
-  else {
-    return FALSE;
-  }
+
   if (isset($form_state['values']['files'])) {
     foreach ($form_state['values']['files'] as $fid => $file) {
       // If the node was previewed prior to saving, $form['#node']->files[$fid]
@@ -872,4 +871,3 @@ function amazon_s3_load($node) {
   }
   return $files;
 }
-
