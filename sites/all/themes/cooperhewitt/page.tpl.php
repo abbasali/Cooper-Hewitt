@@ -39,11 +39,14 @@
 <script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'808fd4d2-4b3f-457d-afda-337d5e5aa268'});</script>
 
 <script>
-	
+	if (document.cookie.indexOf('visited=true') === -1) {
+    	var expires = new Date();
+    	expires.setDate(expires.getDate()+1);
+    	document.cookie = "visited=true; expires="+expires.toUTCString();	
 			$(document).ready(function(){
 			          $.fn.colorbox({width:725, height:440, iframe:true, href:"/sites/default/files/announcement.html"});
 			});
-
+	}
 </script>
 
 	</head>
