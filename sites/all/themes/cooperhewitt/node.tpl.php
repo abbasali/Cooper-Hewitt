@@ -61,7 +61,7 @@
 		</div>
 		
 		<div class="module-bm">
-			<div class="module-bl"></div>
+			<div class="module-bl"><span  class='st_twitter_vcount' displayText='Tweet'></span><span  class='st_email_vcount' displayText='Email'></span><span  class='st_facebook_vcount' displayText='Facebook'></span><span  class='st_plusone_vcount' ></span><span  class='st_fblike_vcount' ></span></div>
 			<div class="module-br"></div>
 		</div>
 

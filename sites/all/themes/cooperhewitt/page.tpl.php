@@ -48,6 +48,8 @@
 	}
 </script>
 
+<script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'d76efed6-2de7-424a-bd20-93d79c35e146'});</script>
+
 	</head>
 	
 	<body id="ff-<?php echo $cooperhewitt_font_family; ?>" class="f-<?php echo $cooperhewitt_defaultfont; ?> <?php echo $cooperhewitt_preset_style; ?> <?php echo $cooperhewitt_bg_style; ?> <?php echo $pageclass; ?> iehandle">
