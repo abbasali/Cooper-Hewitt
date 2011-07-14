@@ -280,7 +280,7 @@ p.buttonheading {position: absolute;top: 0;right: 10px;}
 .buttonheading .email {background-position: 0 -51px;background-repeat: no-repeat;}
 .article-info-surround {padding: 10px;margin:0;overflow: hidden;}
 p.articleinfo, .iteminfo {margin: 0;line-height: 140%;}
-.iteminfo {display: block;float: left;width:430px;}
+.iteminfo {display: block;float: left;width:410px;padding-top:5px;}
 p.pageinfo {padding: 2px 5px;margin-top: 0;display: block;}
 .article-ratings {padding: 2px 5px;margin-top: 25px;}
 .article-rating {float: right !important;margin: 10px 0;white-space:nowrap;}
@@ -311,8 +311,8 @@ body #main-body .componentheading {margin: 0 0 15px 0;font-size: 180%;line-heigh
 .date-div {padding-right: 8px;}
 .article-info-right {float: right;}
 .article-info-left {margin-bottom: 5px;}
-.article-info-left h2 {margin:0;padding-bottom:5px;}
-.createdby {font-weight: bold;margin-bottom: 5px;text-align: right;}
+.article-info-left h2 {margin:0;padding-bottom:5px;font-size:130%;}
+.createdby {font-weight: bold;margin-bottom: 5px;}
 
 /* Extra Joomla Elements */
 span.small, .modifydate {font-size: 90%;}
