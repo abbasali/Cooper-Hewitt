@@ -26,47 +26,31 @@ $link = '';
 			</div>
 					  
 			<?php if ($submitted): ?>	
-				  		
 				<div class="article-info-surround">
-					
-					
-					<div class="article-info-right">
-					<span  class='st_twitter_vcount' st_url="<?php echo 'http://cooperhewitt.org/node/'.$node->nid ?>" st_title="<?php echo $title ?>" displayText='Tweet'></span><span  class='st_facebook_vcount' st_url="<?php echo 'http://cooperhewitt.org/node/'.$node->nid ?>" st_title="<?php echo $title ?>" displayText='Facebook'></span><span  class='st_plusone_vcount' st_url="<?php echo 'http://cooperhewitt.org/node/'.$node->nid ?>" st_title="<?php echo $title ?>" ></span><span  class='st_fblike_vcount' st_url="<?php echo 'http://cooperhewitt.org/node/'.$node->nid ?>" st_title="<?php echo $title ?>" ></span>
-					</div>
 					<div class="iteminfo">
-					<div class="article-info-left">
-							<h2><?php print l($node->title,'node/'.$node->nid); ?></h2>
-							<span class="createdate">
+							<h1 style="font-size:36px;line-height:1.4em;font-family: minerva-modern-1,minerva-modern-2;" ><?php print l($node->title,'node/'.$node->nid); ?></h1>
 							
-								<span class="date1"><?php print format_date($node->created, 'custom', "F j, Y") ?> | </span>
-							</span>
-							<span class="createdby"><?php
-		                                            $uprofile = user_load(array('uid'=>$node->uid));
-		                                            $user_fname = $uprofile->profile_;
-		                                            if ($user_fname!="")
-		                                                echo l($user_fname,'user/'.$node->uid);
-		                                            else
-		                                                echo $name;
-		                                            ?>
-		
-					                                
-	| <?php $comments = 'node/'.$node->nid; 
-	print l('Leave a comment', $comments);
-	?>
-	</span>
+							 Written by 
+									<?php
+		                            $uprofile = user_load(array('uid'=>$node->uid));
+		                            $user_fname = $uprofile->profile_;
+		                            	if ($user_fname!="")
+		                                	echo l($user_fname,'user/'.$node->uid);
+		                                else
+		                                    echo $name;
+		                            ?>
+							on <?php print format_date($node->created, 'custom', "F j, Y") ?> |  
+							<?php 
+								$comments = 'node/'.$node->nid; 
+								print l('Leave a comment', $comments);
+							?>
 							<div class="clr"></div>
 					</div>
-	
-					</div>
 				</div>
-			
 			<?php endif; ?>	
 
-							
-			
 			<?php print $content ?>
-			
-		</div>
+			</div>
 		
 		<div class="module-bm">
 			<div class="module-bl"></div>

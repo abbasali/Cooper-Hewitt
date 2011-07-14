@@ -104,7 +104,7 @@ a.small:hover .button {background-position: 0 -39px;background-repeat: no-repeat
 /* .col1wrap {padding-bottom:2em;} */
 #maincol {position: relative;padding: 0;}
 .wrapper {position:relative;}
-#main-content a, #main-content .separator, #main-content .item {font-weight: bold;}
+#main-content a, #main-content .separator, #main-content .item {font-weight: normal;}
 .blog .module-inner, .full-article .module-inner, .blog .article_row, .blog .leading {padding: 0;}
 #maincontent-block {padding: 10px 10px 0 10px;}
 body #inset-block-right {float: right;padding-top: 10px;}
@@ -280,7 +280,7 @@ p.buttonheading {position: absolute;top: 0;right: 10px;}
 .buttonheading .email {background-position: 0 -51px;background-repeat: no-repeat;}
 .article-info-surround {padding: 10px;margin:0;overflow: hidden;}
 p.articleinfo, .iteminfo {margin: 0;line-height: 140%;}
-.iteminfo {display: block;float: left;width:410px;padding-top:5px;}
+.iteminfo {display: block;float: left;width:660px;padding-top:5px;text-align:center;}
 p.pageinfo {padding: 2px 5px;margin-top: 0;display: block;}
 .article-ratings {padding: 2px 5px;margin-top: 25px;}
 .article-rating {float: right !important;margin: 10px 0;white-space:nowrap;}
