@@ -49,6 +49,7 @@
 </script>
 
 <script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'d76efed6-2de7-424a-bd20-93d79c35e146'});</script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 
 	</head>
 	
