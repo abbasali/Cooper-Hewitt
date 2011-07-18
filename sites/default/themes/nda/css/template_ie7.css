@@ -1,0 +1,73 @@
+/**
+ * @version		1.5.3 August 18, 2010
+ * @author		RocketTheme, LLC http://www.rockettheme.com
+ * @copyright 	Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license		http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+/* zoom fixes */
+h3, #bg-main, #horizmenu-surround, .wrapper, .module-inner, #maincontent-block, #inset-block-left .inset {zoom:1;}
+
+
+/* accessibility issues */
+#accessibility { width: 100px;}
+.article-rating {width: 160px;text-align:right;}
+
+/* horizmenu */
+#horiz-menu {position:relative;z-index:140;}
+#horiz-menu li.parent:hover {z-index:800 !important;}
+.menutop {z-index: 200;}
+.fusion-js-container {position:absolute !important;}
+/*#horiz-menu li.root >.daddy span {margin-right:-15px;padding-right:29px;}*/
+
+/* rok module fixes */
+#roksearch_results .roksearch_even {zoom:1;}
+#roksearch_results .container-wrapper {position:relative;zoom:1;}
+#roksearch_results .container-scroller {position:relative;zoom:1;}
+#roksearch_results .container-scroller .page .roksearch_odd, #roksearch_results .container-scroller .page .roksearch_even {zoom:1;z-index:1000;}
+
+/* rok module fixes */
+.roktabs-wrapper .roktabs-links li {white-space:nowrap;}
+
+/* variation chooser fixes */
+.variation-chooser .selection {height:23px;line-height:23px;}
+.variation-chooser select {margin-top:0;}
+
+li.leaf, li.collapsed, li.expanded {
+	list-style-type: none;
+	list-style-image: none;
+}
+
+#user-login-form .Button {
+	width: 200px;
+}
+
+#pollbutton input.button {
+	background: none;
+	cursor:pointer;
+	border: none;
+	overflow:hidden;
+	text-align: center;
+	padding: 0 0 0 0;
+	line-height: 24px;
+	float: left;
+}
+
+/* RokCart */
+.cart_product_content{zoom:1;}
+.cart_quickcart {margin: 0;}
+.cart_buttons {display:block;height:30px;zoom:1;margin-right: 5px;}
+.checkout-button, .checkout-button2 {display:inline-block;zoom:1;}
+.cart_quickcart .readon1-m, .cart_quickcart .readon1-r {position: relative;}
+.cart_quickcart .readon1-m {z-index: 3;margin-left:-2px !important;}
+.cart_quickcart .readon1-r {z-index: 1;height:29px !important;line-height: 25px !important;}
+body#ff-georgia .item_price {line-height:1.1em;}
+
+/* demo */
+.style1 .image-full img:first-child {background: url(../images/feature/1.jpg) no-repeat;}
+.style2 .image-full img:first-child {background: url(../images/feature/2.jpg) no-repeat;}
+.style3 .image-full img:first-child {background: url(../images/feature/3.jpg) no-repeat;}
+.style4 .image-full img:first-child {background: url(../images/feature/4.jpg) no-repeat;}
+.style5 .image-full img:first-child {background: url(../images/feature/5.jpg) no-repeat;}
+.style6 .image-full img:first-child {background: url(../images/feature/6.jpg) no-repeat;}
+
+/*Added by EStar Solutions*/
