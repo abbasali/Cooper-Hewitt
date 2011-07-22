@@ -280,7 +280,7 @@ p.buttonheading {position: absolute;top: 0;right: 10px;}
 .buttonheading .email {background-position: 0 -51px;background-repeat: no-repeat;}
 .article-info-surround {padding: 10px;margin:0;overflow: hidden;}
 p.articleinfo, .iteminfo {margin: 0;line-height: 140%;}
-.iteminfo {display: block;float: left;width:660px;padding-top:5px;text-align:center;}
+.iteminfo {display: block;float: left;width:660px;padding-top:5px;text-align:left;}
 p.pageinfo {padding: 2px 5px;margin-top: 0;display: block;}
 .article-ratings {padding: 2px 5px;margin-top: 25px;}
 .article-rating {float: right !important;margin: 10px 0;white-space:nowrap;}

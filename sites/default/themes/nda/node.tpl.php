@@ -26,7 +26,7 @@
 			<?php if ($submitted): ?>	
 				<div class="article-info-surround">
 					<div class="iteminfo">
-							<h1 style="font-size:36px;line-height:1.4em;font-family: minerva-modern-1,minerva-modern-2;" ><?php print l($node->title,$node->path); ?></h1>
+							<h1 style="font-size:20px;line-height:1.4em;font-family: minerva-modern-1,minerva-modern-2;margin:0px;" ><?php print l($node->title,$node->path); ?></h1>
 							<div class="clr"></div>
 					</div>
 				</div>
