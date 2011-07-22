@@ -27,18 +27,6 @@
 				<div class="article-info-surround">
 					<div class="iteminfo">
 							<h1 style="font-size:36px;line-height:1.4em;font-family: minerva-modern-1,minerva-modern-2;" ><?php print l($node->title,$node->path); ?></h1>
-							 Written by 
-									<?php
-		                            $uprofile = user_load(array('uid'=>$node->uid));
-		                            $user_fname = $uprofile->profile_;
-		                            	if ($user_fname!="")
-		                                	echo l($user_fname,'user/'.$node->uid);
-		                                else
-		                                    echo $name;
-		                            ?>
-							on <?php print format_date($node->created, 'custom', "F j, Y") ?> |  
-							<a href="<?php echo $node->path ?>#disqus_thread">Comments</a><br /><br />
-							<span  class='st_twitter' st_title="<?php echo $node->title ?>" st_url="http://cooperhewitt.org/<?php echo $node->path ?>" displayText='Tweet'></span><span  class='st_facebook' st_title="<?php echo $node->title ?>" st_url="http://cooperhewitt.org/<?php echo $node->path ?>" displayText='Facebook'></span><span  class='st_email' st_title="<?php echo $node->title ?>" st_url="http://cooperhewitt.org/<?php echo $node->path ?>" displayText='Email'></span><span  class='st_sharethis' st_title="<?php echo $node->title ?>" st_url="http://cooperhewitt.org/<?php echo $node->path ?>" displayText='ShareThis'></span>
 							<div class="clr"></div>
 					</div>
 				</div>
