@@ -27,13 +27,12 @@
 				<div class="article-info-surround">
 					<div class="iteminfo">
 							<h1 style="font-size:20px;line-height:1.4em;font-family: minerva-modern-1,minerva-modern-2;margin:0px;" ><?php print l($node->title,$node->path); ?></h1>
-							<div class="clr"></div><br /><br />
-							<?php print $content ?>
+							<div class="clr"></div>
 					</div>
 				</div>
 			<?php endif; ?>	
 
-			
+			<?php print $content ?>
 		
 			</div>
 		
