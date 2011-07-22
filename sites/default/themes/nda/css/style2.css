@@ -10,7 +10,7 @@
 #logo {background: url(../images/style2/logo.png) 0 0 no-repeat;}
 
 /* Backgrounds */
-#main-trans, #main-trans2, #main-trans-top, #main-trans-bottom {background: url(../images/backgrounds/style2/main-trans.png) 0 0;}
+#main-trans, #main-trans2, #main-trans-top, #main-trans-bottom {background:#BBBBBB;}
 #main-trans2 {padding: 0 10px 10px 10px;}
 .colmask, #mainmodules7 {background: #fff;}
 
@@ -34,7 +34,7 @@ body.medium .feature-module {color: #333;background: url(../images/backgrounds/s
 
 /* Backgrounds - Simple */
 body.simple #bg-tile {background: #652D89;}
-body.simple #header .wrapper {background: url(../images/backgrounds/style2/main-trans.png) 0 0;}
+body.simple #header .wrapper {background:#fff;}
 body.simple .feature-module {color: #333;}
 body.simple #horiz-menu ul, body.simple #horiz-menu .drop-top {background-image: none;}
 body.simple #horiz-menu ul.columns2, body.simple #horiz-menu .columns2 > .drop-top {background-image: url(../images/style2/main/drop-bg-2-simple.png);}
