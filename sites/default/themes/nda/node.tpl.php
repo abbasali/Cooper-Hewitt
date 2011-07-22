@@ -31,8 +31,11 @@
 					</div>
 				</div>
 			<?php endif; ?>	
-
-			<?php print $content ?>
+			<?php if ($node->type!="nda_news") { ?>
+				<?php print $content ?>
+			<?php } else {
+			}
+			?>
 		
 			</div>
 		
