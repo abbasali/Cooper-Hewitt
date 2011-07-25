@@ -22,8 +22,6 @@ function fonts_com_fontyourface_info() {
  */
 function fonts_com_fontyourface_import() {
 
-  fontyourface_provider_disable('fonts_com');
-
   $import_fonts = array();
   $projects = fonts_com_get_projects();
 
@@ -68,7 +66,7 @@ function fonts_com_fontyourface_import() {
     $font->url = 'http://webfonts.fonts.com/en-US/Project/ChooseFonts?ViewDetails=T&ViewFontID=' . $import_font->FontID . '&AddFontToPalette=T';
     $font->provider = 'fonts_com';
     $font->metadata = serialize($metadata);
-    $font->css_family = $import_font->FontCSSName;
+    $font->css_family = '"' . $import_font->FontCSSName . '"';
     $font->foundry = $import_font->FontFondryName;
     $font->tags = array();
 
@@ -100,9 +98,15 @@ function fonts_com_preprocess_page(&$vars) {
 
     if (count($projects) > 0) {
 
+      $base = 'http://fast.fonts.com/jsapi/';
+
+      if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+        $base = 'https://fast.fonts.com/jsapi/';
+      } // if
+
       foreach (array_keys($projects) as $project) {
 
-        $script = '<script type="text/javascript" src="http://fast.fonts.com/jsapi/' . $project . '.js"></script>';
+        $script = '<script type="text/javascript" src="' . $base . $project . '.js"></script>';
         drupal_set_html_head($script);
         $vars['head'] = drupal_get_html_head();
 
@@ -197,14 +201,19 @@ function fonts_com_get_domains_in_project($project_id) {
   if ($response->code == 200) {
 
     $data = json_decode($response->data);
-    $domain = $data->Domains->Domain;
 
-    if (is_array($domain)) {
-      $domains = $domain;
+    if ($data->Domains->TotalRecords > 0) {
+
+      $domain = $data->Domains->Domain;
+
+      if (is_array($domain)) {
+        $domains = $domain;
+      } // if
+      else {
+        $domains[] = $domain;
+      } // else
+
     } // if
-    else {
-      $domains[] = $domain;
-    } // else
 
   } // if
   else {
@@ -294,7 +303,7 @@ function fonts_com_form_alter(&$form, &$form_state, $form_id) {
       ),
       'fonts_com_token_save' => array(
         '#type' => 'submit',
-        '#value' => 'Update',
+        '#value' => 'Update Fonts.com',
       ),
     );
 
