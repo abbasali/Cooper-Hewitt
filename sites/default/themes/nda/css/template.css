@@ -99,7 +99,7 @@ a.small:hover .button {background-position: 0 -39px;background-repeat: no-repeat
 
 /* Main Layout */
 #main-trans {padding: 0 10px 10px 10px;}
-#main-trans-top {padding: 10px 10px;}
+#main-trans-top {padding: 5px 10px;}
 .colmask {clear:both;overflow:hidden;position:relative;width:100%;}
 /* .col1wrap {padding-bottom:2em;} */
 #maincol {position: relative;padding: 0;}
@@ -281,6 +281,7 @@ p.buttonheading {position: absolute;top: 0;right: 10px;}
 .article-info-surround {padding: 10px;margin:0;overflow: hidden;}
 p.articleinfo, .iteminfo {margin: 0;line-height: 140%;}
 .iteminfo {display: block;float: left;width:660px;padding-top:5px;text-align:left;}
+a.iteminfo {color:#000;}
 p.pageinfo {padding: 2px 5px;margin-top: 0;display: block;}
 .article-ratings {padding: 2px 5px;margin-top: 25px;}
 .article-rating {float: right !important;margin: 10px 0;white-space:nowrap;}
