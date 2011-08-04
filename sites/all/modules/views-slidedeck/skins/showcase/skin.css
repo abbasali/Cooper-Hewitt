@@ -53,7 +53,6 @@ Tags: flexible, white, black, multi-color
  */
 .skin-showcase dl.slidedeck > dd {
     position: relative;
-	height: 294px;
     margin: 0;
     overflow: hidden;
 }
@@ -75,16 +74,6 @@ Tags: flexible, white, black, multi-color
  */
 .skin-showcase dl.slidedeck > dt {
     position: relative;
-	cursor: pointer;
-	height: 43px;
-	line-height: 38px;
-	font-size: 12px;
-	font-weight: bold;
-	font-family: "Futura Bold", Arial, Helvetica, sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	background: url('spines.png') top left #d7d7d7;
-	color: #505050;
     margin: 0;
     padding: 0;
 }
@@ -141,10 +130,6 @@ Tags: flexible, white, black, multi-color
  * gap from appearing as the SlideDeck animates.
  */
 .skin-showcase dl.slidedeck .activeCorner {
-	margin-left: -6px;
-	background-image: url('corner.png');
-	width: 12px;
-	height: 25px;
 }
 
 /*
@@ -168,21 +153,6 @@ Tags: flexible, white, black, multi-color
  * position it outside of the slide area it will not appear.
  */
 .skin-showcase dl.slidedeck ul.verticalSlideNav {
-	height: 70px;
-	width: 25px;
-	background: none;
-	position: relative;
-	overflow: hidden;
-	padding: 15px 0 0;
-	margin: 0;
-    top: 0;
-	left: 125px;
-	-webkit-transform: rotate(90deg);
-	-webkit-transform-origin: -7px 0;
-	-moz-transform: rotate(90deg);
-	-moz-transform-origin: -7px 0;
-	-o-transform: rotate(90deg);
-	-o-transform-origin: -7px 0;
 }
 
 /*
@@ -196,15 +166,6 @@ Tags: flexible, white, black, multi-color
  * and/or top padding of this element.
  */
 .skin-showcase dl.slidedeck ul.verticalSlideNav li {
-	position: relative;
-    width: 25px;
-    height: 12px;
-    line-height: 12px;
-	padding: 0;
-	margin: 0;
-    overflow: hidden;
-    float: left;
-    clear: left;
 }
 
 /*
@@ -235,15 +196,6 @@ Tags: flexible, white, black, multi-color
  *     etc....
  */
 .skin-showcase dl.slidedeck ul.verticalSlideNav li a {
-	position: relative;
-	display: block;
-	padding: 12px 0 0 0;
-	margin: 0;
-	width: 25px;
-	height: 0;
-	overflow: hidden;
-    line-height: 12px;
-	background: url('vertical-nav.png') 0 0 no-repeat;
 }
 /* Vertical slide navigation style for the currently active vertical slide navigation link */
 .skin-showcase dl.slidedeck ul.verticalSlideNav li.active a {
@@ -258,10 +210,4 @@ Tags: flexible, white, black, multi-color
  * The SlideDeck vertical slide navigation link hover state.
  */
 dl.slidedeck dd.slide ul.verticalSlideNav li a:hover {
-    opacity: 0.75;
-    -moz-opacity: 0.75;
-    -webkit-opacity: 0.75;
-    -khtml-opacity: 0.75;
-    -ms-filter: "Alpha(opacity=75)";
-    filter: Alpha(opacity=75); 
 }
