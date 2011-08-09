@@ -26,7 +26,6 @@
 			<?php if ($submitted): ?>	
 				<div class="article-info-surround">
 					<div class="iteminfo">
-							<h1 style="font-size:20px;line-height:1.4em;font-family: vera-sans-1,vera-sans-2;margin:0px;" ><?php print l($node->title,$node->path); ?></h1>
 							<?php print $content ?>
 					</div>
 				</div>
