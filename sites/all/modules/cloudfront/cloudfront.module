@@ -1,0 +1,389 @@
+<?php
+
+/**
+ * Implementation of hook_menu
+ */
+function cloudfront_menu() {
+  $items = array();
+  
+	$items['cloudfront/processqueue'] = array(
+	  'title' => 'Process CloudFront Queue',
+	  'page callback' => '_cloudfront_process_queue',
+	  'access arguments' => array('access content'),
+	  'type' => MENU_CALLBACK,
+	);
+  
+  return $items;
+}
+
+/**
+ * Create a cloudfront url for the specified image
+ *
+ * @param $imagecache_namespace
+ *   imagecache preset name
+ * @param $path
+ *   path to original file
+ * @return
+ *   url on success, false on failure
+ */
+function cloudfront_create_url($imagecache_namespace, $path) {
+  $preset_info = imagecache_preset_by_name($imagecache_namespace);
+  if (!isset($preset_info['presetid'])) {
+    return false;
+  }
+  
+  // If the imagecache preset is modified or flushed then the file will be missing.
+  // By returning false we give imagecache a chance to regenerate this image and
+  // send the new version to s3.
+  $imagecache_path = file_directory_path() .'/imagecache/'. $imagecache_namespace .'/'. basename($path);
+  if (!file_exists($imagecache_path)) {
+    return false;
+  }
+  
+  $sql = <<<SQL
+    SELECT 
+      * 
+    FROM 
+      {cloudfront_files} 
+    WHERE 
+      imagecache_preset_id = %d 
+      AND original_file_path = '%s'
+    LIMIT 1
+SQL;
+
+  $results = db_query($sql, $preset_info['presetid'], $path);
+  if ($item = db_fetch_object($results)) {
+    return $item->distribution_url .'/preset_'. $item->imagecache_preset_id .'/'. basename($item->original_file_path);
+  }
+  
+  return false;
+}
+
+/**
+ * Upload any files in the cloudfront send queue.
+ */
+function _cloudfront_process_queue() {
+  $semaphore = variable_get('cloudfront_process_queue_semaphore', false);
+  
+  if ($semaphore) {
+    if (time() - $semaphore > 3600) {
+      watchdog('cloudfront', '_cloudfront_process_queue has been running for more than an hour and is most likely stuck.', null, WATCHDOG_WARNING);
+      variable_del('cloudfront_process_queue_semaphore');
+    }
+    else {
+      watchdog('cloudfront', 'Attempting to re-run _cloudfront_process_queue while it is already running.', null,  WATCHDOG_WARNING);
+    }
+    return 'already running';
+  }
+  
+  register_shutdown_function('_cloudfront_process_queue_cleanup');
+  variable_set('cloudfront_process_queue_semaphore', true);
+  
+  require_once drupal_get_path('module', 'cloudfront') .'/lib/S3.php';
+  $access_key_id = variable_get('cloudfront_access_key_id', false);
+  $secret_access_key = variable_get('cloudfront_secret_access_key', false);
+  
+  $items = array();
+  $results = db_query("SELECT * FROM {cloudfront_send_queue} ORDER BY item_id ASC");
+  while ($item = db_fetch_object($results)) {
+    $result = _cloudfront_upload_item($item, $access_key_id, $secret_access_key);
+    if ($result) {
+      _cloudfront_unqueue_item($item);
+    }
+  }
+  
+  variable_set('cloudfront_process_queue_last', time());
+  watchdog('cloudfront', '_cloudfront_process_queue run complete', null, WATCHDOG_NOTICE);
+  variable_del('cloudfront_process_queue_semaphore');
+  
+  return 'ok';
+}
+
+/**
+ * Clear the cloudfront_process_queue semaphore
+ */
+function _cloudfront_process_queue_cleanup() {
+  if (variable_get('cloudfront_process_queue_semaphore', false)) {
+    watchdog('cloudfront', '_cloudfront_process_queue quit without clearing semaphore', null,  WATCHDOG_WARNING);
+    variable_del('cloudfront_process_queue_semaphore');
+  }
+}
+
+/**
+ * Upload an item from the cloudfront_send_queue to s3.
+ *
+ * @param $item
+ *   item object from cloudfront send queue table
+ * @param $access_key_id
+ *   amazon aws access key
+ * @param $secret_access_key
+ *   amazon aws secret access key
+ */
+function _cloudfront_upload_item($item, $access_key_id, $secret_access_key) {
+  static $s3;
+  
+  if (!isset($s3)) {
+    $s3 = new S3($access_key_id, $secret_access_key, false);
+  }
+  
+  if (!file_exists($item->upload_file_path) || !is_file($item->upload_file_path)) {
+    return false;
+  }
+  
+  $target_path = 'preset_'. $item->imagecache_preset_id .'/'. basename($item->upload_file_path);
+  $result = $s3->putObjectFile($item->upload_file_path, $item->bucket, $target_path, S3::ACL_PUBLIC_READ);
+  if ($result === false) {
+    return false;
+  }
+  
+  return true;
+}
+
+/**
+ * Remove an item from the send queue and create a record in the cloudfront_files table.
+ *
+ * @param $item
+ *   item object from cloudfront_send_queue table
+ * @return
+ *   true on success, false on failure
+ */
+function _cloudfront_unqueue_item($item) {
+  $insert_sql = <<<SQL
+    INSERT INTO {cloudfront_files} (
+      bucket,
+      created,
+      distribution_url,
+      imagecache_preset_id,
+      original_file_path
+    ) VALUES (
+      '%s',
+       %d,
+      '%s',
+       %d,
+      '%s'
+    )
+SQL;
+
+  // This item will replace any items with the same preset_id and original_file_path 
+  // on cloudfront so we need to clear them out.
+  $delete_sql = "DELETE FROM {cloudfront_files} WHERE imagecache_preset_id = %d AND original_file_path = '%s'";
+  db_query($delete_sql, $item->imagecache_preset_id, $item->original_file_path);
+
+  $result = db_query($insert_sql, time(), $item->bucket, $item->distribution_url, $item->imagecache_preset_id, $item->original_file_path);
+  if ($result === false) {
+    return false;
+  }
+  
+  db_query("DELETE FROM {cloudfront_send_queue} WHERE item_id = %d", $item->item_id);
+  
+  // Remove the temp file from the files/cloudfront directory
+  if (is_file($item->upload_file_path)) {
+    unlink($item->upload_file_path);
+  }
+  
+  return true; 
+}
+
+/** 
+ * Implementation of hook_imagecache_actions
+ */
+function cloudfront_imagecache_actions() {
+  $actions = array(
+    'cloudfront_imagecache_send' => array(
+      'name' => 'Send to CloudFront',
+      'description' => 'Send an image to S3 for use in CloudFront',
+    ),
+  );
+  return $actions;
+}
+
+/**
+ * Generate settings form for preset action
+ *
+ * @param $data
+ *   current action settings for this preset
+ * @return
+ *   form array
+ */
+function cloudfront_imagecache_send_form($data) {
+  $form['bucket'] = array(
+    '#type' => 'textfield',
+    '#default_value' => (isset($data['bucket'])) ? $data['bucket'] : '',
+    '#description' => 'The image will be uploaded to this bucket.',
+    '#required' => true,
+    '#title' => 'Bucket',
+  );
+  $form['distribution_url'] = array(
+    '#type' => 'textfield',
+    '#default_value' => (isset($data['distribution_url'])) ? $data['distribution_url'] : '',
+    '#description' => 'URL for the bucket distribution',
+    '#required' => true,
+    '#title' => 'Distribution URL',
+  );
+  $form['unique_name'] = array(
+    '#type' => 'textfield',
+    '#default_value' => (isset($data['unique_name'])) ? $data['unique_name'] : '',
+    '#description' => 'Give this action a unique name. If this action is used
+      in other presets make sure the names do not match.',
+    '#required' => true,
+    '#title' => 'Unique Name',
+  );
+  
+  return $form;
+}
+
+/**
+ * Theme output for settings column in preset actions display
+ *
+ * @param $element
+ *   array containing action settings
+ * @return
+ *   output to display in settings column
+ */
+function theme_cloudfront_imagecache_send($element) {
+  $output  = 'name: '. $element['#value']['unique_name'] .' bucket: '. $element['#value']['bucket'];
+  return $output;
+}
+
+/**
+ * Implementation of imagecache action
+ *
+ * @param &$image
+ *   reference to image object
+ * @param $data
+ *   action settings
+ * @param $presetid
+ *   imagecache preset id
+ * @return
+ *   true on success, false on failure
+ */
+function cloudfront_imagecache_send_image(&$image, $data, $preset_id = false) {
+  $sql = <<<SQL
+    INSERT INTO {cloudfront_send_queue} (
+      bucket,
+      distribution_url,
+      imagecache_preset_id,
+      inserted,
+      original_file_path,
+      upload_file_path
+    ) VALUES (
+      '%s',
+      '%s',
+       %d,
+       %d,
+      '%s',
+      '%s'
+    )
+SQL;
+	
+  if (!$preset_id) {
+    $preset_id = _cloudfront_imagecache_presetid('cloudfront_imagecache_send', $data);
+  }
+
+  if ($preset_id === false) {
+    watchdog('cloudfront', 'Unable to find presetid for action cloudfront_imagecache_send with data %data', array('%data' => serialize($data)), WATCHDOG_ERROR);
+    return false;
+  }
+  
+  $upload_file_path = file_create_path() .'/cloudfront_queue/'. $preset_id .'/'. basename($image->source);
+  $upload_file_dir = dirname($upload_file_path);
+
+  if (!file_check_directory($upload_file_dir) && !mkdir($upload_file_dir, 0775, true)) {
+    return false;
+  }
+	
+  if (!imageapi_image_close($image, $upload_file_path)) {
+    return false;
+  }
+
+	
+  // Remove any duplicates from the queue. It's possible to get duplicate entries if
+  // an image is queued then the preset is flushed or modified before the queue is
+  // processed.
+  $delete_sql = "DELETE FROM {cloudfront_send_queue} WHERE imagecache_preset_id = %d AND original_file_path = '%s'";
+  db_query($delete_sql, $preset_id, $image->source);
+  
+  // Remove file entry for the file we are queueing up. This will keep us serving 
+  // the local version until the queue is processed and the old version is
+  // replaced on cloudfront.
+  $delete_sql = "DELETE FROM {cloudfront_files} WHERE imagecache_preset_id = %d and original_file_path = '%s'";
+  db_query($delete_sql, $preset_id, $image->source);
+  
+  $result = db_query($sql, $data['bucket'], $data['distribution_url'], $preset_id, time(), $image->source, $upload_file_path);
+  
+  return $result;
+}
+
+/**
+ * Find the imagecache presetid using the action name and action settings.
+ * This is used to work around imagecache not sending the presetid when it
+ * calls an action. If you need to have an action appear in two presets with
+ * the settings then you will have to patch imagecache to send the presetid.
+ *
+ * @param $action_name
+ *   the action callback function name without _image
+ * @param $data
+ *   the action settings
+ * @return
+ *   presetid or false on fail
+ */
+function _cloudfront_imagecache_presetid($action_name, $data) {  
+  $sql = <<<SQL
+    SELECT
+      presetid
+    FROM
+      {imagecache_action}
+    WHERE
+      action = '%s'
+      AND data = '%s'
+SQL;
+  $results = db_query($sql, $action_name, serialize($data));
+	$items = array();
+	while ($item = db_fetch_object($results)) {
+		$items[] = $item;
+	}
+	
+	if (empty($items)) {
+		return false;
+	}
+	
+  if (count($items) > 1) {
+    watchdog('cloudfront', 'Action %action appears in more than one preset with the same settings.
+      Change the settings or apply imagecache patch.', array('%action' => $action_name), WATCHDOG_ERROR);
+    return false;
+  }
+
+  return $items[0]->presetid;
+}
+
+/**
+ * Override theme_imagecache and call this function.
+ * Returns an img tag with a cloudfront src if available otherwise falls
+ * back to imagecache.
+ *
+ * @param $namespace
+ *   presetname of the derivative you wish to generate a tag for.
+ * @param $path
+ *   path to the original image you wish to create a derivative image tag for.
+ * @param $alt
+ *   img tag alternate text
+ * @param $title
+ *   img tag title text
+ * @param attributes
+ *   optional drupal attributes array. If attributes is set, the default imagecache classes 
+ *   will not be set automatically, you must do this manually.
+ * @return
+ *   cloudfront url if available, otherwise imagecache url
+ */
+function cloudview_theme_imagecache($namespace, $path, $alt = '', $title = '', $attributes = null) {
+  if (is_null($attributes)) {
+    $attributes['class'] = 'imagecache imagecache-'. $namespace;
+  } 
+  $attributes = drupal_attributes($attributes);
+
+  if ($cloudfront_url = cloudfront_create_url($namespace, $path)) {
+    return '<img src="'. $cloudfront_url .'" alt="'. check_plain($alt) .'" title="'. check_plain($title) .'" '. $attributes .' />';
+  }
+  
+  return theme_imagecache($namespace, $path, $alt = '', $title = '', $attributes = null);
+}
