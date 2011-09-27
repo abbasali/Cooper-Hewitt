@@ -894,3 +894,12 @@ function cooperhewitt_node_submitted($node) {
       '!datetime' => format_date($node->created),
     ));
 }
+
+function cooperhewitt_imagecache($namespace, $path, $alt = '', $title = '', $attributes = null) {
+  if (module_exists('cloudfront')) {
+    return cloudview_theme_imagecache($namespace, $path, $alt, $title, $attributes);
+  }
+  else {
+    return theme_imagecache($namespace, $path, $alt = '', $title = '', $attributes = null);
+  }
+}
