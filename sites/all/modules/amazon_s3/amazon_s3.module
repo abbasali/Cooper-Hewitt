@@ -456,8 +456,9 @@ function amazon_s3_node_form_submit(&$form, &$form_state) {
     // Save new file uploads.
     if (user_access('upload files') && ($file = file_save_upload('upload', $validators, file_directory_path()))) {
       $s3 = amazon_s3_get_instance();
-      $existingFiles = $s3->getBucket(variable_get('aws_bucket_name', ''));
-      if ($existingFiles) { 
+      $prefix = date('Y/m/d');
+      $existingFiles = $s3->getBucket(variable_get('aws_bucket_name', ''), $prefix);
+      if (is_array($existingFiles)) { 
         $file->list = variable_get('upload_list_default', 1);
 
         $fpath = $_SERVER['DOCUMENT_ROOT'] . base_path() . $file->filepath;
